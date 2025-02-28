@@ -1,6 +1,11 @@
 import { motion } from 'framer-motion';
 
-export default function Button({ text, onClick }) {
+interface ButtonProps {
+    text: string;
+    onClick: () => void;
+}
+
+export default function Button({ text, onClick }: ButtonProps) {
     return (
         <motion.button
             whileHover={{
