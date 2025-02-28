@@ -27,3 +27,7 @@ body {
 .footer-icon {
   @apply w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 text-gray-300 hover:text-white hover:bg-[#D72638] transition-all duration-300;
 }
+
+.text-shadow-custom {
+  text-shadow: 2px 2px 15px rgba(255, 255, 255, 0.3);
+}

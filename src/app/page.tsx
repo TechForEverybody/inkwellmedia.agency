@@ -1,10 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-// import BrandsCarousel from './components/carousel';
-// import Footer from './components/footer';
-// import AnimatedCamera from './components/camera';
-// import AnimatedButton from './components/button';
 
 const words = [
     'Creative Ads',
@@ -38,9 +34,7 @@ export default function HeroSection() {
 
     return (
         <>
-            {/* <section className='relative flex items-center justify-center h-screen bg-black text-white overflow-hidden'> */}
             <section className='relative flex items-center justify-center h-screen bg-gradient-to-b from-black via-[#111] to-[#222] text-white overflow-hidden'>
-                {/* <section className="relative flex items-center justify-center h-screen bg-gradient-to-b from-black via-[#111] to-transparent text-white overflow-hidden"> */}
                 {/* Background Animated Particles */}
                 <motion.div
                     className="absolute inset-0 bg-[url('/bg-pattern.svg')] bg-cover opacity-10"
@@ -54,7 +48,7 @@ export default function HeroSection() {
 
                 {/* Hero Content */}
                 <motion.div
-                    className='relative text-center'
+                    className='relative text-center max-w-2xl'
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
@@ -104,7 +98,7 @@ export default function HeroSection() {
                     {/* <AnimatedCamera /> */}
 
                     {/* CTA Button */}
-                    <div className='flex justify-between max-w-sm mx-auto mt-6'>
+                    <div className='flex justify-evenly md:justify-between max-w-sm mx-auto mt-2'>
                         <motion.button
                             whileHover={{
                                 scale: 1.1,
@@ -154,18 +148,6 @@ export default function HeroSection() {
                     /> */}
                 </motion.div>
 
-                {/* Scroll-Based Text Animations */}
-                {/* <div className='absolute bottom-20 w-full text-center'>
-                    <motion.p
-                        className='text-gray-300 text-xl'
-                        initial={{ opacity: 0, y: 40 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 1 }}
-                    >
-                        🚀 Let&apos;s take your brand to the next level!
-                    </motion.p>
-                </div> */}
-
                 {/* Floating Shapes */}
                 <motion.div
                     className='absolute bottom-10 right-10 w-16 h-16 bg-[#D72638] rounded-full opacity-50 blur-3xl'
@@ -179,29 +161,8 @@ export default function HeroSection() {
 
                 <div className='absolute -top-20 right-10 w-32 h-32 bg-[#D72638] opacity-20 blur-2xl rounded-full animate-pulse'></div>
                 <div className='absolute bottom-0 -left-20 w-32 h-32 bg-[#D72638] opacity-20 blur-3xl rounded-full animate-pulse'></div>
-
-                {/* Scroll Down Indicator */}
-                {/* <motion.div
-                    className='absolute bottom-10 text-center'
-                    animate={{ opacity: [0, 1, 0] }}
-                    transition={{ repeat: Infinity, duration: 2 }}
-                >
-                    <p className='text-gray-400'>Scroll down for more</p>
-                    <motion.div
-                        className='w-6 h-6 mx-auto mt-2 border-2 border-white rounded-full'
-                        animate={{ y: [0, 10, 0] }}
-                        transition={{ repeat: Infinity, duration: 1.5 }}
-                    />
-                </motion.div> */}
-                {/* <div className='absolute bottom-10 left-1/2 transform -translate-x-1/2 text-center'>
-                    <BrandsCarousel />
-                </div> */}
                 <div className='absolute bottom-0 w-full h-24 bg-gradient-to-t from-[#222] to-transparent'></div>
             </section>
-            {/* <footer className='w-full py-6 text-center bg-[#111] text-gray-400'>
-                &copy; 2025 Inkwell Media. All rights reserved.
-            </footer> */}
-            {/* <section className='relative flex items-center justify-center h-screen bg-black text-white overflow-hidden'></section> */}
         </>
     );
 }

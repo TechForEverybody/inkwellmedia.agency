@@ -72,7 +72,15 @@ export default function Navbar() {
                             transition={{ delay: index * 0.1 }}
                             className='hover:text-[#D72638] transition-all duration-300'
                         >
-                            <Link href={`/${item.toLowerCase()}`}>{item}</Link>
+                            <Link
+                                href={
+                                    item === 'Home'
+                                        ? '/'
+                                        : `/${item.toLowerCase()}`
+                                }
+                            >
+                                {item}
+                            </Link>
                         </motion.li>
                     ))}
                 </ul>
@@ -101,7 +109,11 @@ export default function Navbar() {
                         ].map((item) => (
                             <Link
                                 key={item}
-                                href={`#${item.toLowerCase()}`}
+                                href={
+                                    item === 'Home'
+                                        ? '/'
+                                        : `/${item.toLowerCase()}`
+                                }
                                 className='text-gray-200 text-lg hover:text-[#D72638] transition-all duration-300'
                                 onClick={() => setIsOpen(false)}
                             >
