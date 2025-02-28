@@ -1,5 +1,4 @@
 'use client';
-import 'swiper/css';
 import Image from 'next/image';
 
 const brands = [
