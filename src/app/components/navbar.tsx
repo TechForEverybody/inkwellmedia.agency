@@ -1,7 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Menu, X, Camera } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Navbar() {
@@ -23,8 +23,8 @@ export default function Navbar() {
                 animate={{ opacity: 1, y: 0 }}
                 className={`relative flex items-center justify-between px-6 py-4 ${
                     isScrolled
-                        ? 'bg-black/80 backdrop-blur-md'
-                        : 'bg-white/10 backdrop-blur-lg'
+                        ? 'bg-[#000433] backdrop-blur-md'
+                        : 'bg-[#181e5a] backdrop-blur-lg'
                 } shadow-lg rounded-b-2xl border border-white/20 max-w-7xl mx-auto transition-all duration-300`}
             >
                 {/* Logo with Animated Camera */}
@@ -34,7 +34,7 @@ export default function Navbar() {
                     className='text-white text-2xl font-bold flex items-center space-x-2'
                 >
                     {/* Floating Camera Icon */}
-                    <motion.div
+                    {/* <motion.div
                         className='text-[#D72638]'
                         animate={{ y: [0, -10, 0], rotate: [0, 5, -5, 0] }}
                         transition={{
@@ -44,15 +44,18 @@ export default function Navbar() {
                         }}
                     >
                         <Camera size={50} />
-                    </motion.div>
-                    <Link href='/' className='flex items-center space-x-1'>
+                    </motion.div> */}
+                    <Link
+                        href='/'
+                        className='flex items-center space-x-1 cursor-pointer'
+                    >
                         Inkwell Media
                     </Link>
-                    <motion.div
+                    {/* <motion.div
                         animate={{ opacity: [0.2, 1, 0.2] }}
                         transition={{ repeat: Infinity, duration: 1 }}
                         className='w-2 h-2 bg-red-500 rounded-full ml-1'
-                    ></motion.div>
+                    ></motion.div> */}
                     {/* Blinking Red Light */}
                 </motion.div>
 
