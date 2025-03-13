@@ -38,6 +38,41 @@ export default function RootLayout({
 
     return (
         <html lang='en'>
+            <head>
+                <title>Inkwellmedia Agency</title>
+                <meta
+                    name='description'
+                    content='Inkwellmedia Agency - Your trusted partner in media solutions.'
+                />
+                <meta
+                    name='keywords'
+                    content='Ad Making Agency, Media Solutions, Advertising, Marketing, Creative Agency'
+                />
+                <meta name='author' content='Inkwellmedia Agency' />
+                <meta
+                    property='og:title'
+                    content='Inkwellmedia Agency - Ad Making Experts'
+                />
+                <meta
+                    property='og:description'
+                    content='Inkwellmedia Agency - Your trusted partner in media solutions and ad making.'
+                />
+                <meta property='og:image' content='/path/to/your/image.jpg' />
+                <meta
+                    property='og:url'
+                    content='https://www.inkwellmedia.com'
+                />
+                <meta name='twitter:card' content='summary_large_image' />
+                <meta
+                    name='twitter:title'
+                    content='Inkwellmedia Agency - Ad Making Experts'
+                />
+                <meta
+                    name='twitter:description'
+                    content='Inkwellmedia Agency - Your trusted partner in media solutions and ad making.'
+                />
+                <meta name='twitter:image' content='/path/to/your/image.jpg' />
+            </head>
             <body
                 className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#1B1B1B]`}
             >
