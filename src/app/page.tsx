@@ -187,7 +187,7 @@ export default function HeroSection() {
         // <section className='relative flex items-center justify-between h-screen bg-[#0b344a] text-white px-12 overflow-hidden'>
         //     {/* Grid Background */}
         <>
-            <section className='relative flex items-center justify-center h-screen bg-[#000433] text-white px-6 md:px-12 overflow-hidden py-24 md:py-0'>
+            <section className='relative flex items-center justify-center h-full md:h-screen bg-[#000433] text-white px-6 md:px-12 overflow-hidden py-28 md:py-0'>
                 {/* Grid Background */}
                 {/* <div className='absolute inset-0 bg-[url(/grid.svg)] opacity-20'></div> */}
 

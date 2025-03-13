@@ -88,7 +88,7 @@ const services = [
 export default function ServicesPage() {
     return (
         // <section className='min-h-screen bg-gradient-to-b from-black via-[#111] to-[#222] text-white py-20 px-6'>
-        <section className='relative flex items-center justify-between h-full bg-[#fff] text-white px-12 py-24 overflow-hidden'>
+        <section className='relative flex items-center justify-between h-full bg-[#fff] text-white px-12 pt-24 overflow-hidden'>
             <div className='max-w-6xl mx-auto text-center'>
                 <h1 className='text-5xl mt-10 text-[#fa8128] font-bold mb-8 text-shadow-custom'>
                     Our Services

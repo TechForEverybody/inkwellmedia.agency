@@ -33,7 +33,7 @@ export default function ContactPage() {
     };
 
     return (
-        <section className='relative flex items-center justify-center md:justify-between pb-10 md:py-24 h-full bg-[#fff] text-white px-12 overflow-hidden'>
+        <section className='relative flex items-center justify-center md:justify-between py-24 h-full bg-[#fff] text-white px-12 overflow-hidden'>
             <div className='max-w-6xl mx-auto text-center'>
                 <h1 className='text-5xl mt-10 text-[#fa8128] font-bold mb-8 text-shadow-custom'>
                     Contact Us

@@ -101,7 +101,7 @@ export default function Navbar() {
                     <motion.div
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className='absolute top-full left-0 w-full bg-[#1B1B1B] p-6 flex flex-col items-center space-y-4 shadow-lg border border-white/10 rounded-b-2xl md:hidden'
+                        className='absolute top-full left-0 w-full bg-[#181e5a] p-6 flex flex-col items-center space-y-4 shadow-lg border border-white/10 rounded-b-2xl md:hidden'
                     >
                         {[
                             'Home',
