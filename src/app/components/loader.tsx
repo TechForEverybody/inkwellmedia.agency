@@ -135,7 +135,7 @@ export default function Loader({
                         <div className='absolute inset-0 blur-xl bg-[#fa8128]/40 rounded-full scale-75 -z-10' />
 
                         {/* Company name/logo with 3D effect */}
-                        <h1 className='text-5xl md:text-7xl font-bold text-white tracking-tight'>
+                        <h1 className='text-3xl md:text-7xl font-bold text-white tracking-tight'>
                             <span className='bg-clip-text text-transparent bg-gradient-to-r from-[#fa8128] via-white to-[#fa8128]'>
                                 {companyName}
                             </span>

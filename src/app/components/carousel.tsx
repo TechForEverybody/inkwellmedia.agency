@@ -14,12 +14,13 @@ const brands = [
     { name: 'Propzone', src: '/pz.png', width: 140, height: 200 },
     { name: 'Sahyadri', src: '/sahyadri.png', width: 140, height: 200 },
     { name: 'Venkatesha', src: '/venkatesha.png', width: 200, height: 200 },
+    { name: 'Cityprop', src: '/cityprop.png', width: 200, height: 200 },
 ];
 
 export default function BrandsCarousel() {
     return (
         <div className='flex justify-center'>
-            <div className='w-2/3 py-10 bg-inherit overflow-hidden'>
+            <div className='md:w-2/3 pt-10 bg-inherit overflow-hidden'>
                 <h2 className='text-center text-3xl font-bold text-[#fa8128] mb-8'>
                     Trusted by leading brands
                 </h2>

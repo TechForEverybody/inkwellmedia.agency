@@ -187,7 +187,7 @@ export default function HeroSection() {
         // <section className='relative flex items-center justify-between h-screen bg-[#0b344a] text-white px-12 overflow-hidden'>
         //     {/* Grid Background */}
         <>
-            <section className='relative flex items-center justify-center h-screen bg-[#000433] text-white px-12 overflow-hidden'>
+            <section className='relative flex items-center justify-center h-screen bg-[#000433] text-white px-12 overflow-hidden pt-10 md:pt-0'>
                 {/* Grid Background */}
                 {/* <div className='absolute inset-0 bg-[url(/grid.svg)] opacity-20'></div> */}
 
@@ -207,14 +207,17 @@ export default function HeroSection() {
                         We craft stunning, high-converting advertisements that
                         make your brand shine.
                     </p>
-                    <div className='flex justify-evenly md:justify-between max-w-sm mx-auto mt-2'>
+                    <div className='flex justify-between max-w-sm mx-auto mt-2'>
                         <motion.button
                             whileHover={{
                                 scale: 1.1,
                                 boxShadow: '0px 0px 20px #fa8128',
                             }}
+                            onClick={() =>
+                                (window.location.href = 'tel:+919172695325')
+                            }
                             whileTap={{ scale: 0.95 }}
-                            className='mt-6 flex items-center justify-center px-6 py-3 text-lg font-semibold text-white backdrop-blur-lg border border-white/20 bg-[#fa8128] rounded-full shadow-lg transition-all duration-300 hover:bg-[#fa8128] hover:border-[#fa8128]'
+                            className='mt-6 flex items-center justify-center px-3 md:px-6 py-3 text-sm md:text-lg font-semibold text-white backdrop-blur-lg border border-white/20 bg-[#fa8128] rounded-full shadow-lg transition-all duration-300 hover:bg-[#fa8128] hover:border-[#fa8128]'
                         >
                             Book a Call{' '}
                             <LucidePhoneCall className='w-4 h-4 ml-2' />
@@ -226,7 +229,7 @@ export default function HeroSection() {
                             }}
                             onClick={() => router.push('/portfolio')}
                             whileTap={{ scale: 0.95 }}
-                            className='flex justify-center items-center mt-6 px-6 py-3 text-lg font-semibold text-white backdrop-blur-lg border rounded-full shadow-lg transition-all duration-300 border-[#fa8128]'
+                            className='flex justify-center items-center mt-6 px-3 md:px-6 py-3 text-sm md:text-lg font-semibold text-white backdrop-blur-lg border rounded-full shadow-lg transition-all duration-300 border-[#fa8128]'
                         >
                             Our Portfolio{' '}
                             <motion.svg

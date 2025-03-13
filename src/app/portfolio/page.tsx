@@ -135,10 +135,10 @@ const portfolioItems: PortfolioItem[] = [
     },
     {
         id: '0',
-        title: 'Matrubhoomi Developers',
+        title: 'Propzone',
         type: 'youtube',
-        thumbnail: 'https://img.youtube.com/vi/xbzwVDNuKEc/hqdefault.jpg',
-        videoUrl: 'xbzwVDNuKEc',
+        thumbnail: 'https://img.youtube.com/vi/_sWam2SD_XM/hqdefault.jpg',
+        videoUrl: '_sWam2SD_XM',
     },
     {
         id: '01',
@@ -182,6 +182,27 @@ const portfolioItems: PortfolioItem[] = [
         type: 'reel',
         thumbnail: 'https://img.youtube.com/vi/vqn5NRrcm6g/hqdefault.jpg',
         videoUrl: 'vqn5NRrcm6g',
+    },
+    {
+        id: '007',
+        title: 'Propzone',
+        type: 'youtube',
+        thumbnail: 'https://img.youtube.com/vi/VEOTMPZFtbc/hqdefault.jpg',
+        videoUrl: 'VEOTMPZFtbc',
+    },
+    {
+        id: '008',
+        title: 'Cityprop',
+        type: 'youtube',
+        thumbnail: 'https://img.youtube.com/vi/dRG5AXarqII/hqdefault.jpg',
+        videoUrl: 'dRG5AXarqII',
+    },
+    {
+        id: '009',
+        title: 'Cityprop',
+        type: 'youtube',
+        thumbnail: 'https://img.youtube.com/vi/h5wFxHRaoqk/hqdefault.jpg',
+        videoUrl: 'h5wFxHRaoqk',
     },
     {
         id: '08',
@@ -240,7 +261,7 @@ const portfolioItems: PortfolioItem[] = [
         videoUrl: 'v-5lj2KO6tE',
     },
     {
-        id: '15',
+        id: '16',
         title: 'Propzone',
         type: 'reel',
         thumbnail: 'https://img.youtube.com/vi/1gpw6RQQ5KQ/hqdefault.jpg',
@@ -376,7 +397,7 @@ export default function PortfolioPage() {
 
     return (
         // <div className='bg-gradient-to-b from-primary/5 via-background to-background min-h-screen'>
-        <div className='flex bg-[#fff] text-white px-12 pt-6'>
+        <div className='flex bg-[#fff] text-white px-12 pt-24'>
             <section className='container mx-auto py-16 px-4 sm:px-6 lg:px-8'>
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}

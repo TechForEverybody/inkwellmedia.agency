@@ -35,7 +35,7 @@ export default function PricingPage() {
     ];
 
     return (
-        <section className='relative flex items-center justify-between h-full bg-[#fff] text-white px-12 overflow-hidden'>
+        <section className='relative flex items-center justify-between h-full bg-[#fff] text-white px-12 py-24 overflow-hidden'>
             <div className='max-w-6xl mx-auto text-center'>
                 <h1 className='text-5xl mt-10 font-bold mb-8 text-[#fa8128] text-shadow-custom'>
                     Pricing Plans
@@ -82,6 +82,7 @@ export default function PricingPage() {
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
                                     className='w-full flex items-center justify-center space-x-2 px-6 py-3 text-lg font-semibold text-white border border-[#fa8128] rounded-lg hover:bg-[#fa8128] transition-all duration-300'
+                                    onClick={() => window.location.href = 'tel:+919172695325'}
                                 >
                                     <MessageSquare size={20} />
                                     <span>Contact Us</span>

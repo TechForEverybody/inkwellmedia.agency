@@ -35,7 +35,7 @@ export default function Navbar() {
                 >
                     {/* Floating Camera Icon */}
                     {/* <motion.div
-                        className='text-[#D72638]'
+                        className='text-[#fa8128]'
                         animate={{ y: [0, -10, 0], rotate: [0, 5, -5, 0] }}
                         transition={{
                             repeat: Infinity,
@@ -73,7 +73,7 @@ export default function Navbar() {
                             initial={{ opacity: 0, y: -10 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: index * 0.1 }}
-                            className='hover:text-[#D72638] transition-all duration-300'
+                            className='hover:text-[#fa8128] transition-all duration-300'
                         >
                             <Link
                                 href={
@@ -117,7 +117,7 @@ export default function Navbar() {
                                         ? '/'
                                         : `/${item.toLowerCase()}`
                                 }
-                                className='text-gray-200 text-lg hover:text-[#D72638] transition-all duration-300'
+                                className='text-gray-200 text-lg hover:text-[#fa8128] transition-all duration-300'
                                 onClick={() => setIsOpen(false)}
                             >
                                 {item}
