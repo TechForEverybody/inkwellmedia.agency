@@ -150,7 +150,7 @@ export default function Loader({
                                 duration: 3,
                             }}
                         >
-                            Creative Excellence
+                            Where imagination becomes reality
                         </motion.p>
                     </motion.div>
                 </div>

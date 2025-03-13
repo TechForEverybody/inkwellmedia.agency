@@ -78,7 +78,7 @@ export default function RootLayout({
             >
                 {loading && (
                     <Loader
-                        companyName='Inkwellmedia Agency'
+                        companyName='Inkwell Media'
                         loading={loading}
                         setLoading={setLoading}
                     />

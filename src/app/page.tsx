@@ -200,7 +200,7 @@ export default function HeroSection() {
                     transition={{ duration: 1 }}
                 >
                     <h1 className='text-[66px] font-bold mb-2 tracking-normal leading-tight'>
-                        Elevate Your Brand with {''}
+                        Grow Your Brand with {''}
                         <span className='text-[#fa8128]'>Creative Vision</span>
                     </h1>
                     <p className='text-lg text-gray-300 font-roboto-light tracking-wider max-w-lg text-center mx-auto'>

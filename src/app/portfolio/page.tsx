@@ -107,13 +107,15 @@ import {
     Youtube,
     Film,
     ExternalLink,
+    YoutubeIcon,
+    FilmIcon,
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import BrandsCarousel from '../components/carousel';
 
 // Define types for different video sources
-type VideoType = 'youtube' | 'reel' | 'custom';
+type VideoType = 'youtube' | 'shorts' | 'reel' | 'custom';
 
 interface PortfolioItem {
     id: string;
@@ -151,35 +153,35 @@ const portfolioItems: PortfolioItem[] = [
     {
         id: '03',
         title: 'Matrubhoomi Developers',
-        type: 'reel',
+        type: 'shorts',
         thumbnail: 'https://img.youtube.com/vi/-eBeMUjt5k0/hqdefault.jpg',
         videoUrl: '-eBeMUjt5k0',
     },
     {
         id: '04',
         title: 'Matrubhoomi Developers',
-        type: 'reel',
+        type: 'shorts',
         thumbnail: 'https://img.youtube.com/vi/pBQidJHykcY/hqdefault.jpg',
         videoUrl: 'pBQidJHykcY',
     },
     {
         id: '05',
         title: 'Matrubhoomi Developers',
-        type: 'reel',
+        type: 'shorts',
         thumbnail: 'https://img.youtube.com/vi/isivFDOGemY/hqdefault.jpg',
         videoUrl: 'isivFDOGemY',
     },
     {
         id: '06',
         title: 'Matrubhoomi Developers',
-        type: 'reel',
+        type: 'shorts',
         thumbnail: 'https://img.youtube.com/vi/zFL4Yeh_8Qc/hqdefault.jpg',
         videoUrl: 'zFL4Yeh_8Qc',
     },
     {
         id: '07',
         title: 'Matrubhoomi Developers',
-        type: 'reel',
+        type: 'shorts',
         thumbnail: 'https://img.youtube.com/vi/vqn5NRrcm6g/hqdefault.jpg',
         videoUrl: 'vqn5NRrcm6g',
     },
@@ -207,63 +209,63 @@ const portfolioItems: PortfolioItem[] = [
     {
         id: '08',
         title: 'Matrubhoomi Developers',
-        type: 'reel',
+        type: 'shorts',
         thumbnail: 'https://img.youtube.com/vi/BNWG7Nu0L1M/hqdefault.jpg',
         videoUrl: 'BNWG7Nu0L1M',
     },
     {
         id: '09',
         title: 'Matrubhoomi Developers',
-        type: 'reel',
+        type: 'shorts',
         thumbnail: 'https://img.youtube.com/vi/bnHKNPTXT6s/hqdefault.jpg',
         videoUrl: 'bnHKNPTXT6s',
     },
     {
         id: '10',
         title: 'Matrubhoomi Developers',
-        type: 'reel',
+        type: 'shorts',
         thumbnail: 'https://img.youtube.com/vi/jHP95mpSAmk/hqdefault.jpg',
         videoUrl: 'jHP95mpSAmk',
     },
     {
         id: '11',
         title: 'Matrubhoomi Developers',
-        type: 'reel',
+        type: 'shorts',
         thumbnail: 'https://img.youtube.com/vi/OvuRPvj4Q7c/hqdefault.jpg',
         videoUrl: 'OvuRPvj4Q7c',
     },
     {
         id: '12',
         title: 'Matrubhoomi Developers',
-        type: 'reel',
+        type: 'shorts',
         thumbnail: 'https://img.youtube.com/vi/4HsAAXdavIA/hqdefault.jpg',
         videoUrl: '4HsAAXdavIA',
     },
     {
         id: '13',
         title: 'Propzone',
-        type: 'reel',
+        type: 'shorts',
         thumbnail: 'https://img.youtube.com/vi/wjFY_h5R-s0/hqdefault.jpg',
         videoUrl: 'wjFY_h5R-s0',
     },
     {
         id: '14',
         title: 'Propzone',
-        type: 'reel',
+        type: 'shorts',
         thumbnail: 'https://img.youtube.com/vi/NPo7JnVoINk/hqdefault.jpg',
         videoUrl: 'NPo7JnVoINk',
     },
     {
         id: '15',
         title: 'Propzone',
-        type: 'reel',
+        type: 'shorts',
         thumbnail: 'https://img.youtube.com/vi/v-5lj2KO6tE/hqdefault.jpg',
         videoUrl: 'v-5lj2KO6tE',
     },
     {
         id: '16',
         title: 'Propzone',
-        type: 'reel',
+        type: 'shorts',
         thumbnail: 'https://img.youtube.com/vi/1gpw6RQQ5KQ/hqdefault.jpg',
         videoUrl: '1gpw6RQQ5KQ',
     },
@@ -350,6 +352,16 @@ export default function PortfolioPage() {
                         title={selectedItem.title}
                     />
                 );
+
+            case 'shorts':
+                return (
+                    <iframe
+                        src={`https://www.youtube.com/embed/${selectedItem.videoUrl}?autoplay=1&rel=0&modestbranding=1`}
+                        allow='autoplay; encrypted-media'
+                        className='w-full aspect-video rounded-lg shadow-xl'
+                        title={selectedItem.title}
+                    />
+                );
             case 'reel':
                 return (
                     <div className='flex flex-col items-center justify-center'>
@@ -388,6 +400,8 @@ export default function PortfolioPage() {
         switch (type) {
             case 'youtube':
                 return <Youtube className='h-5 w-5 text-red-600' />;
+            case 'shorts':
+                return <YoutubeIcon className='h-5 w-5 text-red-600' />;
             case 'reel':
                 return <Instagram className='h-5 w-5 text-pink-500' />;
             case 'custom':
@@ -438,6 +452,18 @@ export default function PortfolioPage() {
                     >
                         <Youtube size={16} />
                         YouTube
+                    </button>
+                    <button
+                        onClick={() => setFilter('shorts')}
+                        className={cn(
+                            'px-4 py-2 rounded-full text-sm font-medium transition-all flex items-center gap-2',
+                            filter === 'shorts'
+                                ? 'bg-red-600 text-white'
+                                : 'bg-white text-red-600 hover:bg-red-600/10'
+                        )}
+                    >
+                        <FilmIcon size={16} />
+                        Shorts
                     </button>
                     <button
                         onClick={() => setFilter('reel')}

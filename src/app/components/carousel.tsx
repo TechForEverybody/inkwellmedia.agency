@@ -22,7 +22,7 @@ export default function BrandsCarousel() {
         <div className='flex justify-center'>
             <div className='md:w-2/3 pt-10 bg-inherit overflow-hidden'>
                 <h2 className='text-center text-3xl font-bold text-[#fa8128] mb-8'>
-                    Trusted by leading brands
+                    Trusted By Leading Brands
                 </h2>
                 <div className='w-full overflow-hidden'>
                     <div className='scrolling-wrapper flex'>
