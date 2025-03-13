@@ -122,8 +122,8 @@ export default function Footer() {
                         <Twitter size={24} />
                     </a>
                     <a
-                        href='#'
-                        className='text-[#000433] hover:text-[#ff6600] transition-all'
+                        href='https://www.instagram.com/inkwellmediaa'
+                        className='text-[#ff6600] hover:text-[#000433] transition-all'
                     >
                         <Instagram size={24} />
                     </a>
@@ -137,7 +137,12 @@ export default function Footer() {
 
                 {/* Right - Call to Action */}
                 <div className='text-center md:text-right'>
-                    <button className='px-8 py-3 text-sm font-semibold text-white bg-[#000433] border border-[#000433] rounded-full shadow-lg hover:bg-[#ff6600] hover:border-[#ff6600] transition-all duration-300'>
+                    <button
+                        className='px-8 py-3 text-sm font-semibold text-white bg-[#000433] border border-[#000433] rounded-full shadow-lg hover:bg-[#ff6600] hover:border-[#ff6600] transition-all duration-300'
+                        onClick={() =>
+                            (window.location.href = 'tel:+919082531628')
+                        }
+                    >
                         Contact Us
                     </button>
                 </div>

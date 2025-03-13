@@ -61,7 +61,7 @@ export default function ContactPage() {
                         <div className='flex items-center space-x-4 mb-6'>
                             <Phone className='text-[#fa8128]' size={28} />
                             <p className='text-gray-300 text-lg'>
-                                +919172695325
+                                +919082531628
                             </p>
                         </div>
                         <div className='flex items-center space-x-4'>

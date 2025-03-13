@@ -11,7 +11,7 @@ import {
 
 const services = [
     {
-        name: 'Video Making',
+        name: 'Content Creation',
         icon: Camera,
         desc: 'High-quality video production to captivate your audience.',
     },
@@ -21,7 +21,7 @@ const services = [
         desc: "Grow your brand's presence with strategic social media campaigns.",
     },
     {
-        name: 'Content Management',
+        name: 'Video Production',
         icon: FileText,
         desc: 'Engaging content to keep your brand fresh and relevant.',
     },

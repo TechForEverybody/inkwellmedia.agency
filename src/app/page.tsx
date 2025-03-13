@@ -214,7 +214,7 @@ export default function HeroSection() {
                                 boxShadow: '0px 0px 20px #fa8128',
                             }}
                             onClick={() =>
-                                (window.location.href = 'tel:+919172695325')
+                                (window.location.href = 'tel:+919082531628')
                             }
                             whileTap={{ scale: 0.95 }}
                             className='mt-6 flex items-center justify-center px-3 md:px-6 py-3 text-sm md:text-lg font-semibold text-white backdrop-blur-lg border border-white/20 bg-[#fa8128] rounded-full shadow-lg transition-all duration-300 hover:bg-[#fa8128] hover:border-[#fa8128]'

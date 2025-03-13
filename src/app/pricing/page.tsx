@@ -82,7 +82,10 @@ export default function PricingPage() {
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
                                     className='w-full flex items-center justify-center space-x-2 px-6 py-3 text-lg font-semibold text-white border border-[#fa8128] rounded-lg hover:bg-[#fa8128] transition-all duration-300'
-                                    onClick={() => window.location.href = 'tel:+919172695325'}
+                                    onClick={() =>
+                                        (window.location.href =
+                                            'tel:+919082531628')
+                                    }
                                 >
                                     <MessageSquare size={20} />
                                     <span>Contact Us</span>
