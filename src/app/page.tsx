@@ -187,11 +187,11 @@ export default function HeroSection() {
         // <section className='relative flex items-center justify-between h-screen bg-[#0b344a] text-white px-12 overflow-hidden'>
         //     {/* Grid Background */}
         <>
-            <section className='relative flex items-center justify-center h-screen bg-[#000433] text-white px-12 overflow-hidden pt-10 md:pt-0'>
+            <section className='relative flex items-center justify-center h-screen bg-[#000433] text-white px-6 md:px-12 overflow-hidden py-24 md:py-0'>
                 {/* Grid Background */}
                 {/* <div className='absolute inset-0 bg-[url(/grid.svg)] opacity-20'></div> */}
 
-                <div className='absolute z-0 mix-blend-multiply h-screen w-screen bg-cover inset-0 bg-[url(/grid-black.jpg)] opacity-20'></div>
+                <div className='absolute z-0 mix-blend-screen h-screen w-screen bg-cover inset-0 bg-[url(/grid-black.jpg)] opacity-20'></div>
                 {/* Left Content */}
                 <motion.div
                     className='text-center max-w-4xl'
@@ -207,7 +207,7 @@ export default function HeroSection() {
                         We craft stunning, high-converting advertisements that
                         make your brand shine.
                     </p>
-                    <div className='flex justify-between max-w-sm mx-auto mt-2'>
+                    <div className='flex justify-evenly md:justify-between max-w-sm mx-auto mt-2'>
                         <motion.button
                             whileHover={{
                                 scale: 1.1,
