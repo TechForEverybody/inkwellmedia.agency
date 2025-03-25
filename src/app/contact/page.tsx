@@ -19,17 +19,30 @@ export default function ContactPage() {
         setLoading(true);
         setSuccess(false);
 
-        const response = await fetch('/api/contact', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(form),
-        });
+        try {
+            const response = await fetch('/api/email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(form),
+            });
 
-        if (response.ok) {
-            setSuccess(true);
-            setForm({ name: '', email: '', message: '' });
+            const data = await response.json();
+
+            if (response.ok) {
+                setSuccess(true);
+                setForm({ name: '', email: '', message: '' });
+            } else {
+                console.error('Error:', data.error);
+                alert('Failed to send message. Please try again later.');
+            }
+        } catch (error) {
+            console.error('Network error:', error);
+            alert('Network error. Please check your connection and try again.');
+        } finally {
+            setLoading(false);
         }
-        setLoading(false);
     };
 
     return (

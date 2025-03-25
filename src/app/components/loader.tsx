@@ -42,7 +42,7 @@ export default function Loader({
     return (
         <div className='fixed inset-0 w-full flex flex-col items-center justify-center h-full bg-[#000433] z-50 text-white overflow-hidden'>
             {/* Animated background elements */}
-            <div className='absolute z-0 mix-blend-multiply h-screen w-screen bg-cover inset-0 bg-[url(/grid-black.jpg)] opacity-20'></div>
+            {/* <div className='absolute z-0 mix-blend-screen h-screen w-screen bg-cover inset-0 bg-[url(/grid-black.jpg)] opacity-20'></div> */}
             <div className='absolute inset-0 overflow-hidden'>
                 {[...Array(20)].map((_, i) => (
                     <motion.div

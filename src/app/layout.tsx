@@ -7,6 +7,7 @@ import Navbar from './components/navbar';
 import Footer from './components/footer';
 import { useState } from 'react';
 import Loader from './components/loader';
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 const geistSans = Geist({
     variable: '--font-geist-sans',
@@ -46,7 +47,7 @@ export default function RootLayout({
                 />
                 <meta
                     name='keywords'
-                    content='Ad Making Agency, Media Solutions, Advertising, Marketing, Creative Agency'
+                    content='Ad Making Agency, Media Solutions, Advertising, Marketing, Creative Agency, Ad making agency in mumbai, Advertising agency in mumbai, Media solutions in mumbai, Social media management in mumbai, Digital marketing in mumbai, Creative agency in mumbai, Ad making agency in india, Advertising agency in india, Media solutions in india, Social media management in india, Digital marketing in india, Creative agency in india, social media management, digital marketing, creative agency, ad making, advertising agency, media solutions, mumbai, india, Pune'
                 />
                 <meta name='author' content='Inkwellmedia Agency' />
                 <meta
@@ -57,10 +58,10 @@ export default function RootLayout({
                     property='og:description'
                     content='Inkwellmedia Agency - Your trusted partner in media solutions and ad making.'
                 />
-                <meta property='og:image' content='/path/to/your/image.jpg' />
+                <meta property='og:image' content='/logo.jpg' />
                 <meta
                     property='og:url'
-                    content='https://www.inkwellmedia.com'
+                    content='https://inkwellmedia.agency/'
                 />
                 <meta name='twitter:card' content='summary_large_image' />
                 <meta
@@ -71,11 +72,12 @@ export default function RootLayout({
                     name='twitter:description'
                     content='Inkwellmedia Agency - Your trusted partner in media solutions and ad making.'
                 />
-                <meta name='twitter:image' content='/path/to/your/image.jpg' />
+                <meta name='twitter:image' content='/logo.jpg' />
             </head>
             <body
                 className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#1B1B1B]`}
             >
+                <GoogleAnalytics gaId="G-Q9Y6TN3605" />
                 {loading && (
                     <Loader
                         companyName='Inkwell Media'

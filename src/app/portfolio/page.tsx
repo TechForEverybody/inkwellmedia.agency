@@ -287,7 +287,7 @@ const portfolioItems: PortfolioItem[] = [
         id: '3',
         title: 'Inkwellmedia Agency',
         type: 'reel',
-        thumbnail: '/placeholder.svg?height=270&width=480',
+        thumbnail: '/logo.jpg?height=270&width=480',
         videoUrl: 'https://www.instagram.com/reel/DGnGamVNVLD/',
     },
     {
