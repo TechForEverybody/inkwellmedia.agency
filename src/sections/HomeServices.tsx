@@ -87,7 +87,7 @@ const HomeServices: React.FC = () => (
         viewport={{ once: true }}
         variants={containerVariants}
       >
-        {servicesData.map((svc, idx) => (
+        {servicesData.map((svc) => (
           <motion.div
             key={svc.id}
             className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl p-6 flex flex-col"
