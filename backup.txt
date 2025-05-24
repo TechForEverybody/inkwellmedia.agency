@@ -1,0 +1,46 @@
+const servicesData: Service[] = [
+  {
+    id: 'content',
+    title: 'Content Creation',
+    Icon: InsertDriveFileIcon,
+    description: `In today’s attention economy, fresh, relevant content is the fuel that drives audience engagement and brand growth. At Inkwell Media, our Content Creation service goes far beyond basic scripting and filming. We begin with a deep-dive workshop to understand your brand’s voice, values, and target demographics. From there, our team of writers, directors, and cinematographers collaborate to craft storyboards and shot lists that align with your marketing goals—whether it’s educating prospects, sparking social conversations, or establishing thought leadership.
+
+Once on set, we employ industry-leading cameras, lighting rigs, and audio capture setups to produce crisp, cinematic footage. Post-production is where the magic truly happens: our editors weave in motion graphics, kinetic typography, and custom sound design to deepen emotional impact and reinforce your key messages. Then we optimize each video asset—long-form explainers, medium-length promos, or ultra-short social clips—to perform natively on YouTube, Instagram, LinkedIn, and TikTok. 
+
+The result? A cohesive library of content that not only resonates with your audience but also boosts SEO, drives website traffic, and cultivates brand loyalty over time. Whether you need an evergreen “About Us” feature, a weekly social series, or a viral-friendly reel, our end-to-end Content Creation service ensures your brand stays fresh, authentic, and top-of-mind across every digital channel.`,
+    tags: ['#Storytelling', '#Videography', '#Cinematic'],
+  },
+  {
+    id: 'social',
+    title: 'Social Media Management',
+    Icon: ShareIcon,
+    description: `On social media, consistency and strategy are everything. Our Social Media Management service is designed to grow your brand’s presence with targeted campaigns, community engagement, and performance analytics. We start by auditing your current profiles—analyzing follower demographics, posting cadence, and engagement metrics. Next, we develop a custom content calendar that blends eye-catching graphics, on-brand video snippets, and data-driven hashtags to maximize reach and shares.
+
+Every piece of content is crafted with platform best practices in mind: whether it’s a carousel post on LinkedIn, a Reel on Instagram, or a short-form video on TikTok. We write compelling captions, schedule posts at optimal times, and actively monitor comments and direct messages to foster real conversations with your audience. 
+
+But we don’t stop at posting—we continually A/B test visuals and copy, track click-through rates, and tweak targeting parameters on paid campaigns to ensure every dollar you spend yields measurable ROI. Monthly reports summarize key insights—follower growth, engagement rate, and top-performing posts—so you always know what’s working. With our Social Media Management service, your brand will cut through the noise, build a loyal community, and turn followers into customers.`,
+    tags: ['#Engagement', '#Analytics', '#Growth'],
+  },
+  {
+    id: 'video',
+    title: 'Video Production',
+    Icon: VideoLibraryIcon,
+    description: `High-quality video remains the most powerful medium to tell your story, influence emotions, and drive action. Our Video Production service covers every stage of the process, giving you a seamless, single-vendor solution from concept to final delivery. We begin with a collaborative idea session—brainstorming creative hooks, narrative arcs, and visual styles that align with your brand identity and campaign objectives.
+
+In pre-production, we handle casting, location scouting, set design, and shot scheduling, ensuring that every logistical detail is covered. On shoot day, our seasoned directors and cinematographers capture footage using 4K+ cameras, gimbals, drones, and professional lighting setups to achieve a signature cinematic look. 
+
+Post-production brings your story to life: editors cut raw footage into polished narratives, colorists apply consistent grading for mood and tone, and motion-graphics artists add animated titles and brand elements. We also integrate licensed music, voice-overs, and sound effects to craft a rich audio experience. Finally, we encode your videos in multiple formats—1080p, 4K, vertical, square—optimized for websites, social platforms, and broadcast. Whether you’re launching a commercial, internal training video, or documentary, our Video Production service delivers captivating visual experiences that engage, inform, and convert.`,
+    tags: ['#4K', '#Cinematic', '#Broadcast'],
+  },
+  {
+    id: 'consultation',
+    title: 'Consultation',
+    Icon: SupportAgentIcon,
+    description: `Effective media campaigns begin with strategy. Our Consultation service pairs you with senior producers and digital marketing experts who analyze your current assets, market positioning, and competitive landscape. We conduct stakeholder interviews, review performance data, and benchmark industry trends to identify high-impact opportunities.
+
+You’ll receive a comprehensive consultation report that outlines clear recommendations—content pillars, distribution channels, budget allocation, and campaign KPIs. We’ll map out a 3-, 6-, and 12-month roadmap, detailing deliverables, timelines, and metrics for success. 
+
+Post-consultation, we stay by your side: our team offers hands-on workshops for your in-house staff, one-on-one training sessions on video editing tools and social ad platforms, and quarterly strategy refresh calls to adapt to market changes. Whether you’re a fledgling startup or a Fortune 500 brand, our Consultation service ensures you have the expert guidance and actionable insights needed to grow and scale your media efforts effectively and efficiently.`,
+    tags: ['#Strategy', '#Roadmap', '#Workshops'],
+  },
+];

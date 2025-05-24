@@ -1,255 +1,180 @@
-// components/ServiceExplainer.tsx
+// components/ServicesFullContent.tsx
 import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Button from '@mui/material/Button';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-import HomeWorkIcon from '@mui/icons-material/HomeWork';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
-import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
-import PublicIcon from '@mui/icons-material/Public';
+import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile';
+import ShareIcon from '@mui/icons-material/Share';
 import VideoLibraryIcon from '@mui/icons-material/VideoLibrary';
-import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
-import SchoolIcon from '@mui/icons-material/School';
-import GroupIcon from '@mui/icons-material/Group';
-import Image from 'next/image';
+import SupportAgentIcon from '@mui/icons-material/SupportAgent';
 
-interface ServiceExplainerItem {
+interface ServiceItem {
     title: string;
     description: string;
     features: string[];
     tags: string[];
     Icon: React.ComponentType<any>;
-    image: string;
 }
 
-const servicesExplainer: ServiceExplainerItem[] = [
+const services: ServiceItem[] = [
     {
-        title: 'Real Estate',
-        description:
-            'In today’s competitive property market, video walkthroughs and location explainers aren’t just nice to have—they’re essential. A cinematic property tour immerses prospective buyers in the space, letting them explore every corner from the comfort of their phone or laptop. Investor-pitch videos combine high-energy editing with data-driven visuals to articulate ROI and neighborhood trends. And detailed connectivity explainers visually map transit, schools, and amenities, giving buyers confidence in both the home and its surroundings. Together, these assets accelerate decision-making, shorten sales cycles, and elevate your brand above static listings.',
+        title: 'Content Creation',
+        description: `Transform ideas into captivating stories with our end-to-end Content Creation. We start by defining your brand voice and target audience, then develop storyboards and shot lists tailored to your objectives. On set, we capture 4K footage with professional lighting and audio. In post-production, our editors add motion graphics, sound design, and color grading to produce versatile assets—long-form explainers, social clips, and promotional reels—optimized for YouTube, Instagram, and TikTok.`,
         features: [
-            'Cinematic Property Tours',
-            'Investor-Ready Pitches',
-            'Geo-Map Explainers',
+            'Brand Voice Workshops',
+            '4K Filming & Audio Capture',
+            'Motion Graphics & Color Grading',
         ],
-        tags: ['#RealEstate', '#Walkthrough', '#Explainers'],
-        Icon: HomeWorkIcon,
-        image: '/images/paper-style-building-with-people.png',
+        tags: ['#Storytelling', '#Videography', '#SocialContent'],
+        Icon: InsertDriveFileIcon,
     },
     {
-        title: 'E-commerce',
-        description:
-            'Online shoppers demand rich, interactive experiences that go beyond still photos. Polished product demo videos highlight features, build trust through close-up details, and reduce returns by setting clear expectations. Authentic customer testimonial reels—filmed, edited, and color-graded for maximum impact—leverage real voices to overcome skepticism. Finally, bite-sized promotional clips optimized for social platforms combine motion graphics and sound design to capture attention in the first three seconds. These videos drive click-throughs, boost conversion rates, and power viral campaigns across Instagram, Facebook, and YouTube Shorts.',
+        title: 'Social Media Management',
+        description: `Amplify your online presence with our Social Media Management. We audit your profiles, craft a data-driven content calendar, and produce engaging posts—carousels, Reels, and Stories—designed for each platform. Our team schedules at peak times, monitors engagement, and responds to your audience in real time. Through A/B testing and analytics, we refine visuals, copy, and targeting to boost follower growth, engagement rates, and ROI, turning passive viewers into loyal customers.`,
         features: [
-            'Product Demo Videos',
-            'Customer Testimonials',
-            'Promotional Reels',
+            'Data-Driven Content Calendars',
+            'Real-Time Community Engagement',
+            'A/B Testing & Performance Reports',
         ],
-        tags: ['#Ecommerce', '#Demo', '#Reels'],
-        Icon: ShoppingCartIcon,
-        image: '/images/ecommerce.png',
+        tags: ['#Engagement', '#Analytics', '#Growth'],
+        Icon: ShareIcon,
     },
     {
-        title: 'Corporate',
-        description:
-            'Large organizations need consistent, professional content to train teams, profile leadership, and document live events. Our staff-training modules blend on-screen talent with animated overlays to simplify complex processes and reduce onboarding time. Executive profile films showcase your leadership’s vision and humanize your brand for internal and external audiences. During conferences, trade shows, and town halls, we capture every keynote, panel discussion, and networking moment with multi-camera setups, then deliver highlight reels that extend your event’s reach well beyond the venue.',
+        title: 'Video Production',
+        description: `Our Video Production service delivers broadcast-quality films, commercials, and training modules. We guide you from concept through final delivery: ideation workshops, location scouting, multi-camera 4K shoots with drones and stabilizers, and professional lighting setups. In post, we edit tight narratives, add animated titles, licensed music, and sound effects. Finally, we encode formats for web, social, and live events. The result is a polished visual experience that captivates and converts.`,
         features: [
-            'Staff Training Modules',
-            'Executive Profiles',
-            'Live Event Coverage',
+            'Concept & Pre-Production',
+            '4K Multi-Camera Shoots',
+            'Editing, Graphics & Sound Design',
         ],
-        tags: ['#Corporate', '#Training', '#Events'],
-        Icon: BusinessCenterIcon,
-        image: '/images/managers-are-discussing-business-issues.png',
-    },
-    {
-        title: 'Startups',
-        description:
-            'A startup’s first video can set the tone for its entire brand. Our launch films craft compelling narratives around your founding story, product benefits, and vision—complete with motion design and original music. We then repurpose that footage into social-friendly clips, infusing platform-specific hooks and captions to maximize shareability. Targeted ads leverage A/B tested thumbnails and call-to-action overlays, ensuring every dollar spent on paid campaigns delivers measurable ROI. This end-to-end approach positions you as both innovative and professional from day one.',
-        features: ['Brand Launch Films', 'Social Media Clips', 'Targeted Ads'],
-        tags: ['#Startups', '#BrandLaunch', '#Social'],
-        Icon: RocketLaunchIcon,
-        image: '/images/laptop-with-connectivity-5g-tech.png',
-    },
-    {
-        title: 'NGOs & Government',
-        description:
-            'Non-profits and public agencies rely on video to educate, inspire, and mobilize communities. Our awareness campaigns pair emotive storytelling with clear statistics, leveraging on-camera interviews and animated infographics. For informational videos—whether explaining new regulations or promoting public health measures—we combine motion graphics with live-action b-roll to maintain engagement and clarity. We ensure all messaging aligns with accessibility standards and can be subtitled or dubbed for multilingual reach, maximizing both impact and compliance.',
-        features: ['Awareness Campaigns', 'Educational Videos', 'Policy Explainers'],
-        tags: ['#NGO', '#Awareness', '#Info'],
-        Icon: PublicIcon,
-        image: '/images/ngo.png',
-    },
-    {
-        title: 'Content Creators',
-        description:
-            'Whether you’re a budding YouTuber or established influencer, polished editing and on-shoot support can transform raw footage into professional content. We handle multi-angle synchronization, color grading, and sound mixing, freeing you to focus on creativity. On-set assistance covers lighting setups, camera operation, and pro tips for engaging delivery. Post-production turnaround times are optimized to keep your upload schedule tight, helping you build audience trust and platform momentum with consistent, high-quality videos.',
-        features: ['Video Editing', 'On-Set Assistance', 'Post-Production'],
-        tags: ['#Creators', '#Editing', '#Support'],
+        tags: ['#4K', '#Cinematic', '#Broadcast'],
         Icon: VideoLibraryIcon,
-        image: '/images/hand-drawn-male-reporter-character-flat-style-isolated-background.png',
     },
     {
-        title: 'Healthcare',
-        description:
-            'Medical facilities and practitioners need clear, trustworthy video guides—for patients and staff alike. Our patient education series breaks down procedures, post-op care, and wellness tips using friendly presenters and simple graphics. Clinic walkthroughs highlight safety protocols, facility features, and wayfinding, improving patient comfort and reducing no-shows. Staff training modules cover equipment operation, emergency drills, and compliance topics, delivered in bite-sized segments that can be revisited on demand—enhancing retention and improving patient outcomes.',
-        features: ['Patient Education', 'Clinic Tours', 'Staff Training Videos'],
-        tags: ['#Healthcare', '#PatientCare', '#Training'],
-        Icon: LocalHospitalIcon,
-        image: '/images/digital-health-concept.png',
-    },
-    {
-        title: 'Education',
-        description:
-            'From K-12 to higher ed, institutions succeed by showcasing their campuses and programs. We produce immersive campus tours—complete with drone aerials and interactive maps—to attract out-of-state and international students. Course introduction videos pair subject-matter experts with animated callouts, giving prospects a sneak peek at your curriculum. For recruitment campaigns, we craft short-form reels optimized for TikTok and Instagram Stories, leveraging authentic student testimonials to drive inquiries and applications.',
-        features: ['Campus Tours', 'Course Intros', 'Promo Reels'],
-        tags: ['#Education', '#Campus', '#Courses'],
-        Icon: SchoolIcon,
-        image: '/images/Education.png',
-    },
-    {
-        title: 'Agencies',
-        description:
-            'Advertising and creative agencies often need white-label production partners to scale client work. We slot seamlessly into your workflow, delivering everything from sizzle reels and brand films to product showcase videos. Our team adapts to your style guides, pitch decks, and client briefs—providing raw footage, rough cuts, and final masters under NDA as required. This flexibility lets you expand your service offerings without the overhead of in-house production, all while maintaining consistent quality and turnaround.',
-        features: ['White-Label Services', 'Custom Campaigns', 'Brand Management'],
-        tags: ['#Agencies', '#WhiteLabel', '#Creative'],
-        Icon: GroupIcon,
-        image: '/images/agencies.png',
+        title: 'Consultation',
+        description: `Get expert guidance with our Consultation service. We audit your existing content, interview stakeholders, and analyze market trends to craft a bespoke media strategy. Your deliverables include content roadmaps, channel recommendations, budget plans, and KPIs. We also offer hands-on workshops, training sessions, and quarterly reviews to keep your campaigns agile. Whether you’re scaling a startup or refining enterprise workflows, our consults ensure measurable growth and sustainable success.`,
+        features: [
+            'Asset Audits & Stakeholder Interviews',
+            'Strategic Roadmaps & KPIs',
+            'Workshops & Quarterly Reviews',
+        ],
+        tags: ['#Strategy', '#Roadmap', '#Workshops'],
+        Icon: SupportAgentIcon,
     },
 ];
 
-const itemVariants = {
-    hidden: { opacity: 0, y: 50 },
+const sectionVariant = {
+    hidden: { opacity: 0, y: 40 },
     visible: (i: number) => ({
         opacity: 1,
         y: 0,
-        transition: { delay: i * 0.1, duration: 0.7, ease: 'easeOut' },
+        transition: { delay: i * 0.3, duration: 0.8, ease: 'easeOut' },
     }),
 };
 
-const ServiceExplainer: React.FC = () => {
+const ServicesFullContent: React.FC = () => {
     return (
-        <section className="py-20 " style={{ background: 'radial-gradient(to left, #4E1C50, #000)' }}>
-            <div className="container mx-auto px-4">
-                {/* Section Header */}
-                <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-bold text-white">
-                        Comprehensive Service Suite
-                    </h2>
-                    <p className="mt-4 text-white/75 max-w-2xl mx-auto">
-                        From real estate walkthroughs to corporate training and social content, each of our services is tailored for maximum impact in today’s market.
-                    </p>
-                </div>
-
-                {/* Service Blocks */}
-                <div className="space-y-16">
-                    {servicesExplainer.map((svc, idx) => {
-                        const IconComponent = svc.Icon;
-                        const isReversed = idx % 2 === 1;
-                        return (
-                            <motion.div
-                                key={svc.title}
-                                className="relative overflow-hidden"
-                                custom={idx}
-                                initial="hidden"
-                                whileInView="visible"
-                                viewport={{ once: true, amount: 0 }}
-                                variants={itemVariants}
+        <section className="py-24 ">
+            <div className="container mx-auto px-4 space-y-20">
+                {services.map((svc, idx) => {
+                    const IconComponent = svc.Icon;
+                    const isReversed = idx % 2 === 1;
+                    return (
+                        <motion.div
+                            key={svc.title}
+                            className="relative"
+                            custom={idx}
+                            variants={sectionVariant}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.3 }}
+                        >
+                            <div
+                                className={`flex flex-col lg:flex-row items-center gap-12 ${isReversed ? 'lg:flex-row-reverse' : ''
+                                    }`}
                             >
-                                <div
-                                    className={`flex flex-col lg:flex-row items-center gap-8 ${isReversed ? 'lg:flex-row-reverse' : ''
-                                        }`}
-                                >
-                                    {/* Text Content */}
-                                    <div className="lg:w-2/3 bg-[#8E24AA] rounded-2xl p-8 space-y-6 relative z-10">
-                                        {/* Watermark Icon */}
-                                        <IconComponent
-                                            className="absolute top-4 right-4 text-white opacity-5 text-9xl"
-                                        />
+                                {/* Text & Features */}
+                                <div className="lg:w-1/2 bg-[#9C27B0] rounded-2xl p-10 relative z-10 shadow-2xl overflow-hidden">
+                                    {/* Decorative Blob */}
+                                    <motion.div
+                                        className="absolute -top-8 -left-8 w-24 h-24 bg-gradient-to-br from-[#FF6A3D] to-[#4E1C50] rounded-full opacity-80"
+                                        animate={{ rotate: [0, 360] }}
+                                        transition={{ loop: Infinity, duration: 20, ease: 'linear' }}
+                                    />
 
-                                        <h3 className="text-2xl font-semibold text-white">
-                                            {svc.title}
-                                        </h3>
-                                        <p className="text-white/80">{svc.description}</p>
+                                    <h3 className="text-3xl font-bold text-white mb-4">
+                                        {svc.title}
+                                    </h3>
+                                    <p className="text-white/80 mb-6">{svc.description}</p>
 
-                                        <div className="flex items-start justify-between gap-8">
-                                            {/* Features List */}
-                                            <ul className="space-y-2 flex-1">
-                                                {svc.features.map((feat) => (
-                                                    <li
-                                                        key={feat}
-                                                        className="flex items-center gap-3 text-white/90"
-                                                    >
-                                                        <CheckCircleIcon className="text-[#FF6A3D]" />
-                                                        <span>{feat}</span>
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                            {/* Service Icon */}
-                                            <IconComponent className="text-[#FF6A3D] text-6xl opacity-90" />
-                                        </div>
-
-                                        {/* Tags */}
-                                        <div className="flex flex-wrap gap-2">
-                                            {svc.tags.map((tag) => (
-                                                <span
-                                                    key={tag}
-                                                    className="text-sm bg-[#FF6A3D]/20 text-white px-3 py-1 rounded-full"
+                                    <div className="flex items-start justify-between mb-6">
+                                        <ul className="space-y-3 flex-1">
+                                            {svc.features.map((f) => (
+                                                <li
+                                                    key={f}
+                                                    className="flex items-center gap-3 text-white/90"
                                                 >
-                                                    {tag}
-                                                </span>
+                                                    <CheckCircleIcon className="text-[#FF6A3D]" />{' '}
+                                                    <span>{f}</span>
+                                                </li>
                                             ))}
-                                        </div>
+                                        </ul>
+                                        <IconComponent className="text-[#FF6A3D] text-7xl opacity-90" />
+                                    </div>
 
-                                        {/* Contact Now Button */}
-                                        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                                            <Button
-                                                component={Link}
-                                                href="/contact-us"
-                                                variant="contained"
-                                                sx={{
-                                                    mt: 4,
-                                                    background: 'linear-gradient(135deg, #FF6A3D 0%, #4E1C50 100%)',
-                                                    color: '#fff',
-                                                    py: 1.5,
-                                                    px: 5,
-                                                    borderRadius: '9999px',
-                                                    boxShadow: '0 5px 15px rgba(0,0,0,0.3)',
-                                                }}
+                                    <div className="flex flex-wrap gap-3 mb-8">
+                                        {svc.tags.map((tag) => (
+                                            <span
+                                                key={tag}
+                                                className="text-sm bg-[#FF6A3D]/20 text-white px-4 py-1 rounded-full"
                                             >
-                                                Contact Now
-                                            </Button>
-                                        </motion.div>
+                                                {tag}
+                                            </span>
+                                        ))}
                                     </div>
 
-                                    {/* Image */}
-                                    <div className="lg:w-1/3 w-full h-full relative sm:hidden md:block">
-                                        <Image
-                                            src={svc.image}
-                                            alt={`${svc.title} illustration`}
-                                            width={500}
-                                            height={400}
-                                            objectFit="contain"
-                                            className="rounded-lg shadow-xl"
-                                        />
-                                        {/* Decorative overlay */}
-                                        <motion.div
-                                            className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent pointer-events-none"
-                                            initial={{ opacity: 0 }}
-                                            whileHover={{ opacity: 1 }}
-                                            transition={{ duration: 1 }}
-                                        />
-                                    </div>
+                                    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                                        <Button
+                                            component={Link}
+                                            href="/contact-us"
+                                            variant="contained"
+                                            sx={{
+                                                background:
+                                                    'linear-gradient(135deg, #FF6A3D 0%, #4E1C50 100%)',
+                                                color: '#fff',
+                                                py: 1.5,
+                                                px: 5,
+                                                borderRadius: '9999px',
+                                                boxShadow: '0 5px 15px rgba(0,0,0,0.4)',
+                                            }}
+                                        >
+                                            Contact Now
+                                        </Button>
+                                    </motion.div>
                                 </div>
-                            </motion.div>
-                        );
-                    })}
-                </div>
+
+                                {/* Graphical Creative Structure */}
+                                <div className="lg:w-1/2 w-full h-80 relative flex items-center justify-center">
+                                    <motion.div
+                                        className="w-64 h-64 bg-gradient-to-tr from-[#FF6A3D]/50 to-[#4E1C50]/50 rounded-2xl"
+                                        initial={{ scale: 0.8, rotate: -10 }}
+                                        animate={{ scale: 1, rotate: 0 }}
+                                        transition={{ duration: 0.8, ease: 'easeOut' }}
+                                    />
+                                    <motion.div
+                                        className="absolute w-48 h-48 bg-white/10 rounded-full mix-blend-screen"
+                                        animate={{ x: [0, 20, 0], y: [0, -20, 0] }}
+                                        transition={{ repeat: Infinity, duration: 6, ease: 'easeInOut' }}
+                                    />
+                                </div>
+                            </div>
+                        </motion.div>
+                    );
+                })}
             </div>
         </section>
     );
 };
 
-export default ServiceExplainer;
+export default ServicesFullContent;

@@ -62,7 +62,7 @@ const Header: React.FC = () => {
             <Box className="mt-auto">
                 <Button
                     component={Link}
-                    href="/contact"
+                    href="/contact-us"
                     variant="contained"
                     fullWidth
                     className="bg-accent hover:bg-accent-dark text-white rounded-full py-2"
@@ -157,7 +157,7 @@ const Header: React.FC = () => {
                         >
                             <Button
                                 component={Link}
-                                href="/contact"
+                                href="/contact-us"
                                 variant="contained"
                                 color='secondary'
                                 className="bg-accent hover:bg-accent-dark text-white rounded-full px-6 py-2 shadow-lg"

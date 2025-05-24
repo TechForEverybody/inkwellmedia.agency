@@ -13,7 +13,7 @@ import Button from '@mui/material/Button';
 import Link from 'next/link';
 
 // Service data with extended descriptions and tags
-const servicesData = [
+const TargetAudienceData = [
     {
         title: 'Real Estate',
         icon: HomeWorkIcon,
@@ -79,7 +79,7 @@ const servicesData = [
     },
 ];
 
-const HomeServices: React.FC = () => {
+const HomeTargetAudience: React.FC = () => {
     return (
         <section
             className="py-16"
@@ -91,16 +91,16 @@ const HomeServices: React.FC = () => {
                 {/* Heading with side lines */}
                 <div className="flex items-center justify-center mb-6">
                     <div className="h-1 w-16 bg-accent mx-4"></div>
-                    <h2 className="text-3xl md:text-4xl font-bold text-white">Services</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold text-white">Target Audience</h2>
                     <div className="h-1 w-16 bg-accent mx-4"></div>
                 </div>
-                <p className="text-center text-gray-300 max-w-xl mx-auto mb-12">
-                    Explore our comprehensive video production services, each tailored with precision to your industry’s unique needs.
+                <p className="text-center text-gray-300 max-w-7xl mx-auto mb-12">
+                    Our end-to-end service suite adapts to the unique needs of each audience—delivering tailored storytelling, data-driven strategies, and production values that resonate with your customers, stakeholders, and communities. Whether you’re targeting homebuyers in Mumbai, global e-commerce shoppers, or students around the world, Inkwell Media crafts every frame to speak directly to your market
                 </p>
 
                 {/* Service Cards */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {servicesData.map((service, idx) => {
+                    {TargetAudienceData.map((service, idx) => {
                         const Icon = service.icon;
                         // Random off-screen start positions
                         const initialX = (Math.random() < 0.5 ? -1 : 1) * (Math.random() * 1200 + 200);
@@ -131,7 +131,7 @@ const HomeServices: React.FC = () => {
                                         </span>
                                     ))}
                                 </div>
-                                <Link href="#contact" passHref>
+                                <Link href="/why-us" passHref>
                                     <Button
                                         variant="contained"
                                         color="secondary"
@@ -149,4 +149,4 @@ const HomeServices: React.FC = () => {
     );
 };
 
-export default HomeServices;
+export default HomeTargetAudience
