@@ -20,9 +20,9 @@ function HomePage() {
       <HomeHero />
       <HomeServices/>
       <HomeConcept />
+      <VariousTypes />
       <HomePortfolio />
       <HeroTargetAudience />
-      <VariousTypes />
       <Testimonials />
       <FAQ />
       <Asker />

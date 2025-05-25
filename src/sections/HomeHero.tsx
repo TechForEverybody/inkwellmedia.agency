@@ -5,6 +5,7 @@ import Link from 'next/link';
 import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
 import PhoneCallbackIcon from '@mui/icons-material/PhoneCallback';
 import { Typography } from '@mui/material';
+import SlotCounter from 'react-slot-counter';
 
 const HomeHero: React.FC = () => {
   return (
@@ -55,6 +56,35 @@ const HomeHero: React.FC = () => {
               production—whether you’re selling real estate, launching a
               startup, or sharing your brand story.
             </motion.p>
+            <motion.p
+              initial={{ y: 40, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.4, duration: 0.8 }}
+              className="text-lg md:text-xl max-w-md"
+            >
+              <Button color='secondary' style={{
+                backgroundColor: '#00000055', borderRadius: '9999px', padding: '12px 24px', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+                textTransform: 'none', fontSize: '1rem', fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: '8px',
+              }}>
+
+                <span className='md:text-3xl px-2'><SlotCounter value={1000} /></span>+ Videos
+              </Button>
+            </motion.p>
+            <motion.p
+              initial={{ y: 40, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.4, duration: 0.8 }}
+              className="text-lg md:text-xl max-w-md"
+            >
+              
+              <Button color='secondary' style={{
+                backgroundColor: '#00000055', borderRadius: '9999px', padding: '12px 24px', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+                textTransform: 'none', fontSize: '1rem', fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: '8px',
+              }}>
+
+              <span className='md:text-4xl px-2'><SlotCounter value={10000000} /></span>+ Views on video
+              </Button>
+            </motion.p>
 
             <motion.div
               initial={{ scale: 0.8, opacity: 0 }}
@@ -62,7 +92,7 @@ const HomeHero: React.FC = () => {
               transition={{ delay: 0.6, type: 'spring', stiffness: 120 }}
               className="flex flex-col sm:flex-row gap-6"
             >
-              <Link href="/contact" passHref>
+              <Link href="/contact-us" passHref>
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                   <Button
                     startIcon={<RocketLaunchIcon />}
@@ -75,7 +105,7 @@ const HomeHero: React.FC = () => {
                 </motion.div>
               </Link>
 
-              <Link href="/contact#callback" passHref>
+              <Link href="/contact-us" passHref>
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                   <Button
                     startIcon={<PhoneCallbackIcon />}

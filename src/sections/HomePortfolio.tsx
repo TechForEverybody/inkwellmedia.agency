@@ -135,7 +135,7 @@ function VideoCard({ item, isDesktop }: VideoCardProps) {
                                 <motion.button
                                     onClick={() => setManualPlay(true)}
                                     whileHover={{ scale: 1.2 }}
-                                    className="bg-white/80 text-black rounded-full p-3"
+                                    className="bg-[#9C27B0] text-black rounded-full p-3"
                                 >
                                     <PlayArrowIcon fontSize="large" />
                                 </motion.button>
@@ -145,27 +145,16 @@ function VideoCard({ item, isDesktop }: VideoCardProps) {
                 </div>
             </div>
 
-            <div className="p-6 bg-white">
+            <div className="p-6 bg-[#9C27B0] text-white">
                 <div className="flex items-center gap-2 mb-2">
                     <Icon className="text-red-500" />
-                    <h3 className="text-xl font-semibold text-gray-900">{item.title}</h3>
+                    <h3 className="text-xl font-semibold ">{item.title}</h3>
                 </div>
-                <p className="text-gray-700 mb-4">{getDescription(item.type)}</p>
+                <p className=" mb-4">{getDescription(item.type)}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                    <span className="text-xs bg-red-100 text-red-600 px-2 py-1 rounded-full">#{item.type}</span>
-                    <span className="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded-full">#Video</span>
+                    <span className="text-xs bg-red-100 text-red-600 px-2 py-1 rounded-full">{item.type}</span>
+                    <span className="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded-full">Video</span>
                 </div>
-                <motion.div whileHover={{ x: 4 }}>
-                    <Button
-                        href={`https://www.youtube.com/watch?v=${item.videoUrl}`}
-                        target="_blank"
-                        variant="outlined"
-                        endIcon={<ArrowForwardIosIcon />}
-                        className="rounded-full text-sm text-gray-700 border-gray-300 hover:bg-gray-100"
-                    >
-                        Watch Now
-                    </Button>
-                </motion.div>
             </div>
         </motion.div>
     );

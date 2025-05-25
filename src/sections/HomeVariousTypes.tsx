@@ -66,7 +66,7 @@ export default function VariousTypes() {
     return (
         <section className="py-16 text-white">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-                Versatile Video Expertise
+                Explore Our Video Production Types
             </h2>
             <p className="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
                 From YouTube videos and shorts to commercials, documentaries, and user-generated content, our team delivers top-tier production quality across every format.
@@ -139,14 +139,14 @@ function TypeCard({ type, index }: TypeCardProps) {
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ delay: index * 0.15 + 0.3, duration: 0.5 }}
             >
-                <span className="text-lg md:text-xl font-semibold">
+                <span className="text-lg md:text-5xl font-semibold">
                     {type.title}
                 </span>
             </motion.div>
 
             {/* Description */}
             <motion.p
-                className="absolute bottom-12 left-4 right-4 text-sm text-gray-200 z-40"
+                className="absolute bottom-12 left-4 right-4 text-xl text-gray-200 z-40"
                 initial={{ y: 20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ delay: index * 0.15 + 0.4, duration: 0.5 }}

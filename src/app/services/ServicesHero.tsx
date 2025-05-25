@@ -10,19 +10,19 @@ import Image from 'next/image';
 const features = [
     {
         text: 'Rapid Turnaround & Agile Workflow',
-        tags: ['#Speed', '#Efficiency'],
+        tags: ['Speed', 'Efficiency'],
     },
     {
         text: 'Data-Driven Creative Strategies',
-        tags: ['#Analytics', '#Creativity'],
+        tags: ['Analytics', 'Creativity'],
     },
     {
         text: 'End-to-End Production Excellence',
-        tags: ['#Quality', '#Reliability'],
+        tags: ['Quality', 'Reliability'],
     },
     {
         text: 'Tailored & Localized Content',
-        tags: ['#Custom', '#Localized'],
+        tags: ['Custom', 'Localized'],
     },
 ];
 
@@ -90,7 +90,7 @@ const ServicesHero: React.FC = () => (
 
                 {/* Tags under heading */}
                 <div className="flex flex-wrap gap-2">
-                    {['#Video', '#Marketing', '#Innovation', '#Branding'].map((tag) => (
+                    {['Video', 'Marketing', 'Innovation', 'Branding'].map((tag) => (
                         <Chip
                             key={tag}
                             label={tag}

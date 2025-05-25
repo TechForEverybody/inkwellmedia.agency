@@ -99,7 +99,7 @@ const HomeTargetAudience: React.FC = () => {
                 </p>
 
                 {/* Service Cards */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
                     {TargetAudienceData.map((service, idx) => {
                         const Icon = service.icon;
                         // Random off-screen start positions
@@ -113,25 +113,28 @@ const HomeTargetAudience: React.FC = () => {
                                 animate={{ x: 0, y: 0, opacity: 1 }}
                                 transition={{ delay: 2 + idx * 0.1, type: 'spring', stiffness: 60 }}
                                 whileHover={{ translateY: -5 }}
-                                className="border border-gray-700 rounded-lg p-6 flex flex-col items-center text-center hover:shadow-lg transition-shadow duration-300 bg-[#4F1C51]"
+                                className="border border-gray-700 rounded-lg p-2 flex flex-row flex-wrap justify-center items-center text-center hover:shadow-lg transition-shadow duration-300 bg-[#4F1C51]"
                             >
-                                <div className="p-4 rounded-full mb-4 bg-white/10">
-                                    <Icon className="text-white text-4xl" sx={{ fontSize: 60 }} />
+                                <div className="p-4 rounded-full mb-4 bg-white/10 mr-5">
+                                    <Icon className="text-white text-2xl" sx={{ fontSize: 30 }} />
                                 </div>
                                 <h3 className="text-xl font-semibold text-white mb-2">{service.title}</h3>
                                 <div className="w-12 h-0.5 bg-accent mb-4"></div>
-                                <p className="text-gray-300 mb-4">{service.description}</p>
-                                <div className="flex flex-wrap justify-center gap-2 mb-6">
-                                    {service.tags.map(tag => (
+                                {/* <p className="text-gray-300 mb-4">{service.description}</p> */}
+                                <div className="flex flex-col  gap-2 mb-6 w-full text-left">
+                                    {service.tags.map((tag, index) => (
                                         <span
                                             key={tag}
-                                            className="text-sm text-white bg-accent/20 px-3 py-1 rounded-full"
+                                            className="w-full text-sm text-white bg-accent/20 px-3 py-1 rounded-full"
+                                            style={{
+
+                                            }}
                                         >
-                                            {tag}
+                                            🚀 {tag}
                                         </span>
                                     ))}
                                 </div>
-                                <Link href="/why-us" passHref>
+                                {/* <Link href="/why-us" passHref>
                                     <Button
                                         variant="contained"
                                         color="secondary"
@@ -139,7 +142,7 @@ const HomeTargetAudience: React.FC = () => {
                                     >
                                         Explore More
                                     </Button>
-                                </Link>
+                                </Link> */}
                             </motion.div>
                         );
                     })}

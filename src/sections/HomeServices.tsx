@@ -18,32 +18,32 @@ interface Service {
 
 const servicesData: Service[] = [
   {
-    id: 'content',
-    title: 'Content Creation',
-    Icon: InsertDriveFileIcon,
-    description: `Transform ideas into captivating stories with our end-to-end content creation. From brand strategy and scripting to 4K filming and dynamic post-production, we deliver versatile assets—long-form explainers, social clips, and promotional reels—optimized for YouTube, Instagram, and TikTok. Engage audiences, enhance SEO, and build lasting brand loyalty.`,
-    tags: ['#Storytelling', '#Videography', '#Cinematic'],
+    id: 'video',
+    title: 'Video Production',
+    Icon: VideoLibraryIcon,
+    description: `Leverage our Video Production for broadcast-quality films, commercials, and training videos. From concept workshops and location scouting to 4K shoots with drones and gimbals, we handle every detail. In post-production, we deliver polished edits with color grading, motion graphics, and sound design—optimized for web, social, and live presentations.`,
+    tags: ['4K', 'Cinematic', 'Broadcast'],
   },
   {
     id: 'social',
     title: 'Social Media Management',
     Icon: ShareIcon,
     description: `Amplify your online presence with our Social Media Management. We craft strategic content calendars, schedule platform-specific posts, and actively engage your community. Through A/B testing, performance analytics, and paid campaign optimization, we boost follower growth, engagement rates, and ROI—turning browsers into loyal customers.`,
-    tags: ['#Engagement', '#Analytics', '#Growth'],
+    tags: ['Engagement', 'Analytics', 'Growth'],
   },
   {
-    id: 'video',
-    title: 'Video Production',
-    Icon: VideoLibraryIcon,
-    description: `Leverage our Video Production for broadcast-quality films, commercials, and training videos. From concept workshops and location scouting to 4K shoots with drones and gimbals, we handle every detail. In post-production, we deliver polished edits with color grading, motion graphics, and sound design—optimized for web, social, and live presentations.`,
-    tags: ['#4K', '#Cinematic', '#Broadcast'],
+    id: 'content',
+    title: 'Content Creation',
+    Icon: InsertDriveFileIcon,
+    description: `Transform ideas into captivating stories with our end-to-end content creation. From brand strategy and scripting to 4K filming and dynamic post-production, we deliver versatile assets—long-form explainers, social clips, and promotional reels—optimized for YouTube, Instagram, and TikTok. Engage audiences, enhance SEO, and build lasting brand loyalty.`,
+    tags: ['Storytelling', 'Videography', 'Cinematic'],
   },
   {
     id: 'consultation',
     title: 'Consultation',
     Icon: SupportAgentIcon,
     description: `Gain expert insights with our Consultation service. We audit your assets, conduct stakeholder interviews, and analyze market trends to craft a detailed media strategy—complete with content roadmaps, budget plans, and KPIs. Through hands-on workshops and quarterly refresh sessions, we ensure your campaigns remain agile and results-driven.`,
-    tags: ['#Strategy', '#Roadmap', '#Workshops'],
+    tags: ['Strategy', 'Roadmap', 'Workshops'],
   },
 ];
 

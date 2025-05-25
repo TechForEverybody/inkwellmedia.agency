@@ -68,7 +68,7 @@ export default function Asker() {
                         transition={{ delay: 0.6, type: 'spring', stiffness: 120 }}
                     >
                         <motion.a
-                            href="/contact"
+                            href="/contact-us"
                             className="inline-block bg-gradient-to-r from-[#FF6A3D] to-[#FFA62B] text-white rounded-full px-10 py-4 text-lg font-medium shadow-xl"
                             whileHover={{ scale: 1.1, boxShadow: '0px 0px 20px rgba(255,106,61,0.7)' }}
                             transition={{ type: 'spring', stiffness: 200 }}

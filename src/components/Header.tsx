@@ -25,13 +25,17 @@ function HideOnScroll(props: Props & { children: React.ReactElement }) {
     const { children, window } = props;
     const trigger = useScrollTrigger({ target: window ? window() : undefined });
     return (
-        <Slide appear={false} direction="down" in={!trigger}>
+        // <Slide appear={true} direction="down" in={!trigger}>
+
+        <>
             {children}
-        </Slide>
+        </>
+        // </Slide>
     );
 }
 
 const navItems = [
+    { label: 'Home', href: '/' },
     { label: 'Services', href: '/services' },
     { label: 'Portfolio', href: '/portfolio' },
     { label: 'Why Us', href: '/why-us' },
@@ -77,9 +81,13 @@ const Header: React.FC = () => {
         <>
             <HideOnScroll>
                 <AppBar elevation={0} className="backdrop-filter backdrop-blur-lg bg-white bg-opacity-20 text-gray-800" sx={{
-                    background: 'linear-gradient(to left, #4F1C51, #000000)',
-                    backdropFilter: 'blur(10px)',
+                    background: 'linear-gradient(to left, #4F1C5155, #00000055)',
+                    backdropFilter: 'blur(50px)',
                     boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)',
+                    maxWidth: '90%',
+                    margin: '20px auto',
+                    left: '0',
+                    borderRadius: '20px',
                 }}
                 >
                     <Toolbar className="container mx-auto flex justify-between items-center px-4 md:px-0">
@@ -111,7 +119,7 @@ const Header: React.FC = () => {
                                 alignItems: 'center',
                             }}>
                                 <IconButton edge="start" disableRipple aria-label="Inkwell Media" className="md:mx-0 mx-auto">
-                                    <Image src="/inkwell-logo.svg" alt="Inkwell Media Logo" width={80} height={20} priority />
+                                    <Image src="/inkwell-logo.svg" alt="Inkwell Media Logo" width={50} height={20} priority />
                                 </IconButton>
                                 <Typography
                                     variant="h6"

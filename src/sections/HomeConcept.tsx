@@ -171,6 +171,7 @@ export default function Concept() {
                                                 color='secondary'
                                                 endIcon={<ArrowForwardIosIcon />}
                                                 className="border-gray-500 text-gray-200 hover:border-white hover:text-white rounded-full"
+                                                href='/why-us'
                                             >
                                                 Learn More
                                             </Button>
