@@ -11,8 +11,8 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import Divider from '@mui/material/Divider';
-import useScrollTrigger from '@mui/material/useScrollTrigger';
-import Slide from '@mui/material/Slide';
+// import useScrollTrigger from '@mui/material/useScrollTrigger';
+// import Slide from '@mui/material/Slide';
 import { motion } from 'framer-motion';
 import MenuIcon from '@mui/icons-material/Menu';
 import Image from 'next/image';
@@ -22,13 +22,13 @@ import { Typography } from '@mui/material';
 interface Props { window?: () => Window; }
 
 function HideOnScroll(props: Props & { children: React.ReactElement }) {
-    const { children, window } = props;
-    const trigger = useScrollTrigger({ target: window ? window() : undefined });
+    // const { children, window } = props;
+    // const trigger = useScrollTrigger({ target: window ? window() : undefined });
     return (
         // <Slide appear={true} direction="down" in={!trigger}>
 
         <>
-            {children}
+            {props.children}
         </>
         // </Slide>
     );

@@ -9,8 +9,8 @@ import VideoLibraryIcon from '@mui/icons-material/VideoLibrary';
 import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
 import SchoolIcon from '@mui/icons-material/School';
 import GroupIcon from '@mui/icons-material/Group';
-import Button from '@mui/material/Button';
-import Link from 'next/link';
+// import Button from '@mui/material/Button';
+// import Link from 'next/link';
 
 // Service data with extended descriptions and tags
 const TargetAudienceData = [
@@ -122,7 +122,7 @@ const HomeTargetAudience: React.FC = () => {
                                 <div className="w-12 h-0.5 bg-accent mb-4"></div>
                                 {/* <p className="text-gray-300 mb-4">{service.description}</p> */}
                                 <div className="flex flex-col  gap-2 mb-6 w-full text-left">
-                                    {service.tags.map((tag, index) => (
+                                    {service.tags.map((tag) => (
                                         <span
                                             key={tag}
                                             className="w-full text-sm text-white bg-accent/20 px-3 py-1 rounded-full"
