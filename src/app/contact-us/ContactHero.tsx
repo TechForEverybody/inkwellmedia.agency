@@ -40,7 +40,9 @@ export default function ContactHero() {
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
-          Let’s Turn Your Ideas into Reality
+          Don't wait any more just for inspiration,  
+It's your time to inspire others with your story
+
         </motion.h1>
         <motion.p
           className="text-center text-lg md:text-xl max-w-3xl mx-auto mb-12"
@@ -48,7 +50,8 @@ export default function ContactHero() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.6 }}
         >
-          Reach out today and experience a seamless, collaborative process—crafted to bring your story to life with clarity, creativity, and confidence.
+          Just give it a push and experience how your ideas can be brought to life where we craft your story into reality- a collaborative experience of clarity, creativity, and confidence.
+
         </motion.p>
 
         {/* Bullet Points */}

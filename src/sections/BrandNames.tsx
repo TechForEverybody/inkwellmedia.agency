@@ -26,7 +26,7 @@ const BrandNames: React.FC = () => {
   const isMobile = window.innerWidth <= 768; // Adjust this breakpoint as needed
   return (
     <div style={{
-      minHeight: isMobile ? "20vh" : "40vh",
+      minHeight: isMobile ? "20vh" : "30vh",
       margin: isMobile ? '1rem auto' : '4rem auto',
     }}>
       <Typography variant="h1" sx={{

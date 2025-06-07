@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     url: 'https://inkwellmedia.agency/',
     siteName: 'Inkwellmedia Agency',
     images: [
-      '/logo.jpg'
+      '/logo.png'
     ],
     type: 'website'
   },
