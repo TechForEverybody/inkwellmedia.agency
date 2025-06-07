@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import Clouds from './Clouds';
 
 const SplashScreen: React.FC = () => {

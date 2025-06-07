@@ -5,7 +5,6 @@ import ServicesHero from './ServicesHero';
 import Footer from '@/components/Footer';
 import Asker from '@/sections/Asker';
 import ServicesFullContent from './ServiceExplainer';
-import { Typography } from '@mui/material';
 
 
 function ServicesPage() {

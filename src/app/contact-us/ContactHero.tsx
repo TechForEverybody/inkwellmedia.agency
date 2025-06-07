@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
 import ChatBubbleIcon from '@mui/icons-material/ChatBubble';
 import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
@@ -9,7 +8,7 @@ import { Typography } from '@mui/material';
 export default function ContactHero() {
   const bulletVariants = {
     hidden: { x: -50, opacity: 0 },
-    visible: (i: number) => ({ x: 0, opacity: 1, transition: { delay: 0, type: 'spring', stiffness: 100 } }),
+    visible: () => ({ x: 0, opacity: 1, transition: { delay: 0, type: 'spring', stiffness: 100 } }),
   };
 
   return (
@@ -40,8 +39,8 @@ export default function ContactHero() {
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
-          Don't wait any more just for inspiration,  
-It's your time to inspire others with your story
+          Dont wait any more just for inspiration,  
+Its your time to inspire others with your story
 
         </motion.h1>
         <motion.p

@@ -61,7 +61,7 @@ export default function Concept() {
                         transition={{ delay: 0.4, duration: 0.6 }}
                         className="mb-6 text-gray-300"
                     >
-                        Realization of concepts into creation is just as wonderful as a butterfly’s evolution. Want a sneak peek at how it goes? Here's how we draw your imagination into illustration.
+                        Realization of concepts into creation is just as wonderful as a butterflys evolution. Want a sneak peek at how it goes? Here how we draw your imagination into illustration.
                     </motion.p>
                     <motion.div
                         initial={{ y: 20, opacity: 0 }}

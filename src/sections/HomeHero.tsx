@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import Button from '@mui/material/Button';
 import Link from 'next/link';
 import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
-import PhoneCallbackIcon from '@mui/icons-material/PhoneCallback';
 import { Typography } from '@mui/material';
 import SlotCounter from 'react-slot-counter';
 
@@ -52,7 +51,7 @@ const HomeHero: React.FC = () => {
                             transition={{ delay: 0.4, duration: 0.8 }}
                             className="text-2xl md:text-xl max-w-7xl text-center"
                         >
-                            It's your story, your dream. Let the Inkwell narrate it for you. We work towards elevating your digital footprint, business performance and social standing with implementation of dynamic media.
+                            Its your story, your dream. Let the Inkwell narrate it for you. We work towards elevating your digital footprint, business performance and social standing with implementation of dynamic media.
                         </motion.p>
                         <motion.p
                             initial={{ y: 40, opacity: 0 }}

@@ -17,7 +17,6 @@ import { motion } from 'framer-motion';
 import MenuIcon from '@mui/icons-material/Menu';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Typography } from '@mui/material';
 
 interface Props { window?: () => Window; }
 

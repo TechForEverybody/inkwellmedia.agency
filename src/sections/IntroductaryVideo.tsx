@@ -2,9 +2,9 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { Button } from '@mui/material'
 import { ContentDialogBox } from '@/components/dialog-box'
-type Props = {}
 
-function IntroductaryVideo({ }: Props) {
+
+function IntroductaryVideo() {
     const [isVideoVisible, setIsVideoVisible] = React.useState(false)
     return (
         <>

@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
-import StarIcon from '@mui/icons-material/Star';
-import { ArrowLeftRounded } from '@mui/icons-material';
 import { ArrowLeftIcon, ArrowRight } from 'lucide-react';
 import { Typography } from '@mui/material';
 
@@ -75,7 +73,7 @@ export default function Testimonials() {
                     WebkitTextFillColor: 'transparent',
                 }}>What Our Clients Say</Typography>
                 {/* <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-6"></h2> */}
-                <p className="text-center text-white/80 mb-12 max-w-full mx-auto">Genuine feedback from our recent partners across industries who've experienced our work first-hand.</p>
+                <p className="text-center text-white/80 mb-12 max-w-full mx-auto">Genuine feedback from our recent partners across industries who have experienced our work first-hand.</p>
 
                 <AnimatePresence initial={false} mode="wait">
                     {testimonials.map((t, i) =>

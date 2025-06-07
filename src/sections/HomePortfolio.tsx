@@ -2,11 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import ReactPlayer from 'react-player/youtube';
 import useMediaQuery from '@mui/material/useMediaQuery';
-// import Button from '@mui/material/Button';
-// import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import YouTubeIcon from '@mui/icons-material/YouTube';
-import ShortTextIcon from '@mui/icons-material/ShortText';
-import Image from 'next/image';
+
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import { Typography } from '@mui/material';
 
@@ -68,7 +64,7 @@ export default function Portfolio() {
 
 
                     <p className="text-gray-400 max-w-2xl mx-auto mt-4">
-                        Our success flourished from our clients who’ve turned their visions into reality through us. This is how our work speaks volumes.Take a glimpse on the varieties of projects we have worked upon.
+                        Our success flourished from our clients who have turned their visions into reality through us. This is how our work speaks volumes.Take a glimpse on the varieties of projects we have worked upon.
                     </p>
                 </div>
                 {rows.map((pair, idx) => {
@@ -110,7 +106,7 @@ function VideoCard({ item, isDesktop }: VideoCardProps) {
     const [hovered, setHovered] = useState(false);
     const [manualPlay, setManualPlay] = useState(false);
     const playing = manualPlay || (isDesktop && hovered);
-    const Icon = item.type === 'youtube' ? YouTubeIcon : ShortTextIcon;
+
 
     return (
         <motion.div

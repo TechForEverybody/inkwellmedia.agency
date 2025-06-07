@@ -33,7 +33,7 @@ const highlights = [
 
 const listItemVariants = {
   hidden: { opacity: 0, x: -30 },
-  visible: (i: number) => ({
+  visible: () => ({
     opacity: 1,
     x: 0,
     transition: { delay:0, duration: 0.6, ease: 'easeOut' },

@@ -6,7 +6,6 @@ import Asker from '@/sections/Asker';
 import Footer from '@/components/Footer';
 import { Typography } from '@mui/material';
 import WhyUsHero from './WhyUsHero';
-import TypesAndProcess from './TypesAndProcess';
 import Concept from '@/sections/HomeConcept';
 
 

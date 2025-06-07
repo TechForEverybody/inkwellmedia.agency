@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import Image from 'next/image';
+
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -10,10 +10,7 @@ import {
   Instagram,
   Youtube,
   Film,
-  ExternalLink,
-  Grid,
 } from 'lucide-react';
-import { cn } from '@/lib/utils';
 
 type VideoType = 'youtube' | 'shorts' | 'reel' | 'custom';
 
@@ -40,30 +37,10 @@ const portfolioItems: PortfolioItem[] = [
   // ...add remaining items here...
 ];
 
-const filterOptions: (VideoType | 'all')[] = [
-  'all',
-  'youtube',
-  'shorts',
-  'reel',
-  'custom',
-];
 
-const filterIcons: Record<VideoType | 'all', React.ReactNode> = {
-  all:   <Grid size={16} className="text-white/80" />,
-  youtube: <Youtube size={16} className="text-red-600" />,
-  shorts:  <Film size={16} className="text-red-600" />,
-  reel:    <Instagram size={16} className="text-pink-500" />,
-  custom:  <Film size={16} className="text-blue-500" />,
-};
 
 export default function PortfolioPage() {
   const [selected, setSelected] = useState<PortfolioItem | null>(null);
-  const [filter, setFilter] = useState<VideoType | 'all'>('all');
-
-  const filtered =
-    filter === 'all'
-      ? portfolioItems
-      : portfolioItems.filter(item => item.type === filter);
 
   const getTypeIcon = (type: VideoType) => {
     switch (type) {
@@ -140,7 +117,7 @@ export default function PortfolioPage() {
           viewport={{ once: true }}
           variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
         >
-          {filtered.map((item, i) => (
+          {portfolioItems.map((item, i) => (
             <motion.div
               key={item.id}
               className="group relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl overflow-hidden shadow-lg"
