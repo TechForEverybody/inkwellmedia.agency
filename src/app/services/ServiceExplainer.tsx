@@ -19,47 +19,43 @@ interface ServiceItem {
 
 const services: ServiceItem[] = [
     {
-        title: 'Content Creation',
-        description: `Transform ideas into captivating stories with our end-to-end Content Creation. We start by defining your brand voice and target audience, then develop storyboards and shot lists tailored to your objectives. On set, we capture 4K footage with professional lighting and audio. In post-production, our editors add motion graphics, sound design, and color grading to produce versatile assets—long-form explainers, social clips, and promotional reels—optimized for YouTube, Instagram, and TikTok.`,
+        title: 'Video production & Content creation',
+        description: `visuals, sounds, entertainment and relativity, these factors could be said as four main pillars when it comes to captivating audiences’ attention.  While media is made to feed information, having versatile media formats plays a huge role in formulation of a brand persona. To enhance your brand, we provide diverse media assets in themes suitable for fulfilling professional, entertainment and infotainment needs. In the services of  content creation, we proceed thoroughly from Brainstorming- to planning, scripting, identifying and utilising conditions. The said can be recreated into scenarios which will definitely help you fulfill your business needs by engaging the right audience and building a desirable brand identity. 
+`,
         features: [
             'Brand Voice Workshops',
             '4K Filming & Audio Capture',
             'Motion Graphics & Color Grading',
         ],
-        tags: ['#Storytelling', '#Videography', '#SocialContent'],
+        tags: ['Storytelling', 'Videography', 'SocialContent'],
         Icon: InsertDriveFileIcon,
     },
     {
         title: 'Social Media Management',
-        description: `Amplify your online presence with our Social Media Management. We audit your profiles, craft a data-driven content calendar, and produce engaging posts—carousels, Reels, and Stories—designed for each platform. Our team schedules at peak times, monitors engagement, and responds to your audience in real time. Through A/B testing and analytics, we refine visuals, copy, and targeting to boost follower growth, engagement rates, and ROI, turning passive viewers into loyal customers.`,
+        description: `In the wake of globalisation, connectivity and engagement goes beyond the scope of community growth- it extends in the form of brand loyalty which directly impacts on brand value and conversion. Understanding the gravity of social media management, the Inkwell implements social media optimization on various social platforms such as Facebook, Instagram, Whatsapp,Youtube, Twitter, linkedin; while providing services of platform optimization, community engagement, strategic formulation, campaign scheduling and management, and result calibration and analytics. Your social media platforms define your image, so let the Inkwell decorate them securely.`,
         features: [
             'Data-Driven Content Calendars',
             'Real-Time Community Engagement',
             'A/B Testing & Performance Reports',
         ],
-        tags: ['#Engagement', '#Analytics', '#Growth'],
+        tags: ['Engagement', 'Analytics', 'Growth'],
         Icon: ShareIcon,
     },
     {
-        title: 'Video Production',
-        description: `Our Video Production service delivers broadcast-quality films, commercials, and training modules. We guide you from concept through final delivery: ideation workshops, location scouting, multi-camera 4K shoots with drones and stabilizers, and professional lighting setups. In post, we edit tight narratives, add animated titles, licensed music, and sound effects. Finally, we encode formats for web, social, and live events. The result is a polished visual experience that captivates and converts.`,
-        features: [
-            'Concept & Pre-Production',
-            '4K Multi-Camera Shoots',
-            'Editing, Graphics & Sound Design',
-        ],
-        tags: ['#4K', '#Cinematic', '#Broadcast'],
-        Icon: VideoLibraryIcon,
-    },
-    {
-        title: 'Consultation',
-        description: `Get expert guidance with our Consultation service. We audit your existing content, interview stakeholders, and analyze market trends to craft a bespoke media strategy. Your deliverables include content roadmaps, channel recommendations, budget plans, and KPIs. We also offer hands-on workshops, training sessions, and quarterly reviews to keep your campaigns agile. Whether you’re scaling a startup or refining enterprise workflows, our consults ensure measurable growth and sustainable success.`,
+        title: 'Influencer marketing',
+        description: `In the current generation, influencers deal a huge impact over their audience with their specific endorsement, because that places a sense of authenticity of the product or service to the audience and it conveys a message. But of course it's not that easy to find an influencer who matches the identity of your brand, right? Especially when they have to fulfill certain criterias such as-
+ i) engagement- not just limited to their followers but the entirety of the mass audience,
+ ii) who knows how to stay up to date with ongoing trends, 
+iii) manages collaborations suiting the market needs, while 
+iv) planning and executing campaigns with your company.
+ We understand it very well, so to ease your complications, Inkwell provides services such as contract management in sectors of partnership/ambassadorship, where we look forward to providing organizations with our selection of finest social media influencers.  Whether it's endorsement or collaborations, or promotion over social platforms, we’ve got contacts in the influencer industries from the range of nano influencers even to the stage of mega influencer. We make it our own responsibility to arrange the best influencer for your work, just so we can witness your successful growth alongside us.
+`,
         features: [
             'Asset Audits & Stakeholder Interviews',
             'Strategic Roadmaps & KPIs',
             'Workshops & Quarterly Reviews',
         ],
-        tags: ['#Strategy', '#Roadmap', '#Workshops'],
+        tags: ['Strategy', 'Roadmap', 'Workshops'],
         Icon: SupportAgentIcon,
     },
 ];
@@ -95,7 +91,7 @@ const ServicesFullContent: React.FC = () => {
                                     }`}
                             >
                                 {/* Text & Features */}
-                                <div className="lg:w-1/2 bg-[#9C27B0] rounded-2xl p-10 relative z-10 shadow-2xl overflow-hidden">
+                                <div className="lg:w-3/4  rounded-2xl p-10 relative z-10 shadow-2xl overflow-hidden">
                                     {/* Decorative Blob */}
                                     <motion.div
                                         className="absolute -top-8 -left-8 w-24 h-24 bg-gradient-to-br from-[#FF6A3D] to-[#4E1C50] rounded-full opacity-80"
@@ -142,7 +138,7 @@ const ServicesFullContent: React.FC = () => {
                                             sx={{
                                                 background:
                                                     'linear-gradient(135deg, #FF6A3D 0%, #4E1C50 100%)',
-                                                color: '#fff',
+                                                color: 'fff',
                                                 py: 1.5,
                                                 px: 5,
                                                 borderRadius: '9999px',
@@ -155,7 +151,7 @@ const ServicesFullContent: React.FC = () => {
                                 </div>
 
                                 {/* Graphical Creative Structure */}
-                                <div className="lg:w-1/2 w-full h-80 relative flex items-center justify-center">
+                                <div className="lg:w-1/4 w-full h-80 relative flex items-center justify-center">
                                     <motion.div
                                         className="w-64 h-64 bg-gradient-to-tr from-[#FF6A3D]/50 to-[#4E1C50]/50 rounded-2xl"
                                         initial={{ scale: 0.8, rotate: -10 }}

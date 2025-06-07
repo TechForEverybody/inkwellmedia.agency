@@ -4,25 +4,33 @@ import Link from 'next/link';
 import ChatBubbleIcon from '@mui/icons-material/ChatBubble';
 import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
+import { Typography } from '@mui/material';
 
 export default function ContactHero() {
   const bulletVariants = {
     hidden: { x: -50, opacity: 0 },
-    visible: (i: number) => ({ x: 0, opacity: 1, transition: { delay: 0.3 + i * 0.2, type: 'spring', stiffness: 100 } }),
+    visible: (i: number) => ({ x: 0, opacity: 1, transition: { delay: 0, type: 'spring', stiffness: 100 } }),
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-[#4E1C50] to-black text-white overflow-hidden relative">
+    <section className="py-20 bg-gradient-to-br from-[#002147] to-black text-white overflow-hidden relative">
       {/* Decorative shapes */}
+      <Typography className='seperator' sx={{
+        height: {
+          xs: '50px',
+          sm: '70px',
+          md: '80px',
+        }
+      }} />
       <motion.div
         className="absolute -top-16 -left-16 w-64 h-64 rounded-full bg-[#FF6A3D] opacity-20"
         animate={{ y: [0, 20, 0] }}
-        transition={{ repeat: Infinity, duration: 6 }}
+        transition={{ repeat: Infinity, duration: 1 }}
       />
       <motion.div
         className="absolute bottom-0 right-0 w-48 h-48 rounded-full bg-[#FFA62B] opacity-20"
         animate={{ x: [0, -20, 0] }}
-        transition={{ repeat: Infinity, duration: 7 }}
+        transition={{ repeat: Infinity, duration: 1 }}
       />
 
       <div className="container mx-auto px-4 relative z-10">
@@ -68,7 +76,7 @@ export default function ContactHero() {
           })}
         </div>
 
-        {/* Call to Action */}
+        {/* Call to Action
         <motion.div
           className="text-center"
           initial={{ scale: 0.8, opacity: 0 }}
@@ -80,7 +88,7 @@ export default function ContactHero() {
               Contact Us Now
             </div>
           </Link>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

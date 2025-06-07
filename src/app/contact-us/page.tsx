@@ -11,13 +11,7 @@ function ContactUsPage() {
   return (
     <div>
       <Header />
-      <Typography className='seperator' sx={{
-        height:{
-          xs: '50px',
-          sm: '70px',
-          md: '80px',
-        }
-      }}/>
+
       <ContactHero/>
       <ContactForm />
 

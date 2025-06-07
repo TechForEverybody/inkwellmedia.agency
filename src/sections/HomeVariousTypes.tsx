@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { Typography } from '@mui/material';
 
 // Define each content type with image, grid spans, descriptions, and tags
 const types = [
@@ -9,70 +10,100 @@ const types = [
         image: '/images/6865587_23409.jpg',
         col: 'lg:col-span-2',
         row: 'lg:row-span-2',
-        description: 'High-quality full-length video showcases optimized for YouTube.',
+        description: 'Use the largest video social media to share and publicise your high quality full-length content on a global level.',
         tags: ['YouTube', 'Full-Length', 'HD'],
     },
     {
         title: 'Commercials & Ads',
-        image: '/images/6851375_28339.jpg',
+        image: '/images/modern-design-illustration-web-ad.png',
         col: 'lg:col-span-2',
-        row: 'lg:row-span-4',
-        description: 'Engaging TV and online commercials tailored to your brand.',
+        row: 'lg:row-span-3',
+        description: 'Let the people recognize your brand, through mass communication',
         tags: ['TV Ads', 'Branding', 'Marketing'],
     },
     {
-        title: 'Mid-Level Ads',
-        image: '/images/modern-design-illustration-web-ad.png',
-        col: 'lg:col-span-1',
+        title: 'Out-of-home (OHH) & kiosk',
+        image: '/images/6851375_28339.jpg',
+        col: 'lg:col-span-2',
         row: 'lg:row-span-2',
-        description: 'Targeted mid-length advertisements for social media campaigns.',
+        description: `Whether it's tv monitors or public billboards, these advertisements will never miss the opportunity to grab your potential audience's attention.`,
         tags: ['Social Media', 'Promos'],
-    },
-    {
-        title: 'Video Production',
-        image: '/images/photographer-character.png',
-        col: 'lg:col-span-1',
-        row: 'lg:row-span-3',
-        description: 'End-to-end production services from concept to final cut.',
-        tags: ['Full-Service', 'Script', 'Editing'],
     },
     {
         title: 'Shorts & Reels',
         image: '/images/hand-with-phone-video-call-icon-isolated.png',
-        col: 'lg:col-span-1',
+        col: 'lg:col-span-2',
         row: 'lg:row-span-3',
-        description: 'Bite-sized, attention-grabbing content for quick engagement.',
+        description: 'Engage and entertain, this motto works the best when it comes to quickly capturing the audience’ attention and creating attachment.',
         tags: ['Shorts', 'Reels', 'Viral'],
+    },
+    {
+        title: 'Animations ',
+        image: '/images/154990.jpg',
+        col: 'lg:col-span-2',
+        row: 'lg:row-span-3',
+        description: 'Fantasies can’t be limited to convey just by words. Let the visuals speak for you.',
+        tags: ['Full-Service', 'Script', 'Editing'],
+    },
+    {
+        title: 'Documentaries',
+        image: '/images/3806.jpg',
+        col: 'lg:col-span-2',
+        row: 'lg:row-span-2',
+        description: 'Share your story, not just by explanation, but through enacted experience',
+        tags: ['Storytelling', 'Long-Form'],
     },
     {
         title: 'User-Generated Content',
         image: '/images/multitasking-businessman-doing-many-tasks-same-time.png',
         col: 'lg:col-span-2',
         row: 'lg:row-span-3',
-        description: 'Authentic content featuring your customers and community.',
+        description: 'Let your community be the witness and feature of your successful journey, not as a bystander, but as a family.',
         tags: ['UGC', 'Authentic', 'Testimonials'],
     },
     {
-        title: 'Documentaries',
+        title: 'Walkthrough videos',
         image: '/images/film-camera-geek-cartoon-cartoon-mascot-vector.png',
-        col: 'lg:col-span-1',
-        row: 'lg:row-span-2',
-        description: 'Compelling storytelling through long-form documentary films.',
-        tags: ['Storytelling', 'Long-Form'],
+        col: 'lg:col-span-2',
+        row: 'lg:row-span-3',
+        description: 'Demonstrate what you want to highlight through the format of a video brochure. Emphasise the exclusivity of your products or services in an informative way. ',
+        tags: ['Walkthrough', 'Product', 'Showcase'],
+    },
+    {
+        title: 'Company culture videos ',
+        image: '/images/11538.jpg',
+        col: 'lg:col-span-2',
+        row: 'lg:row-span-3',
+        description: 'Your offices and employee management is a testimony of your work. Showcase the management and working ambience, services and employee correlation for people to let them know how you operate.',
+        tags: ['Company Culture', 'Behind the Scenes', 'Testimonials'],
     },
 ];
 
 export default function VariousTypes() {
     return (
         <section className="py-16 text-white">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-                Explore Our Video Production Types
-            </h2>
+
+            <Typography variant="h1" sx={{
+                color: '#FFFFFF',
+                fontSize: {
+                    xs: '2rem',
+                    sm: '3rem',
+                    md: '4rem',
+                    lg: '5rem',
+                },
+                fontWeight: 'bold',
+                textAlign: 'center',
+                marginBottom: '1rem',
+                textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+                background: 'linear-gradient(to right, #FFF, #FFFFFF33)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+            }}>Explore Our Video Production Types</Typography>
             <p className="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
                 From YouTube videos and shorts to commercials, documentaries, and user-generated content, our team delivers top-tier production quality across every format.
             </p>
             <div className="container mx-auto px-4">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 auto-rows-[200px]">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4 auto-rows-[300px] md:auto-rows-[150px]">
                     {types.map((type, idx) => (
                         <TypeCard key={idx} type={type} index={idx} />
                     ))}
@@ -91,11 +122,11 @@ function TypeCard({ type, index }: TypeCardProps) {
 
     return (
         <motion.div
-            className={`${type.col} ${type.row} relative overflow-hidden rounded-2xl cursor-pointer`}
+            className={`${type.col} ${type.row} relative overflow-hidden rounded-2xl cursor-pointer border-2 border-white`}
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             whileHover={{ scale: 1.03 }}
-            transition={{ duration: 0.6, delay: index * 0.15 }}
+            transition={{ duration: 0.6, delay: index * 0.01 }}
             onHoverStart={() => setHovered(true)}
             onHoverEnd={() => setHovered(false)}
         >
@@ -105,7 +136,7 @@ function TypeCard({ type, index }: TypeCardProps) {
                 alt={type.title}
                 fill
                 sizes="(min-width: 1024px) 50vw, (min-width: 640px) 50vw, 100vw"
-                style={{ objectFit: 'cover' }}
+                style={{ objectFit: 'cover', opacity: hovered ? 0.1 : 0.8 }}
                 className="z-10"
             />
             {/* Dark Overlay */}
@@ -137,7 +168,7 @@ function TypeCard({ type, index }: TypeCardProps) {
                 className="absolute top-4 left-4 z-40"
                 initial={{ y: -10, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
-                transition={{ delay: index * 0.15 + 0.3, duration: 0.5 }}
+                transition={{ delay: index * 0.05, duration: 0.5 }}
             >
                 <span className="text-lg md:text-5xl font-semibold">
                     {type.title}
@@ -149,7 +180,7 @@ function TypeCard({ type, index }: TypeCardProps) {
                 className="absolute bottom-12 left-4 right-4 text-xl text-gray-200 z-40"
                 initial={{ y: 20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
-                transition={{ delay: index * 0.15 + 0.4, duration: 0.5 }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
             >
                 {type.description}
             </motion.p>

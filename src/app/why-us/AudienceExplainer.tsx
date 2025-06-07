@@ -131,12 +131,12 @@ const itemVariants = {
 
 const AudienceExplainer: React.FC = () => {
     return (
-        <section className="py-20 " style={{ background: 'radial-gradient(to left, #4E1C50, #000)' }}>
+        <section className="py-20 " style={{ background: 'linear-gradient(to top, #002147, #000)' }}>
             <div className="container mx-auto px-4">
                 {/* Section Header */}
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-bold text-white">
-                        Comprehensive Service Suite for many Industries and Audiences
+                        Our expertise in diverse fields
                     </h2>
                     <p className="mt-4 text-white/75 max-w-2xl mx-auto">
                         From real estate walkthroughs to corporate training and social content, each of our services is tailored for maximum impact in today’s market.
@@ -163,7 +163,7 @@ const AudienceExplainer: React.FC = () => {
                                         }`}
                                 >
                                     {/* Text Content */}
-                                    <div className="lg:w-2/3 bg-[#8E24AA] rounded-2xl p-8 space-y-6 relative z-10">
+                                    <div className="lg:w-2/3  rounded-2xl p-8 space-y-6 relative z-10">
                                         {/* Watermark Icon */}
                                         <IconComponent
                                             className="absolute top-4 right-4 text-white opacity-5 text-9xl"

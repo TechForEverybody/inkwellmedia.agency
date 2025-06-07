@@ -12,21 +12,21 @@ const steps = [
         title: 'Pre-Production',
         icon: PlaylistAddCheckIcon,
         description:
-            'Ideas take shape, budgets get set, schedules are planned, scripts written, and locations scouted before the cameras roll.',
+            'IFrom brainstorming ideas and concepts to identifying best suited locations, imagining scenarios and writing specific scripts, hiring crew and approaching talents- it engulfs the field of planning and orientation, because we wish to represent the best for your vision.',
         tags: ['Planning', 'Budgeting', 'Scheduling'],
     },
     {
         title: 'Production',
         icon: VideocamIcon,
         description:
-            'Cameras roll, talent steps into their roles, and every shot captures the essence of your creative vision on set.',
+            'Actualising the scenario into a recording setup, this involves the shooting phase where we feature talented actors and actresses in a setup environment designed to highlight what describes you the best.',
         tags: ['Filming', 'Direction', 'On-Set'],
     },
     {
         title: 'Post-Production',
         icon: EditIcon,
         description:
-            'Raw footage is transformed with editing, color grading, sound design, and visual effects into a polished final product.',
+            'After getting the footage, it is processed over several factors- as we arrange the order into a sequence. Then we apply edits such as colour grading, add animations and visual elements, voice-over and sound design, and review it before finalizing because we want to proof check if it requires any changes or customization from your opinion, and finish it by delivering the product.',
         tags: ['Editing', 'Color Grading', 'Sound Mix'],
     },
 ];
@@ -34,11 +34,11 @@ const steps = [
 export default function Concept() {
     return (
         <section className="relative py-16 overflow-hidden" style={{
-            background: "linear-gradient(to left, #4F1C51, #000000)",
+            background: "linear-gradient(to right, #000, #002147)",
         }}>
             <div className="container mx-auto px-4 flex flex-col lg:flex-row items-start">
                 {/* Left Panel */}
-                
+
                 <motion.div
                     initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -46,17 +46,14 @@ export default function Concept() {
                     transition={{ duration: 0.8 }}
                     className="w-full lg:w-1/3 mb-8 lg:mb-0"
                 >
-                    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                            <VideoProductionAnimation />
 
-                        </motion.div>
                     <motion.h2
                         initial={{ scale: 0.8, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
                         transition={{ delay: 0.2, type: 'spring', stiffness: 120 }}
                         className="text-4xl font-bold mb-4"
                     >
-                        From Concept To Creation
+                        How we roll- transforming creativity into content
                     </motion.h2>
                     <motion.p
                         initial={{ opacity: 0 }}
@@ -64,14 +61,14 @@ export default function Concept() {
                         transition={{ delay: 0.4, duration: 0.6 }}
                         className="mb-6 text-gray-300"
                     >
-                        We guide you through every stage of video production, ensuring your vision is expertly realized.
+                        Realization of concepts into creation is just as wonderful as a butterfly’s evolution. Want a sneak peek at how it goes? Here's how we draw your imagination into illustration.
                     </motion.p>
                     <motion.div
                         initial={{ y: 20, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ delay: 0.6, duration: 0.6 }}
                     >
-                        
+
                     </motion.div>
                     <motion.div
                         initial={{ y: 20, opacity: 0 }}
@@ -87,6 +84,13 @@ export default function Concept() {
                                 Explore Services
                             </Button>
                         </motion.div>
+                    </motion.div >
+                    <motion.div whileHover={{ scale: 2.05 }} whileTap={{ scale: 0.95 }} style={{
+                        display: 'flex',
+                        justifyContent: 'center', alignItems: 'center', height: '400px', width: '100%', marginTop: '20px'
+                    }}>
+                        <VideoProductionAnimation />
+
                     </motion.div>
                 </motion.div>
 
@@ -159,7 +163,7 @@ export default function Concept() {
                                         ))}
                                     </motion.div>
 
-                                    <motion.div
+                                    {/* <motion.div
                                         initial={{ scale: 0.8, opacity: 0 }}
                                         whileInView={{ scale: 1, opacity: 1 }}
                                         viewport={{ once: true }}
@@ -176,7 +180,7 @@ export default function Concept() {
                                                 Learn More
                                             </Button>
                                         </motion.div>
-                                    </motion.div>
+                                    </motion.div> */}
                                 </div>
                             </motion.div>
                         );

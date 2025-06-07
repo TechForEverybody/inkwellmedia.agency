@@ -16,14 +16,16 @@ export default function Asker() {
         <motion.section
             ref={ref}
             className="py-20 relative overflow-hidden"
-            style={{ background: 'radial-gradient(circle at top left, #9C27B0, #4E1C50)' }}
+            style={{
+                background: "radial-gradient(ellipse at top, #000, #002147)", // Dark blue gradient
+            }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
         >
             <div className="container mx-auto px-4">
                 <motion.div
-                    className="relative bg-[rgba(255,255,255,0.05)] backdrop-blur-lg border border-white/20 rounded-3xl p-12 overflow-hidden hover:shadow-2xl"
+                    className="relative bg-[rgba(255,255,255,0.05)] backdrop-blur-lg border-3 border-white rounded-3xl p-12 overflow-hidden hover:shadow-2xl"
                     initial={{ scale: 0.8, opacity: 0, rotate: 5 }}
                     animate={controls}
                     whileHover={{ scale: 1.02, rotate: 0 }}
@@ -47,7 +49,7 @@ export default function Asker() {
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ delay: 0.2, duration: 0.6 }}
                     >
-                        Beyond Videos, We Build Experiences
+                        Beyond the videos, we build experiences
                     </motion.h2>
 
                     {/* Subheading */}
@@ -57,7 +59,8 @@ export default function Asker() {
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ delay: 0.4, duration: 0.6 }}
                     >
-                        From cinematic films and dynamic animations to immersive brand activations, our studio is your partner in telling stories that captivate and inspire.
+                        Captivate your audience, not just by words, but with our visuals that narrates your stories.
+
                     </motion.p>
 
                     {/* Call to Action */}

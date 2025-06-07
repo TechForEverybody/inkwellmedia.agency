@@ -17,12 +17,17 @@ const highlights = [
   {
     icon: ThumbUpIcon,
     title: 'Proven Impact',
-    text: 'Each project is backed by analytics—boosting engagement, conversions, and brand recall.',
+    text: 'After measuring the results of market performance, each project displayed growth in boosting engagement, conversions, and brand recall.',
   },
   {
     icon: TrendingUpIcon,
-    title: 'Trend-Setting Creativity',
-    text: 'We blend cutting-edge visuals and storytelling techniques that position you ahead of the curve.',
+    title: 'Not just upholding the trend, but creative visionary beyond setting',
+    text: 'After reading the measures of market settings and understanding the factors that come into play, we’re profound in going beyond the following current trends, into formulating new trends.',
+  },
+  {
+    icon: TrendingUpIcon,
+    title: 'Mastery of cinematic arts',
+    text: 'We blend cutting-edge visuals and storytelling techniques that position you ahead of the curve..',
   },
 ];
 
@@ -31,7 +36,7 @@ const listItemVariants = {
   visible: (i: number) => ({
     opacity: 1,
     x: 0,
-    transition: { delay: 0.3 + i * 0.2, duration: 0.6, ease: 'easeOut' },
+    transition: { delay:0, duration: 0.6, ease: 'easeOut' },
   }),
 };
 
@@ -41,7 +46,7 @@ const PortfolioHero: React.FC = () => (
     <div
       className="absolute inset-0 -z-10"
       style={{
-        background: 'radial-gradient(circle at 30% 30%, #4E1C50, #000)',
+        background: "linear-gradient(to right, #000, #002147)",
       }}
     />
 
@@ -60,17 +65,17 @@ const PortfolioHero: React.FC = () => (
     <div className="container mx-auto px-4 flex flex-col-reverse lg:flex-row items-center gap-12">
       {/* Text Column */}
       <motion.div
-        className="lg:w-1/2 space-y-6"
+        className="lg:w-2/3 space-y-6"
         initial={{ opacity: 0, x: -60 }}
         whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
+        // viewport={{ once: true }}
         transition={{ duration: 0.8 }}
       >
         <h2 className="text-5xl md:text-6xl font-extrabold text-white leading-tight">
-          Why Our Portfolio Stands Out
+          Portfolio: how we forged steps to success
         </h2>
         <p className="text-white/80 text-lg max-w-2xl">
-          Our work speaks volumes. Every frame in our portfolio is crafted with precision, creativity, and strategy—guaranteeing content that not only wows viewers but delivers measurable results.
+          When we take any project work in our hands, we put efforts not just for our clients, but for our own improvement as well. We exalt our work as innovation- because we wish to give individuality to each and every distinctive asset.  Every frame in our portfolio is crafted with precision, creativity, and strategy: guaranteeing content that not only amazes the viewers but delivers measurable results.
         </p>
 
         <motion.ul
@@ -125,15 +130,15 @@ const PortfolioHero: React.FC = () => (
         className="lg:w-1/2 w-full flex justify-center"
         initial={{ opacity: 0, x: 60 }}
         whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
+        // viewport={{ once: true }}
         transition={{ duration: 0.8, delay: 0.2 }}
       >
         <div className="relative w-full max-w-sm">
           <Image
             src="/images/portfolio.png"
             alt="Portfolio Illustration"
-            width={400}
-            height={600}
+            width={500}
+            height={700}
             objectFit="contain"
             className="rounded-xl shadow-2xl"
           />

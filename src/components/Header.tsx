@@ -47,10 +47,18 @@ const Header: React.FC = () => {
     const handleDrawerToggle = () => setMobileOpen(!mobileOpen);
 
     const drawer = (
-        <Box className="w-64 h-full bg-white p-4 flex flex-col">
+        <Box className="w-full h-full  p-0 flex flex-col" sx={{
+            // background: "linear-gradient(to right, #000, #002147)", // Dark blue gradient
+            backdropFilter: 'blur(50px)',
+            boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)',
+            // borderRadius: '20px',
+            maxWidth: '90%',
+            padding: '20px',
+            color: 'white',
+        }}>
             <Box className="mb-6">
                 <Link href="/">
-                    <Image src="/inkwell-logo.svg" alt="Logo" width={100} height={30} />
+                    <Image src="/images/Screenshot_2025-06-06_211644-removebg-preview.png" alt="Logo" width={100} height={30} />
                 </Link>
             </Box>
             <Divider />
@@ -67,11 +75,18 @@ const Header: React.FC = () => {
                 <Button
                     component={Link}
                     href="/contact-us"
-                    variant="contained"
+                    variant="text"
                     fullWidth
                     className="bg-accent hover:bg-accent-dark text-white rounded-full py-2"
                 >
-                    Connect Now
+                    <motion.a
+                        href="/contact-us"
+                        className="inline-block bg-gradient-to-r from-[#FF6A3D] to-[#FFA62B] text-white rounded-full px-10 p2-4 text-sm font-medium shadow-xl"
+                        whileHover={{ scale: 1.1, boxShadow: '0px 0px 20px rgba(255,106,61,0.7)' }}
+                        transition={{ type: 'spring', stiffness: 200 }}
+                    >
+                        Connect Now →
+                    </motion.a>
                 </Button>
             </Box>
         </Box>
@@ -85,12 +100,13 @@ const Header: React.FC = () => {
                     backdropFilter: 'blur(50px)',
                     boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)',
                     maxWidth: '90%',
-                    margin: '20px auto',
+                    margin: '10px auto',
                     left: '0',
                     borderRadius: '20px',
                 }}
+                
                 >
-                    <Toolbar className="container mx-auto flex justify-between items-center px-4 md:px-0">
+                    <Toolbar className="container mx-auto flex justify-between items-center  md:px-0">
                         {/* Mobile menu button */}
                         <Box sx={{
                             display: "flex",
@@ -119,9 +135,9 @@ const Header: React.FC = () => {
                                 alignItems: 'center',
                             }}>
                                 <IconButton edge="start" disableRipple aria-label="Inkwell Media" className="md:mx-0 mx-auto">
-                                    <Image src="/inkwell-logo.svg" alt="Inkwell Media Logo" width={50} height={20} priority />
+                                    <Image src="/images/Screenshot_2025-06-06_211644-removebg-preview.png" alt="Inkwell Media Logo" width={120} height={50} priority />
                                 </IconButton>
-                                <Typography
+                                {/* <Typography
                                     variant="h6"
                                     noWrap
                                     component="div"
@@ -131,47 +147,60 @@ const Header: React.FC = () => {
                                         textShadow: '2px 2px 4px rgba(255, 255, 255, 0.5)',
                                         fontWeight: 'bold',
                                     }}>Media</span>
-                                </Typography>
+                                </Typography> */}
                             </Link>
                         </Box>
 
                         {/* Desktop nav & button */}
-                        <motion.nav
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ duration: 0.6 }}
-                            className="hidden md:flex items-center space-x-8"
-                        >
-                            {navItems.map((item, idx) => (
-                                <motion.div
-                                    key={item.label}
-                                    initial={{ y: -10, opacity: 0 }}
-                                    animate={{ y: 0, opacity: 1 }}
-                                    transition={{ delay: idx * 0.12, duration: 0.4 }}
-                                    whileHover={{ scale: 1.1 }}
-                                >
-                                    <Link href={item.href}>
-                                        <span className="cursor-pointer font-medium transition-colors hover:text-accent hover:border-b-2 hover:border-accent pb-1">
-                                            {item.label}
-                                        </span>
-                                    </Link>
-                                </motion.div>
-                            ))}
-                        </motion.nav>
                         <motion.div
                             initial={{ scale: 0.8, opacity: 0 }}
                             animate={{ scale: 1, opacity: 1 }}
                             transition={{ delay: 0.5, type: 'spring', stiffness: 120 }}
+                            style={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '10px',
+                            }}
                         >
+                            <motion.nav
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ duration: 0.6 }}
+                                className="hidden md:flex items-center space-x-8"
+                            >
+                                {navItems.map((item, idx) => (
+                                    <motion.div
+                                        key={item.label}
+                                        initial={{ y: -10, opacity: 0 }}
+                                        animate={{ y: 0, opacity: 1 }}
+                                        transition={{ delay: idx * 0.12, duration: 0.4 }}
+                                        whileHover={{ scale: 1.1 }}
+                                    >
+                                        <Link href={item.href}>
+                                            <span className="cursor-pointer font-medium transition-colors hover:text-accent hover:border-2 hover:border-accent p-2 rounded text-sm">
+                                                {item.label}
+                                            </span>
+                                        </Link>
+                                    </motion.div>
+                                ))}
+                            </motion.nav>
                             <Button
                                 component={Link}
                                 href="/contact-us"
-                                variant="contained"
+                                variant="text"
                                 color='secondary'
                                 className="bg-accent hover:bg-accent-dark text-white rounded-full px-6 py-2 shadow-lg"
                                 disableElevation
                             >
-                                Connect Now
+
+                                <motion.a
+                                    href="/contact-us"
+                                    className="inline-block bg-gradient-to-r from-[#FF6A3D] to-[#FFA62B] text-white rounded-full px-4 md:px-10 py-3  text-[10px]  md:text-sm font-medium shadow-xl"
+                                    whileHover={{ scale: 1.1, boxShadow: '0px 0px 20px rgba(255,106,61,0.7)' }}
+                                    transition={{ type: 'spring', stiffness: 200 }}
+                                >
+                                    Connect Now
+                                </motion.a>
                             </Button>
                         </motion.div>
                     </Toolbar>
@@ -181,8 +210,15 @@ const Header: React.FC = () => {
                 anchor="left"
                 open={mobileOpen}
                 onClose={handleDrawerToggle}
-                ModalProps={{ keepMounted: true }}
-                PaperProps={{ className: 'backdrop-filter backdrop-blur-lg bg-white bg-opacity-80' }}
+                style={{
+                    backdropFilter: 'blur(50px)',
+                    boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)',
+                }}
+                PaperProps={{
+                    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                }}
+            // ModalProps={{ keepMounted: true }}
+            // PaperProps={{ className: 'backdrop-filter bg-transparent backdrop-blur-lg bg-opacity-80' }}
             >
                 {drawer}
             </Drawer>

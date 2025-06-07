@@ -12,10 +12,10 @@ function SplashContextProvider({
     useEffect(() => {
         setTimeout(() => {
             setIsSplashVisible(false)
-        }, 3000)
+        }, 2000)
     }, [])
-    if(isSplashVisible){
-        return <SplashScreen/>
+    if (isSplashVisible) {
+        return <SplashScreen />
     }
     return children
 }

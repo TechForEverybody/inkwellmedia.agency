@@ -16,7 +16,7 @@ const ContactForm: React.FC = () => {
             <div
                 className="absolute inset-0 -z-10"
                 style={{
-                    background: 'radial-gradient(circle at 20% 20%, #4E1C50, #000000)',
+                    background: "linear-gradient(to right, #000, #002147)",
                 }}
             />
             {/* Decorative animated dots */}
@@ -45,7 +45,7 @@ const ContactForm: React.FC = () => {
                             className="bg-white/10 backdrop-blur-md rounded-xl p-6 flex flex-col items-center text-center"
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            // viewport={{ once: true }}
                             transition={{ duration: 0.6 }}
                             whileHover={{ rotate: 2, scale: 1.02 }}
                         >
@@ -59,6 +59,11 @@ const ContactForm: React.FC = () => {
                 {/* Form + Info */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                     {/* Form */}
+                    <h3 className="text-2xl font-bold">Get in Touch</h3>
+                    <p className="text-white/80">
+                        Have a project in mind? Our team is ready to bring your vision to life.
+                        Fill out the form and we’ll get back to you within 24 hours.
+                    </p>
                     <motion.form
                         className="space-y-6"
                         initial={{ opacity: 0, x: -50 }}
@@ -129,23 +134,12 @@ const ContactForm: React.FC = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.4 }}
                     >
-                        <h3 className="text-2xl font-bold">Get in Touch</h3>
-                        <p className="text-white/80">
-                            Have a project in mind? Our team is ready to bring your vision to life.
-                            Fill out the form and we’ll get back to you within 24 hours.
-                        </p>
-                        <div className="flex space-x-4 mt-4">
-                            {['facebook', 'twitter', 'instagram', 'linkedin'].map((platform) => (
-                                <Link key={platform} href={`https://${platform}.com/inkwellmedia`} passHref>
-                                    <motion.a
-                                        className="text-white text-2xl"
-                                        whileHover={{ scale: 1.2, color: '#FF6A3D' }}
-                                    >
-                                        <i className={`ri-${platform}-fill`} />
-                                    </motion.a>
-                                </Link>
-                            ))}
+                        <div className="flex space-x-4" style={{
+                            margin: "-20px"
+                        }}>
+                            <img src="/images/contact-us-icons-paper-tags-sketch.png" alt="" />
                         </div>
+
                     </motion.div>
                 </div>
             </div>

@@ -21,18 +21,19 @@ const SplashScreen: React.FC = () => {
                     zIndex: 99999999
                 }}
             >
-                <DotLottieReact
-                    src="/animations/animations-1.lottie"
-                    loop
-                    autoplay
-                />
+                <iframe src="/animations/3d-camera/index.html" style={{
+                    width: '100%',
+                    minHeight: '80vh',
+                    border: 'none',
+                    borderRadius: '20px',
+                }}></iframe>
             </div>
         </div>
     );
 };
 
 const containerStyle: React.CSSProperties = {
-    backgroundColor: '#7B1FA2',
+    backgroundColor: '#001934',
     width: '100vw',
     height: '100vh',
     margin: 0,

@@ -42,12 +42,12 @@ const listVariants = {
 };
 
 const WhyUsHero: React.FC = () => (
-  <section className="relative overflow-hidden py-24">
+  <section className="relative overflow-hidden py-24 md:py-10">
     {/* Background gradient */}
     <div
       className="absolute inset-0 -z-10"
       style={{
-        background: 'radial-gradient(circle at 25% 25%, #4E1C50, #000)',
+        background: "linear-gradient(to right, #000, #002147)",
       }}
     />
 
@@ -73,10 +73,14 @@ const WhyUsHero: React.FC = () => (
         transition={{ duration: 0.8 }}
       >
         <h2 className="text-5xl md:text-6xl font-extrabold text-white leading-tight">
-          Why Choose Inkwell Media?
+          What is Inkwell?
         </h2>
         <p className="text-white/80 text-lg max-w-2xl">
-          At Inkwell Media, we don’t just make videos—we craft experiences. Our holistic approach blends storytelling, technology, and data to deliver content that resonates, engages, and converts. Whether you’re launching a startup, selling real estate, or growing your brand online, here’s why top companies trust us to bring their vision to life.
+          If we’re to answer in a few words? Specialists in the field of media production. But a few words don’t always suffice, right? So let us give you a briefing:
+          <br />
+          <strong style={{
+            color: "yellow"
+          }}>Inkwell</strong>- As the name suggests, the metaphorical meaning gives the expression of a well brimming with ink as ideas and creativity, we work in the fields of creativity and production. Turning dreams into visualisation is an ability which we capitalize. Merging skillfully over the last years, we’ve worked with several organizations helping them achieve commercial success. Even now, we’re actively working over the commercial and corporate sector, personal interests and eventful settings.
         </p>
 
         <motion.ul

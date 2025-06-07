@@ -26,17 +26,17 @@ interface PortfolioItem {
 }
 
 const portfolioItems: PortfolioItem[] = [
-  { id: '02', title: 'Matrubhoomi Dev', type: 'youtube', thumbnail: 'https://img.youtube.com/vi/fC39o9rfl-g/hqdefault.jpg', videoUrl: 'fC39o9rfl-g' },
-  { id: '0', title: 'Propzone',       type: 'youtube', thumbnail: 'https://img.youtube.com/vi/_sWam2SD_XM/hqdefault.jpg', videoUrl: '_sWam2SD_XM' },
-  { id: '01', title: 'Matrubhoomi Dev', type: 'youtube', thumbnail: 'https://img.youtube.com/vi/FeVQc7ruivE/hqdefault.jpg', videoUrl: 'FeVQc7ruivE' },
-  { id: '03', title: 'Matrubhoomi Dev', type: 'shorts',  thumbnail: 'https://img.youtube.com/vi/-eBeMUjt5k0/hqdefault.jpg', videoUrl: '-eBeMUjt5k0' },
-  { id: '04', title: 'Matrubhoomi Dev', type: 'shorts',  thumbnail: 'https://img.youtube.com/vi/pBQidJHykcY/hqdefault.jpg', videoUrl: 'pBQidJHykcY' },
-  { id: '007', title: 'Propzone',       type: 'youtube', thumbnail: 'https://img.youtube.com/vi/VEOTMPZFtbc/hqdefault.jpg', videoUrl: 'VEOTMPZFtbc' },
-  { id: '008', title: 'Cityprop',       type: 'youtube', thumbnail: 'https://img.youtube.com/vi/dRG5AXarqII/hqdefault.jpg', videoUrl: 'dRG5AXarqII' },
-  { id: '3',  title: 'Inkwell Reel',   type: 'reel',    thumbnail: '/logo.jpg?height=270&width=480',         videoUrl: 'https://www.instagram.com/reel/DGnGamVNVLD/' },
-  { id: '4',  title: 'Sahyadri Infra', type: 'youtube', thumbnail: 'https://img.youtube.com/vi/Ojaq3k0U8b4/hqdefault.jpg', videoUrl: 'Ojaq3k0U8b4' },
-  { id: '6',  title: 'Dreamland Prop', type: 'youtube', thumbnail: 'https://img.youtube.com/vi/WBrCNJnnmuk/hqdefault.jpg', videoUrl: 'WBrCNJnnmuk' },
-  { id: '7',  title: 'Propzone Mum',   type: 'youtube', thumbnail: 'https://img.youtube.com/vi/57jgxgvpRsM/hqdefault.jpg', videoUrl: '57jgxgvpRsM' },
+  { id: '02', title: 'Matrubhoomi Dev', type: 'youtube', thumbnail: 'https://img.youtube.com/vi/fC39o9rfl-g/hqdefault.jpg', videoUrl: 'https://www.youtube.com/embed/fC39o9rfl-g' },
+  { id: '0', title: 'Propzone',       type: 'youtube', thumbnail: 'https://img.youtube.com/vi/_sWam2SD_XM/hqdefault.jpg', videoUrl: 'https://www.youtube.com/embed/_sWam2SD_XM' },
+  { id: '01', title: 'Matrubhoomi Dev', type: 'youtube', thumbnail: 'https://img.youtube.com/vi/FeVQc7ruivE/hqdefault.jpg', videoUrl: 'https://www.youtube.com/embed/FeVQc7ruivE' },
+  { id: '03', title: 'Matrubhoomi Dev', type: 'shorts',  thumbnail: 'https://img.youtube.com/vi/-eBeMUjt5k0/hqdefault.jpg', videoUrl: 'https://www.youtube.com/embed/-eBeMUjt5k0' },
+  { id: '04', title: 'Matrubhoomi Dev', type: 'shorts',  thumbnail: 'https://img.youtube.com/vi/pBQidJHykcY/hqdefault.jpg', videoUrl: 'https://www.youtube.com/embed/pBQidJHykcY' },
+  { id: '007', title: 'Propzone',       type: 'youtube', thumbnail: 'https://img.youtube.com/vi/VEOTMPZFtbc/hqdefault.jpg', videoUrl: 'https://www.youtube.com/embed/VEOTMPZFtbc' },
+  { id: '008', title: 'Cityprop',       type: 'youtube', thumbnail: 'https://img.youtube.com/vi/dRG5AXarqII/hqdefault.jpg', videoUrl: 'https://www.youtube.com/embed/dRG5AXarqII' },
+  // { id: '3',  title: 'Inkwell Reel',   type: 'reel',    thumbnail: '/logo.jpg?height=270&width=480',         videoUrl: 'https://www.instagram.com/reel/DGnGamVNVLD/' },
+  { id: '4',  title: 'Sahyadri Infra', type: 'youtube', thumbnail: 'https://img.youtube.com/vi/Ojaq3k0U8b4/hqdefault.jpg', videoUrl: 'https://www.youtube.com/embed/Ojaq3k0U8b4' },
+  { id: '6',  title: 'Dreamland Prop', type: 'youtube', thumbnail: 'https://img.youtube.com/vi/WBrCNJnnmuk/hqdefault.jpg', videoUrl: 'https://www.youtube.com/embed/WBrCNJnnmuk' },
+  { id: '7',  title: 'Propzone Mum',   type: 'youtube', thumbnail: 'https://img.youtube.com/vi/57jgxgvpRsM/hqdefault.jpg', videoUrl: 'https://www.youtube.com/embed/57jgxgvpRsM' },
   // ...add remaining items here...
 ];
 
@@ -75,7 +75,7 @@ export default function PortfolioPage() {
   };
 
   return (
-    <section className="relative py-24 bg-gradient-to-b from-[#4E1C50] to-black overflow-hidden">
+    <section className="relative py-24 bg-gradient-to-b from-[#002147] to-black overflow-hidden">
       {/* Decorative shapes */}
       <motion.div
         className="absolute top-10 left-10 w-16 h-16 bg-[#FF6A3D]/30 rounded-full"
@@ -97,14 +97,14 @@ export default function PortfolioPage() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h1 className="text-5xl font-extrabold">Our Portfolio</h1>
+          <h1 className="text-5xl font-extrabold">Our portfolio- the exquisite memento</h1>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-white/80">
-            Explore our most impactful work—crafted to captivate, convert, and create lasting brand impact.
+            Explore our most impactful work: our mastercraft designed to captivate, convert, and create lasting brand impact.
           </p>
         </motion.div>
 
         {/* Filter Bar */}
-        <motion.div
+        {/* <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -130,7 +130,7 @@ export default function PortfolioPage() {
               </span>
             </motion.button>
           ))}
-        </motion.div>
+        </motion.div> */}
 
         {/* Video Grid */}
         <motion.div
@@ -151,10 +151,10 @@ export default function PortfolioPage() {
               whileHover={{ translateY: -5 }}
             >
               <div className="relative h-48 overflow-hidden">
-                <Image
-                  src={item.thumbnail}
-                  alt={item.title}
-                  fill
+                <iframe
+                  src={item.videoUrl}
+                  // alt={item.title}
+                  // fill
                   className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity"/>
@@ -170,11 +170,11 @@ export default function PortfolioPage() {
                   <PlayCircle className="w-12 h-12 text-white/90" />
                 </motion.button>
               </div>
-              <div className="p-4 flex flex-col h-32">
-                <h3 className="text-lg font-semibold text-white mb-2 line-clamp-1">
+              {/* <div className="p-4 flex flex-col h-32"> */}
+                {/* <h3 className="text-lg font-semibold text-white mb-2 line-clamp-1">
                   {item.title}
-                </h3>
-                <div className="mt-auto flex items-center justify-between">
+                </h3> */}
+                {/* <div className="mt-auto flex items-center justify-between">
                   <motion.div whileHover={{ x: 4 }}>
                     <Link href="#" onClick={() => setSelected(item)}>
                       <span className="text-sm font-medium text-[#FF6A3D] flex items-center gap-1">
@@ -183,8 +183,8 @@ export default function PortfolioPage() {
                       </span>
                     </Link>
                   </motion.div>
-                </div>
-              </div>
+                </div> */}
+              {/* </div> */}
             </motion.div>
           ))}
         </motion.div>
@@ -209,8 +209,8 @@ export default function PortfolioPage() {
               >
                 <div className="flex justify-between items-center p-4 border-b border-white/20">
                   <div className="flex items-center gap-2">
-                    {getTypeIcon(selected.type)}
-                    <h3 className="text-xl text-white">{selected.title}</h3>
+                    {/* {getTypeIcon(selected.type)} */}
+                    {/* <h3 className="text-xl text-white">{selected.title}</h3> */}
                   </div>
                   <button
                     onClick={() => setSelected(null)}

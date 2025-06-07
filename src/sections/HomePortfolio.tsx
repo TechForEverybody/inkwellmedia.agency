@@ -19,18 +19,15 @@ export interface PortfolioItem {
 }
 
 const portfolioItems: PortfolioItem[] = [
-    { id: '02', title: 'Matrubhoomi Developers', type: 'youtube', thumbnail: 'https://img.youtube.com/vi/fC39o9rfl-g/hqdefault.jpg', videoUrl: 'fC39o9rfl-g' },
-    { id: '04', title: 'Matrubhoomi Developers', type: 'shorts', thumbnail: 'https://img.youtube.com/vi/pBQidJHykcY/hqdefault.jpg', videoUrl: 'pBQidJHykcY' },
-    { id: '03', title: 'Matrubhoomi Developers', type: 'shorts', thumbnail: 'https://img.youtube.com/vi/-eBeMUjt5k0/hqdefault.jpg', videoUrl: '-eBeMUjt5k0' },
-    { id: '01', title: 'Matrubhoomi Developers', type: 'youtube', thumbnail: 'https://img.youtube.com/vi/FeVQc7ruivE/hqdefault.jpg', videoUrl: 'FeVQc7ruivE' },
-    { id: '0', title: 'Propzone', type: 'youtube', thumbnail: 'https://img.youtube.com/vi/_sWam2SD_XM/hqdefault.jpg', videoUrl: '_sWam2SD_XM' },
-
+    { id: '02', title: 'Matrubhoomi Developers', type: 'youtube', thumbnail: 'https://img.youtube.com/vi/fC39o9rfl-g/hqdefault.jpg', videoUrl: 'https://youtu.be/H6QoS8K_d-E?si=lsvwvNvRInDRW3qN' },
+    { id: '04', title: 'Matrubhoomi Developers', type: 'shorts', thumbnail: 'https://img.youtube.com/vi/pBQidJHykcY/hqdefault.jpg', videoUrl: 'https://youtube.com/shorts/94uZDoGDON4?si=ZmmYrHkFEs8wpLAR' },
+    { id: '03', title: 'Matrubhoomi Developers', type: 'shorts', thumbnail: 'https://img.youtube.com/vi/-eBeMUjt5k0/hqdefault.jpg', videoUrl: 'https://youtube.com/shorts/wwyxj2gvp3c?si=bafddA0ih8AIevHi' },
+    { id: '03', title: 'Matrubhoomi Developers', type: 'shorts', thumbnail: 'https://img.youtube.com/vi/-eBeMUjt5k0/hqdefault.jpg', videoUrl: 'https://youtube.com/shorts/al-_uTSeak4?si=c_LmsOqVDh-NqSoQ' },
+    { id: '03', title: 'Matrubhoomi Developers', type: 'shorts', thumbnail: 'https://img.youtube.com/vi/-eBeMUjt5k0/hqdefault.jpg', videoUrl: 'https://youtube.com/shorts/SQNVQDK4tsQ?si=JqV1vzbtXxBOBQ8r' },
+    { id: '01', title: 'Matrubhoomi Developers', type: 'youtube', thumbnail: 'https://img.youtube.com/vi/FeVQc7ruivE/hqdefault.jpg', videoUrl: 'https://www.youtube.com/watch?v=FeVQc7ruivE' },
+    { id: '0', title: 'Propzone', type: 'youtube', thumbnail: 'https://img.youtube.com/vi/_sWam2SD_XM/hqdefault.jpg', videoUrl: 'https://youtu.be/khet2AUsNto?si=UCY2rsbTgrHLgyni' },
+    { id: '0', title: 'Propzone', type: 'youtube', thumbnail: 'https://img.youtube.com/vi/_sWam2SD_XM/hqdefault.jpg', videoUrl: 'https://youtu.be/4spJftpawzc?si=3vns_A_0P8ZmAGKk' },
 ];
-
-const getDescription = (type: PortfolioItem['type']) =>
-    type === 'youtube'
-        ? 'Full-length project showcase on YouTube.'
-        : 'Short-form promotional reel.';
 
 export default function Portfolio() {
     const isDesktop = useMediaQuery('(min-width:1024px)');
@@ -42,15 +39,36 @@ export default function Portfolio() {
 
     return (
         <Typography className="py-16" sx={{
-            background: "linear-gradient(to right, #4F1C51, #000000)",
+            background: "linear-gradient(to right, #000, #002147)", // Dark blue gradient
         }}>
 
 
             <div className="container mx-auto px-4 space-y-12">
                 <div className="text-center mb-12 px-4">
-                    <h2 className="text-3xl md:text-4xl font-bold">Our Portfolio</h2>
+
+                    <Typography variant="h1" sx={{
+                        color: '#FFFFFF',
+                        fontSize: {
+                            xs: '2rem',
+                            sm: '3rem',
+                            md: '4rem',
+                            lg: '5rem',
+                        },
+                        fontWeight: 'bold',
+                        textAlign: 'center',
+                        marginBottom: '1rem',
+                        textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+                        background: 'linear-gradient(to right, #FFF, #FFFFFF33)',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent',
+                    }}>Portfolio for people, drawpot for you</Typography>
+
+
+
+
+
                     <p className="text-gray-400 max-w-2xl mx-auto mt-4">
-                        Explore a curated selection of our video production work, from full-length YouTube showcases to short-form reels that captivate audiences.
+                        Our success flourished from our clients who’ve turned their visions into reality through us. This is how our work speaks volumes.Take a glimpse on the varieties of projects we have worked upon.
                     </p>
                 </div>
                 {rows.map((pair, idx) => {
@@ -100,7 +118,7 @@ function VideoCard({ item, isDesktop }: VideoCardProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative rounded-xl overflow-hidden shadow-lg"
+            className="relative rounded-xl overflow-hidden shadow-lg border-2 border-white"
         >
             <div
                 className="relative"
@@ -110,7 +128,7 @@ function VideoCard({ item, isDesktop }: VideoCardProps) {
                 <div className="relative w-full h-[350px] ">
                     {playing ? (
                         <ReactPlayer
-                            url={`https://www.youtube.com/watch?v=${item.videoUrl}`}
+                            url={`${item.videoUrl}`}
                             playing
                             muted
                             loop
@@ -120,11 +138,14 @@ function VideoCard({ item, isDesktop }: VideoCardProps) {
                         />
                     ) : (
                         <>
-                            <Image
-                                src={item.thumbnail}
-                                alt={`${item.title} thumbnail`}
-                                layout="fill"
-                                objectFit="cover"
+                            <ReactPlayer
+                                url={`${item.videoUrl}`}
+
+                                muted
+                                loop
+                                width="100%"
+                                height="100%"
+                                style={{ position: 'absolute', top: 0, left: 0 }}
                             />
                             <motion.div
                                 className="absolute inset-0 flex items-center justify-center bg-black/25"
@@ -145,15 +166,15 @@ function VideoCard({ item, isDesktop }: VideoCardProps) {
                 </div>
             </div>
 
-            <div className="p-6 bg-[#9C27B0] text-white">
-                <div className="flex items-center gap-2 mb-2">
+            <div className="p-0 bg-[#9C27B0] text-white">
+                {/* <div className="flex items-center gap-2 mb-2">
                     <Icon className="text-red-500" />
                     <h3 className="text-xl font-semibold ">{item.title}</h3>
-                </div>
-                <p className=" mb-4">{getDescription(item.type)}</p>
-                <div className="flex flex-wrap gap-2 mb-4">
+                </div> */}
+                {/* <p className=" mb-4">{getDescription(item.type)}</p> */}
+                <div className="flex flex-wrap gap-2 mb-4 absolute top-0 py-5">
                     <span className="text-xs bg-red-100 text-red-600 px-2 py-1 rounded-full">{item.type}</span>
-                    <span className="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded-full">Video</span>
+                    {/* <span className="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded-full">Video</span> */}
                 </div>
             </div>
         </motion.div>

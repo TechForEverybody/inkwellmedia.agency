@@ -28,7 +28,7 @@ const sectionVariants: Variants = {
 }
 
 const logoUrl =
-    '/inkwell-logo.svg'
+    'images/Screenshot_2025-06-06_211644-removebg-preview.png'
 
 export default function Footer() {
     return (
@@ -51,25 +51,15 @@ export default function Footer() {
                     >
                         <div style={{
                             display: 'flex',
-                            alignItems: 'center',
+                            alignItems: 'start  ',
                         }}>
 
                             <Box
                                 component="img"
                                 src={logoUrl}
                                 alt="Innov8r Logo"
-                                sx={{ height: 48, mb: 1 }}
+                                sx={{ height: 100, mb: 1 }}
                             />
-                            <Typography
-                                variant="h6"
-                                sx={{
-                                    fontWeight: 'bold',
-                                    textAlign: 'center',
-                                    mb: 1,
-                                }}
-                            >
-                                Inkwell Media
-                            </Typography>
                         </div>
                         <Typography
                             variant="subtitle1"

@@ -9,6 +9,7 @@ import VideoLibraryIcon from '@mui/icons-material/VideoLibrary';
 import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
 import SchoolIcon from '@mui/icons-material/School';
 import GroupIcon from '@mui/icons-material/Group';
+import { Typography } from '@mui/material';
 // import Button from '@mui/material/Button';
 // import Link from 'next/link';
 
@@ -84,18 +85,34 @@ const HomeTargetAudience: React.FC = () => {
         <section
             className="py-16"
             style={{
-                background: 'linear-gradient(to right, #4F1C51, #000000)',
+                background: "linear-gradient(to right, #000, #002147)",
+
             }}
         >
             <div className="container mx-auto px-4">
                 {/* Heading with side lines */}
                 <div className="flex items-center justify-center mb-6">
                     <div className="h-1 w-16 bg-accent mx-4"></div>
-                    <h2 className="text-3xl md:text-4xl font-bold text-white">Target Audience</h2>
+                    <Typography variant="h1" sx={{
+                        color: '#FFFFFF',
+                        fontSize: {
+                            xs: '2rem',
+                            sm: '3rem',
+                            md: '4rem',
+                            lg: '5rem',
+                        },
+                        fontWeight: 'bold',
+                        textAlign: 'center',
+                        marginBottom: '1rem',
+                        textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+                        background: 'linear-gradient(to right, #FFF, #FFFFFF33)',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent',
+                    }}>Our expertise in diverse fields</Typography>
                     <div className="h-1 w-16 bg-accent mx-4"></div>
                 </div>
                 <p className="text-center text-gray-300 max-w-7xl mx-auto mb-12">
-                    Our end-to-end service suite adapts to the unique needs of each audience—delivering tailored storytelling, data-driven strategies, and production values that resonate with your customers, stakeholders, and communities. Whether you’re targeting homebuyers in Mumbai, global e-commerce shoppers, or students around the world, Inkwell Media crafts every frame to speak directly to your market
+                    As we can observe, the current generation has technically progressed to the point where it has created different sectors. It resulted in segmented communities and people based on their specific needs. Now, with the right audience in mind, having a unique approach to cater your audience is essential. With the consideration of diversity, we studied the skills of video production, and now we provide the media assets suitable and applicable for all industries, so that you may present yourself before your audience with perfection.
                 </p>
 
                 {/* Service Cards */}
@@ -113,24 +130,27 @@ const HomeTargetAudience: React.FC = () => {
                                 animate={{ x: 0, y: 0, opacity: 1 }}
                                 transition={{ delay: 2 + idx * 0.1, type: 'spring', stiffness: 60 }}
                                 whileHover={{ translateY: -5 }}
-                                className="border border-gray-700 rounded-lg p-2 flex flex-row flex-wrap justify-center items-center text-center hover:shadow-lg transition-shadow duration-300 bg-[#4F1C51]"
+                                className="border-white border-2 rounded-lg p-2 flex flex-row flex-wrap justify-center items-center text-center hover:shadow-lg transition-shadow duration-300 bg-transparent backdrop-blur-5xl hover:bg-white/10 shadow-lg"
                             >
                                 <div className="p-4 rounded-full mb-4 bg-white/10 mr-5">
-                                    <Icon className="text-white text-2xl" sx={{ fontSize: 30 }} />
+                                    <Icon className="text-white text-2xl" sx={{ fontSize: 90 }} />
                                 </div>
                                 <h3 className="text-xl font-semibold text-white mb-2">{service.title}</h3>
                                 <div className="w-12 h-0.5 bg-accent mb-4"></div>
                                 {/* <p className="text-gray-300 mb-4">{service.description}</p> */}
-                                <div className="flex flex-col  gap-2 mb-6 w-full text-left">
+                                <div className="flex flex-wrap  gap-2 mb-6 w-full text-left">
                                     {service.tags.map((tag) => (
                                         <span
                                             key={tag}
                                             className="w-full text-sm text-white bg-accent/20 px-3 py-1 rounded-full"
                                             style={{
-
+                                                border: '1px solid #fff',
+                                                backdropFilter: 'blur(5px)',
+                                                textAlign: 'center',
+                                                width: 'fit-content',
                                             }}
                                         >
-                                            🚀 {tag}
+                                            {tag}
                                         </span>
                                     ))}
                                 </div>

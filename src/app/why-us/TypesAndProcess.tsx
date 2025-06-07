@@ -11,46 +11,77 @@ const types = [
   {
     title: 'YouTube Videos',
     image: '/images/6865587_23409.jpg',
-    description: 'Full-length, high-definition videos optimized for YouTube audiences.',
-    tags: ['YouTube', 'HD'],
+    col: 'lg:col-span-2',
+    row: 'lg:row-span-2',
+    description: 'Use the largest video social media to share and publicise your high quality full-length content on a global level.',
+    tags: ['YouTube', 'Full-Length', 'HD'],
   },
   {
     title: 'Commercials & Ads',
-    image: '/images/6851375_28339.jpg',
-    description: 'Short-form ads crafted for TV and online distribution.',
-    tags: ['TV Ads', 'Branding'],
-  },
-  {
-    title: 'Mid-Level Ads',
     image: '/images/modern-design-illustration-web-ad.png',
-    description: 'Balanced-length social media ads that engage and convert.',
-    tags: ['Social', 'Promos'],
+    col: 'lg:col-span-2',
+    row: 'lg:row-span-3',
+    description: 'Let the people recognize your brand, through mass communication',
+    tags: ['TV Ads', 'Branding', 'Marketing'],
   },
   {
-    title: 'Video Production',
-    image: '/images/photographer-character.png',
-    description: 'End-to-end filming & editing from concept through delivery.',
-    tags: ['Full-Service', 'Editing'],
+    title: 'Out-of-home (OHH) & kiosk',
+    image: '/images/6851375_28339.jpg',
+    col: 'lg:col-span-2',
+    row: 'lg:row-span-2',
+    description: `Whether it's tv monitors or public billboards, these advertisements will never miss the opportunity to grab your potential audience's attention.`,
+    tags: ['Social Media', 'Promos'],
   },
   {
     title: 'Shorts & Reels',
     image: '/images/hand-with-phone-video-call-icon-isolated.png',
-    description: 'Quick, vertical videos designed for social engagement.',
-    tags: ['Shorts', 'Reels'],
+    col: 'lg:col-span-2',
+    row: 'lg:row-span-3',
+    description: 'Engage and entertain, this motto works the best when it comes to quickly capturing the audience’ attention and creating attachment.',
+    tags: ['Shorts', 'Reels', 'Viral'],
+  },
+  {
+    title: 'Animations ',
+    image: '/images/154990.jpg',
+    col: 'lg:col-span-2',
+    row: 'lg:row-span-3',
+    description: 'Fantasies can’t be limited to convey just by words. Let the visuals speak for you.',
+    tags: ['Full-Service', 'Script', 'Editing'],
+  },
+  {
+    title: 'Documentaries',
+    image: '/images/3806.jpg',
+    col: 'lg:col-span-2',
+    row: 'lg:row-span-2',
+    description: 'Share your story, not just by explanation, but through enacted experience',
+    tags: ['Storytelling', 'Long-Form'],
   },
   {
     title: 'User-Generated Content',
     image: '/images/multitasking-businessman-doing-many-tasks-same-time.png',
-    description: 'Authentic footage featuring real customers and advocates.',
-    tags: ['UGC', 'Testimonials'],
+    col: 'lg:col-span-2',
+    row: 'lg:row-span-3',
+    description: 'Let your community be the witness and feature of your successful journey, not as a bystander, but as a family.',
+    tags: ['UGC', 'Authentic', 'Testimonials'],
   },
   {
-    title: 'Documentaries',
+    title: 'Walkthrough videos',
     image: '/images/film-camera-geek-cartoon-cartoon-mascot-vector.png',
-    description: 'Long-form storytelling films that captivate and inform.',
-    tags: ['Storytelling', 'Long-Form'],
+    col: 'lg:col-span-2',
+    row: 'lg:row-span-3',
+    description: 'Demonstrate what you want to highlight through the format of a video brochure. Emphasise the exclusivity of your products or services in an informative way. ',
+    tags: ['Walkthrough', 'Product', 'Showcase'],
+  },
+  {
+    title: 'Company culture videos ',
+    image: '/images/11538.jpg',
+    col: 'lg:col-span-2',
+    row: 'lg:row-span-3',
+    description: 'Your offices and employee management is a testimony of your work. Showcase the management and working ambience, services and employee correlation for people to let them know how you operate.',
+    tags: ['Company Culture', 'Behind the Scenes', 'Testimonials'],
   },
 ];
+
 
 const steps = [
   {
@@ -85,7 +116,7 @@ const fadeInUp = {
 const CombinedServicesWorkflow: React.FC = () => (
   <section className="py-24 ">
     <div className="container mx-auto px-4 space-y-20">
-      
+
       {/* Header */}
       <motion.div
         initial="hidden"
