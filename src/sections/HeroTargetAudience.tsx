@@ -108,6 +108,8 @@ const HomeTargetAudience: React.FC = () => {
                         background: 'linear-gradient(to right, #FFF, #FFFFFF33)',
                         WebkitBackgroundClip: 'text',
                         WebkitTextFillColor: 'transparent',
+        WebkitTextStroke: '2px white',
+
                     }}>Our expertise in diverse fields</Typography>
                     <div className="h-1 w-16 bg-accent mx-4"></div>
                 </div>

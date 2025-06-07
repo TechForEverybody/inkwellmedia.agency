@@ -77,6 +77,7 @@ export default function FAQ() {
                         background: 'linear-gradient(to right, #FFF, #FFFFFF33)',
                         WebkitBackgroundClip: 'text',
                         WebkitTextFillColor: 'transparent',
+                                WebkitTextStroke: '2px white',
                     }}>Frequently Asked Questions</Typography>
                     {/* <h1 style={{
                         color: '#FFFFFF',

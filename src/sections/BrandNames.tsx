@@ -27,7 +27,7 @@ const BrandNames: React.FC = () => {
   return (
     <div style={{
       minHeight: isMobile ? "20vh" : "30vh",
-      margin: isMobile ? '1rem auto' : '4rem auto',
+      margin: isMobile ? '1rem auto' : '2rem auto',
     }}>
       <Typography variant="h1" sx={{
         color: '#FFFFFF',
@@ -44,6 +44,8 @@ const BrandNames: React.FC = () => {
         background: 'linear-gradient(to right, #FFF, #FFFFFF33)',
         WebkitBackgroundClip: 'text',
         WebkitTextFillColor: 'transparent',
+        WebkitTextStroke: '2px white',
+
       }}>Standing Tall with Our  Clients</Typography>
       <Box
         sx={{

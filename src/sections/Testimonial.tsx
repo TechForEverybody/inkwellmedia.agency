@@ -71,6 +71,8 @@ export default function Testimonials() {
                     background: 'linear-gradient(to right, #FFF, #FFFFFF33)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
+                    WebkitTextStroke: '2px white',
+
                 }}>What Our Clients Say</Typography>
                 {/* <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-6"></h2> */}
                 <p className="text-center text-white/80 mb-12 max-w-full mx-auto">Genuine feedback from our recent partners across industries who have experienced our work first-hand.</p>

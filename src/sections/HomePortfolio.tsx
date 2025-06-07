@@ -57,6 +57,7 @@ export default function Portfolio() {
                         background: 'linear-gradient(to right, #FFF, #FFFFFF33)',
                         WebkitBackgroundClip: 'text',
                         WebkitTextFillColor: 'transparent',
+                                WebkitTextStroke: '2px white',
                     }}>Portfolio for people, drawpot for you</Typography>
 
 

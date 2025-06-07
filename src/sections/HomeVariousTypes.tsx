@@ -98,6 +98,7 @@ export default function VariousTypes() {
                 background: 'linear-gradient(to right, #FFF, #FFFFFF33)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
+                        WebkitTextStroke: '2px white',
             }}>Explore Our Video Production Types</Typography>
             <p className="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
                 From YouTube videos and shorts to commercials, documentaries, and user-generated content, our team delivers top-tier production quality across every format.

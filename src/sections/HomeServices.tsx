@@ -98,6 +98,8 @@ const HomeServices: React.FC = () => (
                     background: 'linear-gradient(to right, #FFF, #FFFFFF33)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
+        WebkitTextStroke: '2px white',
+
                 }}>Our Services</Typography>
                 <p className="mt-4 text-white/80 max-w-2xl mx-auto">
                     We offer premium advertising services tailored to help your brand succeed in the digital space.

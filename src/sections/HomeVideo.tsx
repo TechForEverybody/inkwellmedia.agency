@@ -93,6 +93,7 @@ const HomeVideo: React.FC = () => {
                 background: 'linear-gradient(to right, #FFF, #FFFFFF33)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
+                WebkitTextStroke: '2px white',
             }}>INKWELL SHOWREEL</Typography>
             <video
                 src="/Inkwell media showreel v2.mp4"

@@ -65,7 +65,7 @@ export default function Footer() {
                             variant="subtitle1"
                             sx={{ fontStyle: 'italic' }}
                         >
-                            Where Vision Meets Execution
+                            Let your imagination transforms into visual
                         </Typography>
                     </motion.div>
                 </Box>
