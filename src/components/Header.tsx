@@ -47,7 +47,7 @@ const Header: React.FC = () => {
 
     const drawer = (
         <Box className="w-full h-full  p-0 flex flex-col" sx={{
-            // background: "linear-gradient(to right, #000, #002147)", // Dark blue gradient
+            background: "linear-gradient(to right, #000, #002147)", // Dark blue gradient
             backdropFilter: 'blur(50px)',
             boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)',
             // borderRadius: '20px',
@@ -76,13 +76,13 @@ const Header: React.FC = () => {
                     href="/contact-us"
                     variant="text"
                     fullWidth
-                    className="bg-accent hover:bg-accent-dark text-white rounded-full py-2"
+                    className="bg-accent hover:bg-accent-dark text-white rounded-full py-2 w-[200px]"
                 >
                     <motion.a
                         href="/contact-us"
-                        className="inline-block bg-gradient-to-r from-[#FF6A3D] to-[#FFA62B] text-white rounded-full px-10 p2-4 text-sm font-medium shadow-xl"
+                        className="inline-block bg-gradient-to-r from-[#FF6A3D] to-[#FFA62B] text-white rounded-full px-10 p-1 text-xs font-medium shadow-xl w-[200px]"
                         whileHover={{ scale: 1.1, boxShadow: '0px 0px 20px rgba(255,106,61,0.7)' }}
-                        transition={{ type: 'spring', stiffness: 200 }}
+                        transition={{ type: 'spring', stiffness: 200, }}
                     >
                         Connect Now →
                     </motion.a>
@@ -103,7 +103,7 @@ const Header: React.FC = () => {
                     left: '0',
                     borderRadius: '20px',
                 }}
-                
+
                 >
                     <Toolbar className="container mx-auto flex justify-between items-center  md:px-0">
                         {/* Mobile menu button */}
@@ -212,9 +212,13 @@ const Header: React.FC = () => {
                 style={{
                     backdropFilter: 'blur(50px)',
                     boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)',
+                    background: 'linear-gradient(to right, #000, #002147)', // Dark blue gradient
                 }}
                 PaperProps={{
-                    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                    sx: {
+                        background: 'transparent', // Dark blue gradient
+
+                    },
                 }}
             // ModalProps={{ keepMounted: true }}
             // PaperProps={{ className: 'backdrop-filter bg-transparent backdrop-blur-lg bg-opacity-80' }}
