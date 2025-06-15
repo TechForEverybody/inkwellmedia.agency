@@ -23,19 +23,175 @@ interface PortfolioItem {
 }
 
 const portfolioItems: PortfolioItem[] = [
-  { id: '02', title: 'Matrubhoomi Dev', type: 'youtube', thumbnail: 'https://img.youtube.com/vi/fC39o9rfl-g/hqdefault.jpg', videoUrl: 'https://www.youtube.com/embed/fC39o9rfl-g' },
-  { id: '0', title: 'Propzone',       type: 'youtube', thumbnail: 'https://img.youtube.com/vi/_sWam2SD_XM/hqdefault.jpg', videoUrl: 'https://www.youtube.com/embed/_sWam2SD_XM' },
-  { id: '01', title: 'Matrubhoomi Dev', type: 'youtube', thumbnail: 'https://img.youtube.com/vi/FeVQc7ruivE/hqdefault.jpg', videoUrl: 'https://www.youtube.com/embed/FeVQc7ruivE' },
-  { id: '03', title: 'Matrubhoomi Dev', type: 'shorts',  thumbnail: 'https://img.youtube.com/vi/-eBeMUjt5k0/hqdefault.jpg', videoUrl: 'https://www.youtube.com/embed/-eBeMUjt5k0' },
-  { id: '04', title: 'Matrubhoomi Dev', type: 'shorts',  thumbnail: 'https://img.youtube.com/vi/pBQidJHykcY/hqdefault.jpg', videoUrl: 'https://www.youtube.com/embed/pBQidJHykcY' },
-  { id: '007', title: 'Propzone',       type: 'youtube', thumbnail: 'https://img.youtube.com/vi/VEOTMPZFtbc/hqdefault.jpg', videoUrl: 'https://www.youtube.com/embed/VEOTMPZFtbc' },
-  { id: '008', title: 'Cityprop',       type: 'youtube', thumbnail: 'https://img.youtube.com/vi/dRG5AXarqII/hqdefault.jpg', videoUrl: 'https://www.youtube.com/embed/dRG5AXarqII' },
+  { id: '1', title: 'Matrubhoomi Dev', type: 'youtube', thumbnail: 'https://img.youtube.com/vi/fC39o9rfl-g/hqdefault.jpg', videoUrl: 'https://www.youtube.com/embed/fC39o9rfl-g' },
+  { id: '2', title: 'Propzone', type: 'youtube', thumbnail: 'https://img.youtube.com/vi/_sWam2SD_XM/hqdefault.jpg', videoUrl: 'https://www.youtube.com/embed/_sWam2SD_XM' },
+  { id: '3', title: 'Matrubhoomi Dev', type: 'youtube', thumbnail: 'https://img.youtube.com/vi/FeVQc7ruivE/hqdefault.jpg', videoUrl: 'https://www.youtube.com/embed/FeVQc7ruivE' },
+  { id: '4', title: 'Matrubhoomi Dev', type: 'shorts', thumbnail: 'https://img.youtube.com/vi/-eBeMUjt5k0/hqdefault.jpg', videoUrl: 'https://www.youtube.com/embed/-eBeMUjt5k0' },
+  { id: '5', title: 'Matrubhoomi Dev', type: 'shorts', thumbnail: 'https://img.youtube.com/vi/pBQidJHykcY/hqdefault.jpg', videoUrl: 'https://www.youtube.com/embed/pBQidJHykcY' },
+  { id: '6', title: 'Propzone', type: 'youtube', thumbnail: 'https://img.youtube.com/vi/VEOTMPZFtbc/hqdefault.jpg', videoUrl: 'https://www.youtube.com/embed/VEOTMPZFtbc' },
+  { id: '7', title: 'Cityprop', type: 'youtube', thumbnail: 'https://img.youtube.com/vi/dRG5AXarqII/hqdefault.jpg', videoUrl: 'https://www.youtube.com/embed/dRG5AXarqII' },
   // { id: '3',  title: 'Inkwell Reel',   type: 'reel',    thumbnail: '/logo.jpg?height=270&width=480',         videoUrl: 'https://www.instagram.com/reel/DGnGamVNVLD/' },
-  { id: '4',  title: 'Sahyadri Infra', type: 'youtube', thumbnail: 'https://img.youtube.com/vi/Ojaq3k0U8b4/hqdefault.jpg', videoUrl: 'https://www.youtube.com/embed/Ojaq3k0U8b4' },
-  { id: '6',  title: 'Dreamland Prop', type: 'youtube', thumbnail: 'https://img.youtube.com/vi/WBrCNJnnmuk/hqdefault.jpg', videoUrl: 'https://www.youtube.com/embed/WBrCNJnnmuk' },
-  { id: '7',  title: 'Propzone Mum',   type: 'youtube', thumbnail: 'https://img.youtube.com/vi/57jgxgvpRsM/hqdefault.jpg', videoUrl: 'https://www.youtube.com/embed/57jgxgvpRsM' },
-  // ...add remaining items here...
+  { id: '8', title: 'Sahyadri Infra', type: 'youtube', thumbnail: 'https://img.youtube.com/vi/Ojaq3k0U8b4/hqdefault.jpg', videoUrl: 'https://www.youtube.com/embed/Ojaq3k0U8b4' },
+  { id: '9', title: 'Dreamland Prop', type: 'youtube', thumbnail: 'https://img.youtube.com/vi/WBrCNJnnmuk/hqdefault.jpg', videoUrl: 'https://www.youtube.com/embed/WBrCNJnnmuk' },
+  { id: '10', title: 'Propzone Mum', type: 'youtube', thumbnail: 'https://img.youtube.com/vi/57jgxgvpRsM/hqdefault.jpg', videoUrl: 'https://www.youtube.com/embed/57jgxgvpRsM' },
+  {
+    id: '11',
+    title: 'Inkwell Reel',
+    type: 'shorts',
+    thumbnail: '/logo.jpg?height=270&width=480',
+    videoUrl: 'https://youtube.com/embed/F8wheacVWM8?si=3_1N0BTsaJwSNgYT',
+  },
+  {
+    id: '12',
+    title: 'Inkwell Reel',
+    type: 'shorts',
+    thumbnail: '/logo.jpg?height=270&width=480',
+    videoUrl: 'https://www.youtube.com/embed/wwyxj2gvp3c',
+  },
+  {
+    id: '13',
+    title: 'Inkwell Reel',
+    type: 'shorts',
+    thumbnail: '/logo.jpg?height=270&width=480',
+    videoUrl: 'https://www.youtube.com/embed/Y2rg42rsOpg',
+  },
+  {
+    id: '14',
+    title: 'Inkwell Reel',
+    type: 'youtube',
+    thumbnail: '/logo.jpg?height=270&width=480',
+    videoUrl: 'https://www.youtube.com/embed/aNngkxF7z3s',
+  },
+    {
+    id: '21',
+    title: 'YouTube Video 1',
+    type: 'youtube',
+    thumbnail: '/logo.jpg?height=270&width=480',
+    videoUrl: 'https://www.youtube.com/embed/LjptiQ9uraE',
+  },
+  {
+    id: '22',
+    title: 'YouTube Video 2',
+    type: 'youtube',
+    thumbnail: '/logo.jpg?height=270&width=480',
+    videoUrl: 'https://www.youtube.com/embed/a_MjHRBsNA0',
+  },
+  {
+    id: '23',
+    title: 'YouTube Video 3',
+    type: 'youtube',
+    thumbnail: '/logo.jpg?height=270&width=480',
+    videoUrl: 'https://www.youtube.com/embed/7bmqV683kt8',
+  },
+  {
+    id: '24',
+    title: 'YouTube Video 4',
+    type: 'youtube',
+    thumbnail: '/logo.jpg?height=270&width=480',
+    videoUrl: 'https://www.youtube.com/embed/blIl41wj3hc',
+  },
+  {
+    id: '25',
+    title: 'YouTube Video 5',
+    type: 'youtube',
+    thumbnail: '/logo.jpg?height=270&width=480',
+    videoUrl: 'https://www.youtube.com/embed/4spJftpawzc',
+  },
+  {
+    id: '26',
+    title: 'YouTube Video 6',
+    type: 'youtube',
+    thumbnail: '/logo.jpg?height=270&width=480',
+    videoUrl: 'https://www.youtube.com/embed/H6QoS8K_d-E',
+  },
+  {
+    id: '27',
+    title: 'YouTube Video 7',
+    type: 'youtube',
+    thumbnail: '/logo.jpg?height=270&width=480',
+    videoUrl: 'https://www.youtube.com/embed/L6cn5ib-7NU',
+  },
+  {
+    id: '28',
+    title: 'YouTube Video 8',
+    type: 'youtube',
+    thumbnail: '/logo.jpg?height=270&width=480',
+    videoUrl: 'https://www.youtube.com/embed/SQNVQDK4tsQ',
+  },
+  {
+    id: '29',
+    title: 'YouTube Video 9',
+    type: 'youtube',
+    thumbnail: '/logo.jpg?height=270&width=480',
+    videoUrl: 'https://www.youtube.com/embed/al-_uTSeak4',
+  },
+  {
+    id: '30',
+    title: 'YouTube Video 10',
+    type: 'youtube',
+    thumbnail: '/logo.jpg?height=270&width=480',
+    videoUrl: 'https://www.youtube.com/embed/ze6-VOcF3no',
+  },
+  {
+    id: '31',
+    title: 'YouTube Video 11',
+    type: 'youtube',
+    thumbnail: '/logo.jpg?height=270&width=480',
+    videoUrl: 'https://www.youtube.com/embed/KKMK0SEjoMw',
+  },
+  {
+    id: '32',
+    title: 'YouTube Video 12',
+    type: 'youtube',
+    thumbnail: '/logo.jpg?height=270&width=480',
+    videoUrl: 'https://www.youtube.com/embed/Ojaq3k0U8b4',
+  },
+  {
+    id: '33',
+    title: 'YouTube Video 13',
+    type: 'youtube',
+    thumbnail: '/logo.jpg?height=270&width=480',
+    videoUrl: 'https://www.youtube.com/embed/XoTa1AwYd4k',
+  },
+  {
+    id: '34',
+    title: 'YouTube Video 14',
+    type: 'youtube',
+    thumbnail: '/logo.jpg?height=270&width=480',
+    videoUrl: 'https://www.youtube.com/embed/5l2F3DXbxXY',
+  },
+  {
+    id: '35',
+    title: 'YouTube Video 15',
+    type: 'youtube',
+    thumbnail: '/logo.jpg?height=270&width=480',
+    videoUrl: 'https://www.youtube.com/embed/yW4S1tPu-po',
+  },
+  {
+    id: '36',
+    title: 'YouTube Video 16',
+    type: 'youtube',
+    thumbnail: '/logo.jpg?height=270&width=480',
+    videoUrl: 'https://www.youtube.com/embed/WBrCNJnnmuk',
+  },
+  {
+    id: '37',
+    title: 'YouTube Short 1',
+    type: 'youtube',
+    thumbnail: '/logo.jpg?height=270&width=480',
+    videoUrl: 'https://www.youtube.com/embed/O6iSZjs9pEs',
+  },
+  {
+    id: '38',
+    title: 'YouTube Short 2',
+    type: 'youtube',
+    thumbnail: '/logo.jpg?height=270&width=480',
+    videoUrl: 'https://www.youtube.com/embed/8wsCSvYan_o',
+  }
 ];
+
+
+
 
 
 
@@ -45,14 +201,14 @@ export default function PortfolioPage() {
   const getTypeIcon = (type: VideoType) => {
     switch (type) {
       case 'youtube': return <Youtube className="w-5 h-5 text-red-600" />;
-      case 'shorts':  return <Film className="w-5 h-5 text-red-600" />;
-      case 'reel':    return <Instagram className="w-5 h-5 text-pink-500" />;
-      case 'custom':  return <Film className="w-5 h-5 text-blue-500" />;
+      case 'shorts': return <Film className="w-5 h-5 text-red-600" />;
+      case 'reel': return <Instagram className="w-5 h-5 text-pink-500" />;
+      case 'custom': return <Film className="w-5 h-5 text-blue-500" />;
     }
   };
 
   return (
-    <section className="relative py-24 bg-gradient-to-b from-[#002147] to-black overflow-hidden">
+    <section className="relative py-24 bg-gradient-to-r from-[#09316E] to-[#00DAFE] overflow-hidden">
       {/* Decorative shapes */}
       <motion.div
         className="absolute top-10 left-10 w-16 h-16 bg-[#FF6A3D]/30 rounded-full"
@@ -134,7 +290,7 @@ export default function PortfolioPage() {
                   // fill
                   className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity"/>
+                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity" />
                 <div className="absolute top-2 right-2 flex items-center gap-1 bg-white/30 backdrop-blur-sm rounded-full px-2 py-1 text-xs">
                   {getTypeIcon(item.type)}
                   <span className="text-white">{item.type}</span>
@@ -148,10 +304,10 @@ export default function PortfolioPage() {
                 </motion.button>
               </div>
               {/* <div className="p-4 flex flex-col h-32"> */}
-                {/* <h3 className="text-lg font-semibold text-white mb-2 line-clamp-1">
+              {/* <h3 className="text-lg font-semibold text-white mb-2 line-clamp-1">
                   {item.title}
                 </h3> */}
-                {/* <div className="mt-auto flex items-center justify-between">
+              {/* <div className="mt-auto flex items-center justify-between">
                   <motion.div whileHover={{ x: 4 }}>
                     <Link href="#" onClick={() => setSelected(item)}>
                       <span className="text-sm font-medium text-[#FF6A3D] flex items-center gap-1">
@@ -211,7 +367,7 @@ export default function PortfolioPage() {
                     </div>
                   ) : (
                     <iframe
-                      src={`https://www.youtube.com/embed/${selected.videoUrl}?autoplay=1&rel=0&modestbranding=1`}
+                      src={`${selected.videoUrl}?autoplay=1&rel=0&modestbranding=1`}
                       allow="autoplay; encrypted-media"
                       className="w-full aspect-video"
                       title={selected.title}

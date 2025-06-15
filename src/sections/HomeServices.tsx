@@ -98,7 +98,7 @@ const HomeServices: React.FC = () => (
                     background: 'linear-gradient(to right, #FFF, #FFFFFF33)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
-        WebkitTextStroke: '2px white',
+                    WebkitTextStroke: '2px white',
 
                 }}>Our Services</Typography>
                 <p className="mt-4 text-white/80 max-w-2xl mx-auto">
@@ -139,9 +139,11 @@ function ServiceCard({ service }: { service: Service }) {
                 className="relative w-full h-full transition-transform duration-500"
                 style={{ transformStyle: 'preserve-3d' }}
             >
-                <div
+                <Typography component={'div'}
                     className="  border-2 border-white rounded-2xl inset-0 flex flex-col justify-center items-center bg-white/5 backdrop-blur-lg  p-6"
-                    style={{ backfaceVisibility: 'hidden' }}
+                    style={{
+                        backfaceVisibility: 'hidden',
+                    }}
                 >
                     <div className="flex justify-center mb-4">
                         <service.Icon className="text-5xl text-[#FF6A3D]" />
@@ -159,9 +161,9 @@ function ServiceCard({ service }: { service: Service }) {
                             />
                         </div>
                     )}
-                </div>
+                </Typography>
 
-                <div
+                <Typography component={'div'}
                     className="absolute top-0 indent-0 flex flex-col justify-between bg-white/5 backdrop-blur-lg  p-6  border-2 border-white rounded-2xl"
                     style={{
                         transform: 'rotateY(180deg)',
@@ -208,7 +210,7 @@ function ServiceCard({ service }: { service: Service }) {
                             </Button>
                         </Link>
                     </motion.div>
-                </div>
+                </Typography>
             </div>
 
             {/* Hover-triggered rotation */}

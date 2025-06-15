@@ -15,14 +15,14 @@ export interface PortfolioItem {
 }
 
 const portfolioItems: PortfolioItem[] = [
-    { id: '02', title: 'Matrubhoomi Developers', type: 'youtube', thumbnail: 'https://img.youtube.com/vi/fC39o9rfl-g/hqdefault.jpg', videoUrl: 'https://youtu.be/H6QoS8K_d-E?si=lsvwvNvRInDRW3qN' },
-    { id: '04', title: 'Matrubhoomi Developers', type: 'shorts', thumbnail: 'https://img.youtube.com/vi/pBQidJHykcY/hqdefault.jpg', videoUrl: 'https://youtube.com/shorts/94uZDoGDON4?si=ZmmYrHkFEs8wpLAR' },
-    { id: '03', title: 'Matrubhoomi Developers', type: 'shorts', thumbnail: 'https://img.youtube.com/vi/-eBeMUjt5k0/hqdefault.jpg', videoUrl: 'https://youtube.com/shorts/wwyxj2gvp3c?si=bafddA0ih8AIevHi' },
-    { id: '03', title: 'Matrubhoomi Developers', type: 'shorts', thumbnail: 'https://img.youtube.com/vi/-eBeMUjt5k0/hqdefault.jpg', videoUrl: 'https://youtube.com/shorts/al-_uTSeak4?si=c_LmsOqVDh-NqSoQ' },
-    { id: '03', title: 'Matrubhoomi Developers', type: 'shorts', thumbnail: 'https://img.youtube.com/vi/-eBeMUjt5k0/hqdefault.jpg', videoUrl: 'https://youtube.com/shorts/SQNVQDK4tsQ?si=JqV1vzbtXxBOBQ8r' },
-    { id: '01', title: 'Matrubhoomi Developers', type: 'youtube', thumbnail: 'https://img.youtube.com/vi/FeVQc7ruivE/hqdefault.jpg', videoUrl: 'https://www.youtube.com/watch?v=FeVQc7ruivE' },
-    { id: '0', title: 'Propzone', type: 'youtube', thumbnail: 'https://img.youtube.com/vi/_sWam2SD_XM/hqdefault.jpg', videoUrl: 'https://youtu.be/khet2AUsNto?si=UCY2rsbTgrHLgyni' },
-    { id: '0', title: 'Propzone', type: 'youtube', thumbnail: 'https://img.youtube.com/vi/_sWam2SD_XM/hqdefault.jpg', videoUrl: 'https://youtu.be/4spJftpawzc?si=3vns_A_0P8ZmAGKk' },
+    { id: '1', title: 'Propzone', type: 'youtube', thumbnail: 'https://img.youtube.com/vi/_sWam2SD_XM/hqdefault.jpg', videoUrl: 'https://youtu.be/khet2AUsNto?si=UCY2rsbTgrHLgyni' },
+    { id: '2', title: 'Matrubhoomi Developers', type: 'shorts', thumbnail: 'https://img.youtube.com/vi/pBQidJHykcY/hqdefault.jpg', videoUrl: 'https://youtube.com/shorts/94uZDoGDON4?si=ZmmYrHkFEs8wpLAR' },
+    { id: '3', title: 'Propzone', type: 'youtube', thumbnail: 'https://img.youtube.com/vi/_sWam2SD_XM/hqdefault.jpg', videoUrl: 'https://youtu.be/4spJftpawzc?si=3vns_A_0P8ZmAGKk' },
+    { id: '4', title: 'Matrubhoomi Developers', type: 'shorts', thumbnail: 'https://img.youtube.com/vi/-eBeMUjt5k0/hqdefault.jpg', videoUrl: 'https://youtube.com/shorts/al-_uTSeak4?si=c_LmsOqVDh-NqSoQ' },
+    { id: '5', title: 'Matrubhoomi Developers', type: 'youtube', thumbnail: 'https://img.youtube.com/vi/fC39o9rfl-g/hqdefault.jpg', videoUrl: 'https://youtu.be/H6QoS8K_d-E?si=lsvwvNvRInDRW3qN' },
+    { id: '6', title: 'Matrubhoomi Developers', type: 'shorts', thumbnail: 'https://img.youtube.com/vi/-eBeMUjt5k0/hqdefault.jpg', videoUrl: 'https://youtube.com/shorts/SQNVQDK4tsQ?si=JqV1vzbtXxBOBQ8r' },
+    { id: '7', title: 'Matrubhoomi Developers', type: 'shorts', thumbnail: 'https://img.youtube.com/vi/-eBeMUjt5k0/hqdefault.jpg', videoUrl: 'https://youtube.com/shorts/wwyxj2gvp3c?si=bafddA0ih8AIevHi' },
+    { id: '8', title: 'Matrubhoomi Developers', type: 'youtube', thumbnail: 'https://img.youtube.com/vi/FeVQc7ruivE/hqdefault.jpg', videoUrl: 'https://www.youtube.com/watch?v=FeVQc7ruivE' },
 ];
 
 export default function Portfolio() {
@@ -57,7 +57,7 @@ export default function Portfolio() {
                         background: 'linear-gradient(to right, #FFF, #FFFFFF33)',
                         WebkitBackgroundClip: 'text',
                         WebkitTextFillColor: 'transparent',
-                                WebkitTextStroke: '2px white',
+                        WebkitTextStroke: '2px white',
                     }}>Portfolio for people, drawpot for you</Typography>
 
 
@@ -71,6 +71,8 @@ export default function Portfolio() {
                 {rows.map((pair, idx) => {
                     // determine columns for this row
                     let cols = '1fr 1fr 1fr';
+                    console.log(pair);
+                    
                     if (pair.length === 3) {
                         if (pair[0].type === 'youtube' && pair[1].type === 'shorts' && pair[2].type === 'shorts') cols = '2fr 1fr 1fr';
                         else if (pair[0].type === 'shorts' && pair[1].type === 'youtube' && pair[2].type === 'shorts') cols = '1fr 2fr 1fr';

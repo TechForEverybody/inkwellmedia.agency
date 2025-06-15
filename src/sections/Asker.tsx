@@ -17,7 +17,7 @@ export default function Asker() {
             ref={ref}
             className="py-20 relative overflow-hidden"
             style={{
-                background: "radial-gradient(ellipse at top, #000, #002147)", // Dark blue gradient
+                // background: "radial-gradient(ellipse at top, #000, #002147)", // Dark blue gradient
             }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -43,14 +43,22 @@ export default function Asker() {
                     />
 
                     {/* Main Heading */}
-                    <motion.h2
-                        className="text-4xl md:text-6xl font-bold text-white text-center mb-4"
+                    <motion.h3
+                        className="text-4xl md:text-4xl font-bold text-white text-center mb-4"
                         initial={{ y: 30, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ delay: 0.2, duration: 0.6 }}
                     >
-                        Beyond the videos, we build experiences
-                    </motion.h2>
+                        <span style={{
+                            fontSize: '2em', color: '#FF6A3D', fontWeight: 'bold',
+                        }}>Beyond</span> the <span style={{
+                            fontSize: '2em', color: '#FF6A3D', fontWeight: 'bold',
+                        }}>videos</span>, <span style={{
+                            fontSize: '2em', color: '#FF6A3D', fontWeight: 'bold',
+                        }}>we</span> build <span style={{
+                            fontSize: '2em', color: '#FF6A3D', fontWeight: 'bold',
+                        }}>experiences</span>
+                    </motion.h3>
 
                     {/* Subheading */}
                     <motion.p

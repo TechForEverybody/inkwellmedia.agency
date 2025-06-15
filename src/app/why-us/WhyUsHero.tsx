@@ -7,7 +7,7 @@ import PublicIcon from '@mui/icons-material/Public';
 import BrushIcon from '@mui/icons-material/Brush';
 import TimelineIcon from '@mui/icons-material/Timeline';
 import BuildIcon from '@mui/icons-material/Build';
-import Image from 'next/image';
+import { Typography } from '@mui/material';
 
 const reasons = [
   {
@@ -42,15 +42,26 @@ const listVariants = {
 };
 
 const WhyUsHero: React.FC = () => (
-  <section className="relative overflow-hidden py-24 md:py-10">
+  <section className="relative overflow-hidden py-24 md:py-10" style={{
+    background: "url('/images/29.jpg') no-repeat center center/cover",
+    backgroundAttachment: "fixed",
+    backgroundSize: 'cover',
+    minHeight: '100vh',
+    fontFamily: 'Elecrolize, sans-serif',
+  }}>
     {/* Background gradient */}
+
     <div
       className="absolute inset-0 -z-10"
-      style={{
-        background: "linear-gradient(to right, #000, #002147)",
-      }}
-    />
 
+    />
+    <Typography className='seperator' sx={{
+      height: {
+        xs: '50px',
+        sm: '70px',
+        md: '80px',
+      }
+    }} />
     {/* Decorative animated shapes */}
     <motion.div
       className="absolute top-16 left-16 w-12 h-12 bg-[#FF6A3D]/50 rounded-full"
@@ -66,7 +77,7 @@ const WhyUsHero: React.FC = () => (
     <div className="container mx-auto px-4 flex flex-col-reverse lg:flex-row items-center gap-12">
       {/* Text Column */}
       <motion.div
-        className="lg:w-1/2 space-y-6"
+        className="lg:w-3/4 space-y-6"
         initial={{ opacity: 0, x: -60 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
@@ -130,31 +141,6 @@ const WhyUsHero: React.FC = () => (
         </motion.div>
       </motion.div>
 
-      {/* Illustration Column */}
-      <motion.div
-        className="lg:w-1/2 w-full flex justify-center"
-        initial={{ opacity: 0, x: 60 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-      >
-        <div className="relative w-full max-w-sm">
-          <Image
-            src="/images/why-us.png"
-            alt="Why Us Illustration"
-            width={400}
-            height={600}
-            objectFit="contain"
-            className="rounded-xl shadow-2xl"
-          />
-          {/* Subtle overlay dots */}
-          <motion.div
-            className="absolute -top-4 -right-4 w-6 h-6 bg-[#FF6A3D]/50 rounded-full"
-            animate={{ y: [0, 15, 0] }}
-            transition={{ repeat: Infinity, duration: 5, ease: 'easeInOut' }}
-          />
-        </div>
-      </motion.div>
     </div>
   </section>
 );

@@ -1,17 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ContextProviders from "./providers";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 
 export const metadata: Metadata = {
@@ -35,9 +25,13 @@ export const metadata: Metadata = {
     description: 'Inkwellmedia Agency - Your trusted partner in media solutions and ad making.',
     url: 'https://inkwellmedia.agency/',
     siteName: 'Inkwellmedia Agency',
-    images: [
-      '/logo.png'
-    ],
+    images:{
+      url: 'https://inkwellmedia.agency/logo.jpg',
+      width: 1200,
+      height: 630,
+      alt: 'Inkwellmedia Agency Logo',
+      type: 'image/jpeg'
+    },
     type: 'website'
   },
   twitter: {
@@ -54,12 +48,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning={true} data-lt-installed="true">
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;700&family=Geist+Mono:wght@400;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Kumar+One+Outline&family=Bebas+Neue&family=Oswald:wght@400;700&family=Oxanium:wght@400;700&family=Electrolize:wght@400;700&display=swap" rel="stylesheet" />
+
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         style={{
           background: "linear-gradient(to right, #000, #002147)", // Dark blue gradient
           minHeight: "100vh",
           color: "#fff",
+          fontFamily: "Electrolize, sans-serif",
         }}
       >
         <ContextProviders>

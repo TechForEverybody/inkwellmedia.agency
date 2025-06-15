@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography, useTheme } from '@mui/material';
+import { Box, useTheme } from '@mui/material';
 import { keyframes } from '@emotion/react';
 
 const brands = [
@@ -27,9 +27,10 @@ const BrandNames: React.FC = () => {
   return (
     <div style={{
       minHeight: isMobile ? "20vh" : "30vh",
-      margin: isMobile ? '1rem auto' : '2rem auto',
+      marginTop: isMobile ? '0rem' : '10rem',
+      marginBottom: isMobile ? '0rem' : '0rem',
     }}>
-      <Typography variant="h1" sx={{
+      {/* <Typography variant="h1" sx={{
         color: '#FFFFFF',
         fontSize: {
           xs: '2rem',
@@ -46,7 +47,7 @@ const BrandNames: React.FC = () => {
         WebkitTextFillColor: 'transparent',
         WebkitTextStroke: '2px white',
 
-      }}>Standing Tall with Our  Clients</Typography>
+      }}>Standing Tall with Our  Clients</Typography> */}
       <Box
         sx={{
           width: '100%',

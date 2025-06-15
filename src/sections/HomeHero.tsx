@@ -13,7 +13,7 @@ const HomeHero: React.FC = () => {
 
             <section
                 className="relative min-h-screen h-full bg-cover bg-center pt-20"
-                style={{ backgroundImage: "url('/images/kyle-loftus-6oLabfCwBME-unsplash.jpg')", backgroundAttachment:"fixed" }}
+                style={{ backgroundImage: "url('/images/kyle-loftus-6oLabfCwBME-unsplash.jpg')", backgroundAttachment: "fixed" }}
             >
                 {/* <Typography className='seperator' sx={{
                     height: {
@@ -39,17 +39,34 @@ const HomeHero: React.FC = () => {
                             initial={{ y: -40, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
                             transition={{ delay: 0.2, duration: 0.8 }}
-                            className="text-4xl md:text-6xl text-center font-extrabold leading-tight"
+                            className="text-4xl md:text-7xl  font-extrabold leading-tight"
                         >
-                            Every brand has its own story,
-                            <br /> And we narrate it into visuals
+                            Every  <span style={{
+                                fontFamily: 'Kumar One Outline, cursive',
+                            }}>
+                                brand
+                            </span>
+                            <br />
+                            has its own <span style={{
+                                fontFamily: 'Kumar One Outline, cursive',
+                            }}>
+                                story
+                            </span>,
+
+                            <br /> <span style={{
+                                fontFamily: "Bebas Neue",
+                                fontWeight: 'bold',
+                                fontSize: "2rem",
+                            }}>
+                                And we narrate it into visuals
+                            </span>
                         </motion.h1>
 
                         <motion.p
                             initial={{ y: 40, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
                             transition={{ delay: 0.4, duration: 0.8 }}
-                            className="text-2xl md:text-xl max-w-7xl text-center"
+                            className="text-2xl md:text-xl max-w-7xl text-center "
                         >
                             Its your story, your dream. Let the Inkwell narrate it for you. We work towards elevating your digital footprint, business performance and social standing with implementation of dynamic media.
                         </motion.p>
@@ -57,35 +74,40 @@ const HomeHero: React.FC = () => {
                             initial={{ y: 40, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
                             transition={{ delay: 0.4, duration: 0.8 }}
-                            className="text-5xl md:text-xl max-w-7xl flex justify-center flex-wrap gap-2"
+                            className="text-5xl md:text-xl max-w-7xl flex justify-start flex-wrap gap-2 relative"
                         >
-                            <Button style={{
-                                backgroundColor: '#00000055', borderRadius: '9999px', padding: '12px 24px', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+
+                            <Button variant='contained' style={{
+                                transform: 'skewX(20deg)', borderRadius: 0,
+
+                                padding: '5px 24px', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
                                 textTransform: 'none', fontSize: '1rem', fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: '0px',
                             }}>
-
                                 <span className='md:text-3xl p-0'><SlotCounter value={1000} /></span>+ Videos
                             </Button>
-                            <Button style={{
-                                backgroundColor: '#00000055', borderRadius: '9999px', padding: '12px 24px', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+                            <Button variant='contained' style={{
+                                transform: 'skewX(20deg)', borderRadius: 0,
+
+                                padding: '5px 24px', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
                                 textTransform: 'none', fontSize: '1rem', fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: '0px',
+                                position: 'relative', top: '50px',left: '10px',
                             }}>
                                 <span className='md:text-4xl p-0'><SlotCounter value={10000000} /></span>+ Views on video
                             </Button>
                         </motion.p>
-                        <motion.p
+                        {/* <motion.p
                             initial={{ y: 40, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
                             transition={{ delay: 0.4, duration: 0.8 }}
                             className="text-lg md:text-xl max-w-md"
                         >
-                        </motion.p>
+                        </motion.p> */}
 
                         <motion.div
                             initial={{ scale: 0.8, opacity: 0 }}
                             animate={{ scale: 1, opacity: 1 }}
                             transition={{ delay: 0.6, type: 'spring', stiffness: 120 }}
-                            className="flex flex-col sm:flex-row gap-6 justify-center items-center flex-wrap"
+                            className="flex flex-col sm:flex-row gap-6 justify-start items-center flex-wrap pt-10"
                         >
                             <Link href="/contact-us" passHref>
                                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>

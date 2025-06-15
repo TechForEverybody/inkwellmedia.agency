@@ -12,7 +12,13 @@ export default function ContactHero() {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-[#002147] to-black text-white overflow-hidden relative">
+    <section className="py-20  to-black text-white overflow-hidden relative" style={{
+      background: "url('/images/low-angle-view-television-camera-against-illuminated-spot-lights.jpg') no-repeat center center/cover",
+      backgroundAttachment: "fixed",
+      backgroundSize: 'cover',
+      minHeight: '100vh',
+      fontFamily: 'Elecrolize, sans-serif',
+    }}>
       {/* Decorative shapes */}
       <Typography className='seperator' sx={{
         height: {
@@ -34,13 +40,14 @@ export default function ContactHero() {
 
       <div className="container mx-auto px-4 relative z-10">
         <motion.h1
-          className="text-5xl md:text-6xl font-bold text-center mb-6 leading-tight"
+          className="text-5xl md:text-4xl font-bold text-center mb-6 leading-tight"
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
-          Dont wait any more just for inspiration,  
-Its your time to inspire others with your story
+          Don’t wait any more just for inspiration,
+          <br />
+          Its your time to <span className="text-[#FF6A3D] text-[1.8em] font-bold">inspire others</span> with your <span className="text-[#FF6A3D] text-[1.8em] font-bold">story</span>
 
         </motion.h1>
         <motion.p

@@ -1,7 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import Button from '@mui/material/Button';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import PlaylistAddCheckIcon from '@mui/icons-material/PlaylistAddCheck';
 import VideocamIcon from '@mui/icons-material/Videocam';
 import EditIcon from '@mui/icons-material/Edit';
@@ -34,7 +32,7 @@ const steps = [
 export default function Concept() {
     return (
         <section className="relative py-16 overflow-hidden" style={{
-            background: "linear-gradient(to right, #000, #002147)",
+            background: "linear-gradient(to right, #56F01C, #16710A)",
         }}>
             <div className="container mx-auto px-4 flex flex-col lg:flex-row items-start">
                 {/* Left Panel */}
@@ -70,24 +68,10 @@ export default function Concept() {
                     >
 
                     </motion.div>
-                    <motion.div
-                        initial={{ y: 20, opacity: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
-                        transition={{ delay: 0.6, duration: 0.6 }}
-                    >
-                        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                            <Button
-                                variant="contained"
-                                endIcon={<ArrowForwardIosIcon />}
-                                className="bg-red-500 hover:bg-red-600 py-2 px-6 rounded-full"
-                            >
-                                Explore Services
-                            </Button>
-                        </motion.div>
-                    </motion.div >
                     <motion.div whileHover={{ scale: 2.05 }} whileTap={{ scale: 0.95 }} style={{
                         display: 'flex',
-                        justifyContent: 'center', alignItems: 'center', height: '400px', width: '100%', marginTop: '20px'
+                        justifyContent: 'center', alignItems: 'center', height: '400px', width: '100%', marginTop: '20px',
+                        scale: 1.5
                     }}>
                         <VideoProductionAnimation />
 

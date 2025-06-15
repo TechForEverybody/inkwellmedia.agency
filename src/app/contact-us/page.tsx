@@ -8,7 +8,9 @@ import ContactHero from './ContactHero';
 
 function ContactUsPage() {
   return (
-    <div>
+    <div style={{
+      background: "linear-gradient(to right, #A000F8, #2B1047)", // Dark blue gradient
+    }}>
       <Header />
 
       <ContactHero/>

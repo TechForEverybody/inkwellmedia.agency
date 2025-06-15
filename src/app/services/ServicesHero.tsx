@@ -5,7 +5,6 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import Chip from '@mui/material/Chip';
 import Button from '@mui/material/Button';
 import Link from 'next/link';
-import Image from 'next/image';
 
 const features = [
     {
@@ -32,7 +31,14 @@ const listItemVariants = {
 };
 
 const ServicesHero: React.FC = () => (
-    <section className="relative overflow-hidden py-24">
+    <section className="relative overflow-hidden py-24" 
+        style={{
+    background: "url('/images/2149066324.jpg')",
+    minHeight: '100vh',
+    backgroundAttachment: "fixed",
+    backgroundSize: 'cover',
+    fontFamily: 'Elecrolize, sans-serif',
+  }}>
         {/* Background gradient */}
         <div
             className="absolute inset-0 -z-10"
@@ -121,19 +127,6 @@ const ServicesHero: React.FC = () => (
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.2 }}
             >
-                <div className="relative w-full max-w-xs lg:max-w-md">
-                    <Image
-                        src="/images/influencer-broadcasting-podcast-show.png"
-                        alt="Our Services"
-                        width={400}
-                        height={600}
-                        objectFit="cover"
-                        className="rounded-xl shadow-2xl"
-                    />
-                    {/* Extra decorative overlays */}
-                    <div className="absolute -top-4 -right-4 w-10 h-10 bg-[#FF6A3D] rounded-full mix-blend-screen" />
-                    <div className="absolute -bottom-4 -left-4 w-16 h-16 border-4 border-[#FF6A3D] rounded-full animate-pulse" />
-                </div>
                 <motion.ul
                     className="space-y-4 mt-8"
                     initial="hidden"

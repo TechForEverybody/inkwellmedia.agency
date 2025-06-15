@@ -54,6 +54,7 @@ const Header: React.FC = () => {
             maxWidth: '90%',
             padding: '20px',
             color: 'white',
+            fontFamily: 'Electrolize, sans-serif',
         }}>
             <Box className="mb-6">
                 <Link href="/">
@@ -102,6 +103,7 @@ const Header: React.FC = () => {
                     margin: '10px auto',
                     left: '0',
                     borderRadius: '20px',
+                    fontFamily: 'Electrolize, sans-serif',
                 }}
 
                 >

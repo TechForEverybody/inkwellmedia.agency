@@ -1,29 +1,23 @@
 "use client";
 import Header from '@/components/Header'
 import React from 'react'
-import AudienceExplainer from './AudienceExplainer';
 import Asker from '@/sections/Asker';
 import Footer from '@/components/Footer';
-import { Typography } from '@mui/material';
 import WhyUsHero from './WhyUsHero';
 import Concept from '@/sections/HomeConcept';
 
 
 function WhyUsPage() {
   return (
-    <div>
+    <div style={{
+          background: "linear-gradient(to right, #56F01C, #16710A)", // Dark blue gradient
+        }}>
       <Header />
-      <Typography className='seperator' sx={{
-        height: {
-          xs: '50px',
-          sm: '70px',
-          md: '80px',
-        }
-      }} />
+
       <WhyUsHero />
-      <Concept/>
+      <Concept />
       {/* <TypesAndProcess /> */}
-      <AudienceExplainer />
+      {/* <AudienceExplainer /> */}
       <Asker />
       <Footer />
     </div>

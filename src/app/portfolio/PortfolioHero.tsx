@@ -6,7 +6,7 @@ import Button from '@mui/material/Button';
 import StarIcon from '@mui/icons-material/Star';
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
-import Image from 'next/image';
+import { Typography } from '@mui/material';
 
 const highlights = [
   {
@@ -36,20 +36,26 @@ const listItemVariants = {
   visible: () => ({
     opacity: 1,
     x: 0,
-    transition: { delay:0, duration: 0.6, ease: 'easeOut' },
+    transition: { delay: 0, duration: 0.6, ease: 'easeOut' },
   }),
 };
 
 const PortfolioHero: React.FC = () => (
-  <section className="relative overflow-hidden py-24">
-    {/* Background Gradient */}
-    <div
-      className="absolute inset-0 -z-10"
-      style={{
-        background: "linear-gradient(to right, #000, #002147)",
-      }}
-    />
-
+  <section className="relative overflow-hidden py-24" style={{
+    background: "url('/images/filmmaker-crew-team-with-professional-cinema-equipment-video-camera-set.jpg') no-repeat center center/cover",
+    backgroundAttachment: "fixed",
+    backgroundSize: 'cover',
+    minHeight: '100vh',
+    color: '#fff',
+    fontFamily: 'Elecrolize, sans-serif',
+  }}>
+    <Typography className='seperator' sx={{
+      height: {
+        xs: '50px',
+        sm: '70px',
+        md: '80px',
+      }
+    }} />
     {/* Decorative Shapes */}
     <motion.div
       className="absolute top-16 left-16 w-12 h-12 bg-[#FF6A3D]/50 rounded-full"
@@ -65,16 +71,16 @@ const PortfolioHero: React.FC = () => (
     <div className="container mx-auto px-4 flex flex-col-reverse lg:flex-row items-center gap-12">
       {/* Text Column */}
       <motion.div
-        className="lg:w-2/3 space-y-6"
-        initial={{ opacity: 0, x: -60 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        // viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
+        className="lg:w-5/7 space-y-6"
+        // initial={{ opacity: 0, x: -60 }}
+        // whileInView={{ opacity: 1, x: 0 }}
+        // // viewport={{ once: true }}
+        // transition={{ duration: 0.8 }}
       >
-        <h2 className="text-5xl md:text-6xl font-extrabold text-white leading-tight">
+        <h2 className="text-5xl md:text-6xl font-extrabold text-gray leading-tight">
           Portfolio: how we forged steps to success
         </h2>
-        <p className="text-white/80 text-lg max-w-2xl">
+        <p className="text-gray/80 text-lg max-w-2xl">
           When we take any project work in our hands, we put efforts not just for our clients, but for our own improvement as well. We exalt our work as innovation- because we wish to give individuality to each and every distinctive asset.  Every frame in our portfolio is crafted with precision, creativity, and strategy: guaranteeing content that not only amazes the viewers but delivers measurable results.
         </p>
 
@@ -82,7 +88,7 @@ const PortfolioHero: React.FC = () => (
           className="space-y-6"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          // viewport={{ once: true, amount: 0.3 }}
         >
           {highlights.map((item, i) => {
             const Icon = item.icon;
@@ -95,10 +101,10 @@ const PortfolioHero: React.FC = () => (
               >
                 <Icon className="text-4xl text-[#FF6A3D] mt-1" />
                 <div>
-                  <h3 className="text-xl font-semibold text-white">
+                  <h3 className="text-xl font-semibold text-gray">
                     {item.title}
                   </h3>
-                  <p className="text-white/75">{item.text}</p>
+                  <p className="text-gray/75">{item.text}</p>
                 </div>
               </motion.li>
             );
@@ -125,30 +131,6 @@ const PortfolioHero: React.FC = () => (
         </motion.div>
       </motion.div>
 
-      {/* Illustration Column */}
-      <motion.div
-        className="lg:w-1/2 w-full flex justify-center"
-        initial={{ opacity: 0, x: 60 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        // viewport={{ once: true }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-      >
-        <div className="relative w-full max-w-sm">
-          <Image
-            src="/images/portfolio.png"
-            alt="Portfolio Illustration"
-            width={500}
-            height={700}
-            objectFit="contain"
-            className="rounded-xl shadow-2xl"
-          />
-          <motion.div
-            className="absolute -top-4 -right-4 w-6 h-6 bg-[#FF6A3D]/50 rounded-full"
-            animate={{ y: [0, 15, 0] }}
-            transition={{ repeat: Infinity, duration: 5, ease: 'easeInOut' }}
-          />
-        </div>
-      </motion.div>
     </div>
   </section>
 );
